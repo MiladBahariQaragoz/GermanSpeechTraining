@@ -8,6 +8,7 @@ authors = [
 ]
 requires-python = ">=3.12"
 dependencies = [
+    "edge-tts>=7.2.8",
     "pillow>=12.3.0",
     "piper-tts>=1.8.0",
 ]
@@ -26,7 +27,11 @@ build-backend = "uv_build"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-markers = ["slow: needs real external tools or models (deselect with -m 'not slow')"]
+markers = [
+    "slow: needs real external tools or models (deselect with -m 'not slow')",
+    "network: calls an online service; run explicitly with -m network",
+]
+addopts = "-m 'not network'"
 
 [tool.ruff]
 line-length = 110

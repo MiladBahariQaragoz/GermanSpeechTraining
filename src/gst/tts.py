@@ -2,6 +2,8 @@
 
 import hashlib
 import os
+import subprocess
+import time
 import unicodedata
 import wave
 from collections.abc import Callable
@@ -72,6 +74,52 @@ class PiperTTS:
         config = SynthesisConfig(length_scale=self.length_scale)
         with wave.open(str(out), "wb") as wav:
             self._voice(voice).synthesize_wav(text, wav, syn_config=config)
+
+
+def _edge_fetch(text: str, voice: str) -> bytes:
+    import edge_tts
+
+    audio = bytearray()
+    for chunk in edge_tts.Communicate(text, voice).stream_sync():
+        if chunk["type"] == "audio":
+            audio += chunk["data"]
+    if not audio:
+        raise TTSError(f"edge-tts returned no audio for {text!r}")
+    return bytes(audio)
+
+
+class EdgeTTS:
+    """Microsoft's neural voices via edge-tts: free, no key, but the endpoint rate-limits (HTTP 403).
+
+    Failed requests are retried with growing pauses; `voice` is e.g. "de-DE-KillianNeural".
+    """
+
+    name = "edge"
+
+    def __init__(
+        self,
+        fetch: Callable[[str, str], bytes] = _edge_fetch,
+        sleep: Callable[[float], None] = time.sleep,
+        attempts: int = 5,
+        backoff: float = 8.0,
+    ):
+        self.fetch = fetch
+        self.sleep = sleep
+        self.attempts = attempts
+        self.backoff = backoff
+
+    def synthesize(self, text: str, voice: str, out: Path) -> None:
+        for attempt in range(1, self.attempts + 1):
+            try:
+                mp3 = self.fetch(text, voice)
+                break
+            except Exception as error:
+                if attempt == self.attempts:
+                    raise TTSError(f"edge-tts failed {attempt} times for {text!r}: {error}") from error
+                self.sleep(self.backoff * attempt)
+        subprocess.run(
+            ["ffmpeg", "-v", "error", "-y", "-i", "pipe:0", "-ac", "1", str(out)], input=mp3, check=True
+        )
 
 
 def _httpx_post(url: str, headers: dict, json: dict) -> bytes:

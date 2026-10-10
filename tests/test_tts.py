@@ -1,7 +1,17 @@
+import subprocess
+
 import pytest
 
 from gst.config import WORK_DIR
-from gst.tts import CachedTTS, ElevenLabsTTS, PiperTTS, TTSError, compose_phonemes, wav_duration
+from gst.tts import (
+    CachedTTS,
+    EdgeTTS,
+    ElevenLabsTTS,
+    PiperTTS,
+    TTSError,
+    compose_phonemes,
+    wav_duration,
+)
 from tests.fakes import FakeTTS, write_silence
 
 
@@ -96,5 +106,68 @@ def test_piper_speaks_german(tmp_path):
     out = tmp_path / "hallo.wav"
 
     PiperTTS(voices).synthesize("Hallo, wie geht's?", "de_DE-thorsten-high", out)
+
+    assert wav_duration(out) > 0.5
+
+
+def _mp3(tmp_path, seconds):
+    path = tmp_path / "clip.mp3"
+    subprocess.run(
+        ["ffmpeg", "-v", "error", "-y", "-f", "lavfi", "-i", "anullsrc=r=24000:cl=mono", "-t", str(seconds),
+         "-c:a", "libmp3lame", str(path)],
+        check=True,
+    )
+    return path.read_bytes()
+
+
+class FlakyFetch:
+    """Fails `failures` times, then returns `audio`."""
+
+    def __init__(self, audio: bytes, failures: int = 0):
+        self.audio = audio
+        self.failures = failures
+        self.calls = []
+
+    def __call__(self, text, voice):
+        self.calls.append((text, voice))
+        if len(self.calls) <= self.failures:
+            raise ConnectionError("403, message='Invalid response status'")
+        return self.audio
+
+
+def test_edge_converts_the_mp3_it_fetches_to_wav(tmp_path):
+    fetch = FlakyFetch(_mp3(tmp_path, 1.0))
+    out = tmp_path / "out.wav"
+
+    EdgeTTS(fetch=fetch, sleep=lambda s: None).synthesize("Hallo!", "de-DE-KillianNeural", out)
+
+    assert fetch.calls == [("Hallo!", "de-DE-KillianNeural")]
+    assert wav_duration(out) == pytest.approx(1.0, abs=0.1)
+
+
+def test_edge_retries_with_growing_pauses_when_the_service_refuses(tmp_path):
+    fetch = FlakyFetch(_mp3(tmp_path, 0.5), failures=2)
+    pauses = []
+
+    EdgeTTS(fetch=fetch, sleep=pauses.append).synthesize("Hallo!", "v", tmp_path / "out.wav")
+
+    assert len(fetch.calls) == 3
+    assert pauses == [8, 16]
+
+
+def test_edge_gives_up_after_the_last_attempt(tmp_path):
+    fetch = FlakyFetch(b"", failures=99)
+
+    with pytest.raises(TTSError, match="403"):
+        EdgeTTS(fetch=fetch, sleep=lambda s: None, attempts=3).synthesize("Hallo!", "v", tmp_path / "out.wav")
+
+    assert len(fetch.calls) == 3
+
+
+@pytest.mark.network
+def test_edge_speaks_german_for_real(tmp_path):
+    out = tmp_path / "hallo.wav"
+
+    EdgeTTS().synthesize("Hallo, wie geht's?", "de-DE-KillianNeural", out)
 
     assert wav_duration(out) > 0.5
