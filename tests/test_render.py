@@ -43,3 +43,13 @@ def test_rendering_again_reuses_speech_and_segments(drills, tmp_path):
 
     assert again.calls == []
     assert {p: p.stat().st_mtime_ns for p in (work / "segments").iterdir()} == segments
+
+
+def test_video_frame_rate_follows_the_timeline_config(drills, tmp_path):
+    cfg = TimelineConfig(intro=0.4, outro=0.4, speak_min=0.4, speak_extra=0.0, speak_factor=0.2, fps=25)
+
+    tts = CachedTTS(FakeTTS(0.005), tmp_path / "tts")
+
+    video = render_level(drills, tts, Voices("q", "a"), tmp_path / "w", cfg)
+
+    assert probe(video)["fps"] == 25

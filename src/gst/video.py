@@ -13,7 +13,6 @@ from pathlib import Path
 from gst.cards import BAR, BAR_FILL, RULE
 from gst.timeline import Chapter
 
-FPS = 30
 RATE = 44100
 
 
@@ -25,23 +24,26 @@ def _hex(colour: str) -> str:
     return "0x" + colour.lstrip("#")
 
 
-def encode_segment(image: Path, duration: float, out: Path, countdown: bool = False) -> None:
-    """A silent H.264 clip of `image`; with `countdown`, the bar empties over the clip."""
-    frames = round(duration * FPS)
+def encode_segment(image: Path, duration: float, out: Path, countdown: bool = False, fps: int = 30) -> None:
+    """A silent H.264 clip of `image`; with `countdown`, the bar empties over the clip.
+
+    `fps` must match the timeline's, which rounds every segment to whole frames.
+    """
+    frames = round(duration * fps)
     if countdown:
         x, y, width, height = BAR
         graph = (
-            f"color=c={_hex(RULE)}:s={width}x{height}:r={FPS}[track];"
-            f"color=c={_hex(BAR_FILL)}:s={width}x{height}:r={FPS}[fill];"
-            f"[track][fill]overlay=x='-{width}*t/{frames / FPS}':y=0[bar];"
+            f"color=c={_hex(RULE)}:s={width}x{height}:r={fps}[track];"
+            f"color=c={_hex(BAR_FILL)}:s={width}x{height}:r={fps}[fill];"
+            f"[track][fill]overlay=x='-{width}*t/{frames / fps}':y=0[bar];"
             f"[0:v][bar]overlay=x={x}:y={y},format=yuv420p[v]"
         )
         video = ["-filter_complex", graph, "-map", "[v]"]
     else:
         video = ["-vf", "format=yuv420p"]
     _ffmpeg(
-        "-loop", "1", "-framerate", str(FPS), "-i", str(image), *video,
-        "-frames:v", str(frames), "-r", str(FPS),
+        "-loop", "1", "-framerate", str(fps), "-i", str(image), *video,
+        "-frames:v", str(frames), "-r", str(fps),
         "-c:v", "libx264", "-tune", "stillimage", "-preset", "veryfast", "-crf", "20", "-an", str(out),
     )
 
@@ -102,12 +104,16 @@ def mux(segments: list[Path], audio: Path, chapters: list[Chapter], out: Path) -
 
 def probe(path: Path) -> dict:
     result = subprocess.run(
-        ["ffprobe", "-v", "error", "-show_entries", "format=duration:stream=codec_type:chapter_tags=title",
+        ["ffprobe", "-v", "error", "-show_entries",
+         "format=duration:stream=codec_type,r_frame_rate:chapter_tags=title",
          "-of", "json", str(path)],
         capture_output=True, text=True, check=True,
     )
     info = json.loads(result.stdout)
+    video = next((s for s in info.get("streams", []) if s["codec_type"] == "video"), None)
+    num, _, den = video["r_frame_rate"].partition("/") if video else ("0", "", "1")
     return {
+        "fps": int(num) / int(den or 1),
         "duration": float(info["format"]["duration"]),
         "streams": [s["codec_type"] for s in info.get("streams", [])],
         "chapters": [c.get("tags", {}).get("title") for c in info.get("chapters", [])],

@@ -76,3 +76,11 @@ def test_mux_joins_segments_with_audio_and_chapters(still, tmp_path):
     assert info["duration"] == pytest.approx(3.0, abs=0.1)
     assert (info["streams"].count("video"), info["streams"].count("audio")) == (1, 1)
     assert info["chapters"] == ["Intro", "L01-D01 · Frage?"]
+
+
+def test_segment_uses_the_requested_frame_rate(still, tmp_path):
+    out = tmp_path / "segment.mp4"
+
+    encode_segment(still, 1.0, out, fps=25)
+
+    assert probe(out)["fps"] == 25

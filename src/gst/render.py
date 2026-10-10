@@ -33,17 +33,17 @@ def _card(segment: Segment, drills: list[Drill]) -> Image.Image:
     return question_card(segment.drill, countdown=segment.kind == "speak")
 
 
-def _encode(image: Image.Image, segment: Segment, folder: Path) -> Path:
-    """Encode once per distinct (frame, duration, kind); later renders reuse the file."""
+def _encode(image: Image.Image, segment: Segment, folder: Path, fps: int) -> Path:
+    """Encode once per distinct (frame, duration, kind, fps); later renders reuse the file."""
     digest = hashlib.sha256(image.tobytes())
-    digest.update(f"{segment.duration:.4f}|{segment.kind}".encode())
+    digest.update(f"{segment.duration:.4f}|{segment.kind}|{fps}".encode())
     path = folder / f"{digest.hexdigest()[:20]}.mp4"
     if not path.exists():
         with tempfile.TemporaryDirectory() as tmp:
             still = Path(tmp) / "card.png"
             image.save(still)
             partial = path.with_suffix(".partial.mp4")
-            encode_segment(still, segment.duration, partial, countdown=segment.kind == "speak")
+            encode_segment(still, segment.duration, partial, countdown=segment.kind == "speak", fps=fps)
             partial.rename(path)
     return path
 
@@ -70,7 +70,7 @@ def render_level(
         (work_dir / name).mkdir(parents=True, exist_ok=True)
     workers = max(1, (os.cpu_count() or 2) // 2)
     with ThreadPoolExecutor(workers) as pool:
-        jobs = [pool.submit(_encode, _card(s, drills), s, work_dir / "segments") for s in segments]
+        jobs = [pool.submit(_encode, _card(s, drills), s, work_dir / "segments", cfg.fps) for s in segments]
         paths = [job.result() for job in jobs]
 
     name = f"level-{drills[0].level:02d}"
