@@ -124,8 +124,8 @@ def _row(line: Line, prefix: str) -> str:
 
 
 def shortlist_digest(conversations: list[Conversation], picks: list[Pick]) -> str:
-    """Digest-style view of the picks with their rank and `Line.number`; a picked line that answers a
-    question gets that question above it for context."""
+    """Digest-style view of the picks with their rank and `Line.number`. For context, a picked answer gets
+    its question above it and a picked question gets its answer below it (unless those are picked too)."""
     first = conversations[0]
     out = [f"# Level {first.level} · {first.cefr} · Jev shortlist", ""]
     for conv in conversations:
@@ -133,10 +133,13 @@ def shortlist_digest(conversations: list[Conversation], picks: list[Pick]) -> st
         mine = [p for p in picks if p.conversation is conv]
         picked = {p.line.number for p in mine}
         for pick in mine:
-            before = pick.line.number - 1
+            before, after = pick.line.number - 1, pick.line.number + 1
             if before >= 1 and before not in picked and _is_question(conv.lines[before - 1]):
                 out.append(_row(conv.lines[before - 1], " " * 7))
             out.append(_row(pick.line, f"[{pick.rank:.2f}] "))
+            if (_is_question(pick.line) and after <= len(conv.lines) and after not in picked
+                    and not _is_question(conv.lines[after - 1])):
+                out.append(_row(conv.lines[after - 1], " " * 7))
         out.append("")
     return "\n".join(out)
 
