@@ -168,7 +168,7 @@ class ScriptedJudge:
     def ask(self, state, questions):
         if self.error:
             raise self.error
-        return {"relevance": 3.0, "speaking_value": 2.0}
+        return {"value": 3.0}
 
 
 def _shortlist(ocr_root, tmp_path, *extra):
@@ -188,7 +188,7 @@ def test_shortlist_prints_the_ranked_exchanges(ocr_root, tmp_path, monkeypatch, 
     assert _shortlist(ocr_root, tmp_path, "--model", "jev-test") == 0
 
     out = capsys.readouterr().out
-    assert "[0.83] 04 ? Was wirst du kochen? | What will you cook?" in out
+    assert "[1.00] 04 ? Was wirst du kochen? | What will you cook?" in out
     assert seen == {"model": "jev-test", "work_dir": tmp_path}
 
 

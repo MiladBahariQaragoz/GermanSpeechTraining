@@ -1,7 +1,13 @@
-"""Rank a level's question→answer exchanges with Jev, so drills are written from the best ones.
+"""Rank every line of a level's conversations with Jev, so drills are written from the best ones.
 
-Jev (TypeSafe System One) only judges: it scores each exchange for topic relevance and speaking value.
-Code builds the candidates, ranks them and formats the shortlist; Claude still writes every drill.
+Jev (TypeSafe System One) only judges: for each line it scores how valuable that line is for a learner
+to practise saying, given the learner's level, the situation and the nearby lines. Code builds the
+requests, ranks and formats the shortlist; Claude still writes every drill.
+
+Chosen in a bake-off against 180 hand-picked drills (levels 10-12): this per-line, learner-framed Score
+found 77 % of them in the top 12 lines per conversation, against 68 % in ~17 lines for scoring
+question→answer pairs and 67 % for one Choice over the whole conversation (its probabilities go flat
+after ~10 lines).
 """
 
 import hashlib
@@ -19,35 +25,35 @@ INSTALL_HINT = (
 )
 
 QUESTIONS: dict[str, dict[str, Any]] = {
-    "relevance": {
+    "value": {
         "type": "score",
-        "instructions": (
-            "`exchange` is a question and its answer from a German conversation about `topic`. "
-            "How central is this exchange to that situation?"
-        ),
+        "instructions": {
+            "question": "How valuable is `candidate` for `learner` to practise saying aloud? "
+                        "`context` holds the lines just before and after it in the conversation.",
+            "prefer": [
+                "complete sentences the learner could reuse in this situation in real life",
+                "concrete content: items, amounts, times, places, preferences, reasons, requests, problems",
+                "the typical vocabulary and sentence patterns of `situation`",
+            ],
+            "avoid": [
+                "greetings, thanks, goodbyes and small talk",
+                "bare yes/no answers and reactions such as 'Okay.', 'Gute Idee!', 'Wow!'",
+                "lines that only make sense inside this one dialogue, such as 'Hier ist sie.' "
+                "or a character's name",
+            ],
+        },
         "criteria": [
-            "Greeting, small talk, thanks or goodbye that could happen in any conversation",
-            "Loosely connected: it could happen in this situation, but the situation is not about it",
-            "A typical exchange for this situation",
-            "A core exchange of this situation that a learner would most need to handle it",
-        ],
-    },
-    "speaking_value": {
-        "type": "score",
-        "instructions": (
-            "A language learner will practise saying the answer in `exchange` "
-            "(the lines after the question). "
-            "How much useful speaking practice does that answer give?"
-        ),
-        "criteria": [
-            "A single word, a bare yes or no, or a reaction such as 'Okay.' or 'Gute Idee!'",
-            "A short complete sentence with little concrete content",
-            "A complete sentence with concrete information such as items, amounts, times, places, "
-            "preferences or reasons",
-            "Two or more sentences of concrete information the learner could reuse about their own life",
+            "Greeting, small talk, thanks, goodbye, a bare yes/no or a reaction",
+            "A sentence that only makes sense inside this dialogue, or has little to reuse",
+            "A useful complete sentence for this situation with some concrete content",
+            "A sentence the learner would very likely need to say in this situation, "
+            "with concrete reusable content",
         ],
     },
 }
+
+# Lines of context Jev sees around the candidate.
+CONTEXT_BEFORE, CONTEXT_AFTER = 3, 1
 
 
 class JudgeError(Exception):
@@ -63,47 +69,32 @@ class Judge(Protocol):
 
 
 @dataclass(frozen=True)
-class Exchange:
-    conversation: Conversation
-    question: Line
-    answers: tuple[Line, ...]
-
-
-@dataclass(frozen=True)
 class Pick:
-    exchange: Exchange
-    rank: float  # 0..1, mean of the normalised scores
+    conversation: Conversation
+    line: Line
+    rank: float  # 0..1, the normalised Score
 
 
 def _is_question(line: Line) -> bool:
     return line.de.rstrip().endswith("?")
 
 
-def exchanges(conv: Conversation, max_answer_lines: int = 2) -> list[Exchange]:
-    """Each question line with the (up to `max_answer_lines`) lines that answer it."""
-    found = []
-    lines = conv.lines
-    for i, line in enumerate(lines):
-        if not _is_question(line):
-            continue
-        answers = []
-        for following in lines[i + 1 : i + 1 + max_answer_lines]:
-            if _is_question(following):
-                break
-            answers.append(following)
-        if answers:
-            found.append(Exchange(conv, line, tuple(answers)))
-    return found
+def _line(line: Line) -> dict:
+    return {"line": line.number, "german": line.de, "english": line.en}
 
 
-def _state(exchange: Exchange) -> dict:
-    conv = exchange.conversation
+def line_state(conv: Conversation, line: Line) -> dict:
+    """What Jev sees for one candidate: who is learning, the situation, the line and its neighbours."""
+    i = line.number - 1
     return {
-        "topic": {"german": conv.topic_de, "english": conv.topic_en},
-        "exchange": [
-            {"german": line.de, "english": line.en}
-            for line in (exchange.question, *exchange.answers)
-        ],
+        "learner": {
+            "cefr_level": conv.cefr,
+            "goal": f"to speak German confidently in this situation: {conv.topic_en or conv.topic_de}",
+            "practice": "hears a question, then answers aloud with one sentence from the course",
+        },
+        "situation": {"german": conv.topic_de, "english": conv.topic_en},
+        "context": [_line(near) for near in conv.lines[max(0, i - CONTEXT_BEFORE): i + 1 + CONTEXT_AFTER]],
+        "candidate": _line(line),
     }
 
 
@@ -112,34 +103,40 @@ def _rank(answers: dict[str, float]) -> float:
     return sum(parts) / len(parts)
 
 
-def shortlist(conversations: list[Conversation], judge: Judge, per_conversation: int = 6,
+def shortlist(conversations: list[Conversation], judge: Judge, per_conversation: int = 12,
               workers: int = 8) -> list[Pick]:
-    """The best `per_conversation` exchanges of each conversation, conversations in order, lines in order."""
-    candidates = [e for conv in conversations for e in exchanges(conv)]
+    """The best `per_conversation` lines of each conversation, conversations in order, lines in order."""
+    candidates = [(conv, line) for conv in conversations for line in conv.lines]
     with ThreadPoolExecutor(max_workers=workers) as pool:
-        ranks = list(pool.map(lambda e: _rank(judge.ask(_state(e), QUESTIONS)), candidates))
+        ranks = list(pool.map(lambda c: _rank(judge.ask(line_state(*c), QUESTIONS)), candidates))
 
     picks = []
     for conv in conversations:
-        mine = [Pick(e, r) for e, r in zip(candidates, ranks, strict=True) if e.conversation is conv]
+        mine = [Pick(c, line, r) for (c, line), r in zip(candidates, ranks, strict=True) if c is conv]
         best = sorted(mine, key=lambda p: p.rank, reverse=True)[:per_conversation]
-        picks += sorted(best, key=lambda p: p.exchange.question.number)
+        picks += sorted(best, key=lambda p: p.line.number)
     return picks
 
 
+def _row(line: Line, prefix: str) -> str:
+    mark = "?" if _is_question(line) else " "
+    return f"{prefix}{line.number:02d} {mark} {line.de} | {line.en}"
+
+
 def shortlist_digest(conversations: list[Conversation], picks: list[Pick]) -> str:
-    """Digest-style view of the picks: rank, then the transcript lines with their `Line.number`."""
+    """Digest-style view of the picks with their rank and `Line.number`; a picked line that answers a
+    question gets that question above it for context."""
     first = conversations[0]
     out = [f"# Level {first.level} · {first.cefr} · Jev shortlist", ""]
     for conv in conversations:
         out.append(f"## C{conv.number:02d} · {conv.topic_de} — {conv.topic_en}")
-        mine = [p for p in picks if p.exchange.conversation is conv]
-        if not mine:
-            out.append("(no question→answer exchanges; read the full digest)")
+        mine = [p for p in picks if p.conversation is conv]
+        picked = {p.line.number for p in mine}
         for pick in mine:
-            q = pick.exchange.question
-            out.append(f"[{pick.rank:.2f}] {q.number:02d} ? {q.de} | {q.en}")
-            out += [f"       {a.number:02d}   {a.de} | {a.en}" for a in pick.exchange.answers]
+            before = pick.line.number - 1
+            if before >= 1 and before not in picked and _is_question(conv.lines[before - 1]):
+                out.append(_row(conv.lines[before - 1], " " * 7))
+            out.append(_row(pick.line, f"[{pick.rank:.2f}] "))
         out.append("")
     return "\n".join(out)
 

@@ -154,9 +154,9 @@ def build_parser() -> argparse.ArgumentParser:
     digest.set_defaults(run=_digest)
 
     ranked = commands.add_parser("shortlist",
-                                 help="print a level's best question→answer exchanges, ranked by Jev")
+                                 help="print the lines of a level most worth practising, ranked by Jev")
     ranked.add_argument("--level", type=int, required=True)
-    ranked.add_argument("--per-conversation", type=int, default=6)
+    ranked.add_argument("--per-conversation", type=int, default=12)
     ranked.add_argument("--model", help="System One model (default: the SDK's current default)")
     ranked.add_argument("--work-dir", type=Path, default=WORK_DIR, help="holds the jev/ answer cache")
     ranked.set_defaults(run=_shortlist)
