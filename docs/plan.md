@@ -56,7 +56,7 @@ shared-modules-touched: []
 | Scope now | A1 only (levels 1–10, 200 conversations) | User choice. |
 | Question writing | **Claude writes the drills in-session** (no Jev, no local LLM) | User decision 2026-10-10: question writing needs a frontier LLM anyway, so the separate "decision maker" stage is dropped. Claude reads each level's digest, picks the most topic-relevant exchanges and writes ≥40 drills per level. |
 | Grounding | Every drill cites `source_lines` (line numbers in its conversation); the model answer reuses the course's own sentences wherever they fit | Practice stays tied to what the course taught; the validator checks the citation and the word overlap. |
-| TTS | **Piper** (local, offline, unlimited) default; **ElevenLabs** optional backend | Tested 2026-10-10: Piper `de_DE-thorsten-high` works. edge-tts returns HTTP 403. ElevenLabs free tier = 10k chars/month ≈ 1–2 levels/month — too small as default. |
+| TTS | **edge-tts** default (Florian questions, Killian answers); Piper (offline) and ElevenLabs as options | Changed 2026-10-10 after the user listened to level 1: Piper's German pronunciation was not good enough. The user picked the two Microsoft neural voices from a sample set. edge-tts is free but refuses ~50 % of requests (HTTP 403) at random, so requests are retried and every clip is cached. ElevenLabs free tier = 10k chars/month ≈ 1–2 levels/month. |
 | Video unit | One MP4 per course level, one chapter per drill | One practice session = one level (~12 min). |
 | Repo | `github.com/MiladBahariQaragoz/GermanSpeechTraining`, cloned to `~/Github/GermanSpeechTraining` | User choice. Code + drill JSON in git; MP4/WAV/cache on the external drive, gitignored. |
 | Docs | `CLAUDE.md` and `docs/` committed | User choice. |
@@ -89,7 +89,7 @@ enforced by tests or by `gst check`; items marked *(human)* are judged by the us
 
 **Engineering**
 10. *(auto)* `uv run pytest` and `uv run ruff check .` pass on every commit.
-11. *(auto)* Rendering costs **$0** by default (local Piper TTS) and needs no API key.
+11. *(auto)* Rendering costs **$0** by default (edge-tts, no API key).
 12. *(auto)* Re-rendering is incremental: a second run with unchanged drills makes **zero** TTS calls.
 13. *(auto)* Adding levels 11–40 later needs only `slide_ocr.py`, a Claude authoring session per level,
     and `gst render --levels 11-40` — no code change.
@@ -269,6 +269,11 @@ Tests (`tests/test_cli.py`):
 low-quality German Piper voices (kerstin, ramona, eva_k) do not know — "ich" lost its ç. Fixed in
 `tts.compose_phonemes` (merges into the precomposed `ç` those voices do know). Only the French nasal in
 "Restaurant" still loses its tilde on the question voice.
+
+**Voice change (after user review):** added `EdgeTTS` and made it the default. Found while rendering:
+`edge_tts.Communicate.stream_sync()` blocks forever when the service answers 403, because its worker
+thread dies before queueing the end marker. `_edge_fetch` now drives the async `stream()` itself so the
+error reaches the retry loop.
 
 ### Task 12: Author + render levels 2–10
 - [ ] Per level: digest → write `level-NN.json` → `gst check` → commit + push (one commit per level).
