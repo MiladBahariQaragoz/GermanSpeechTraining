@@ -3,6 +3,7 @@ import json
 import pytest
 
 from gst.cli import main, parse_levels
+from gst.shortlist import JudgeError
 from gst.tts import TTSError
 from tests.fakes import FakeTTS
 from tests.test_drills import GROCERY_DRILL, LIBRARY_DRILL
@@ -156,3 +157,44 @@ def test_render_reports_a_missing_elevenlabs_key(ocr_root, tmp_path, monkeypatch
 
     assert code == 1
     assert "ELEVENLABS_API_KEY" in capsys.readouterr().out
+
+
+class ScriptedJudge:
+    name = "scripted"
+
+    def __init__(self, error=None):
+        self.error = error
+
+    def ask(self, state, questions):
+        if self.error:
+            raise self.error
+        return {"value": 3.0}
+
+
+def _shortlist(ocr_root, tmp_path, *extra):
+    return main(["shortlist", "--level", "1", "--ocr-root", str(ocr_root),
+                 "--work-dir", str(tmp_path), *extra])
+
+
+def test_shortlist_prints_the_ranked_exchanges(ocr_root, tmp_path, monkeypatch, capsys):
+    seen = {}
+
+    def fake_make_judge(model, work_dir):
+        seen.update(model=model, work_dir=work_dir)
+        return ScriptedJudge()
+
+    monkeypatch.setattr("gst.cli.make_judge", fake_make_judge)
+
+    assert _shortlist(ocr_root, tmp_path, "--model", "jev-test") == 0
+
+    out = capsys.readouterr().out
+    assert "[1.00] 04 ? Was wirst du kochen? | What will you cook?" in out
+    assert seen == {"model": "jev-test", "work_dir": tmp_path}
+
+
+def test_shortlist_reports_judge_failures_without_a_traceback(ocr_root, tmp_path, monkeypatch, capsys):
+    monkeypatch.setattr("gst.cli.make_judge",
+                        lambda model, work_dir: ScriptedJudge(JudgeError("No API key was provided.")))
+
+    assert _shortlist(ocr_root, tmp_path) == 1
+    assert "level 1: No API key was provided." in capsys.readouterr().out

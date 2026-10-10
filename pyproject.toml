@@ -20,6 +20,9 @@ gst = "gst.cli:main"
 elevenlabs = [
     "httpx>=0.28.1",
 ]
+jev = [
+    "typesafe-sdk>=0.7",
+]
 
 [build-system]
 requires = ["uv_build>=0.11.26,<0.12.0"]

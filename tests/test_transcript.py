@@ -49,6 +49,37 @@ def test_title_slide_is_recognised_when_ocr_dropped_an_accent(tmp_path):
     assert [line.de for line in conv.lines] == [de for de, _ in GROCERY_LINES[:2]]
 
 
+def test_title_slide_is_recognised_when_ocr_kept_punctuation_the_folder_lacks(tmp_path):
+    folder = write_conversation(tmp_path, "13 - Level 13 - A2 - Beginner",
+                                "1 -Hotel Check-in wie man es reibungslos gestaltet",
+                                ("Hotel Check-in: wie man es reibungslos gestaltet",
+                                 "Hotel check-in: how to make it smooth"), GROCERY_LINES[:2])
+
+    conv = load_conversation(folder)
+
+    assert conv.topic_en == "Hotel check-in: how to make it smooth"
+    assert [line.de for line in conv.lines] == [de for de, _ in GROCERY_LINES[:2]]
+
+
+def test_title_slide_is_recognised_despite_a_small_ocr_typo(tmp_path):
+    folder = write_conversation(tmp_path, "13 - Level 13 - A2 - Beginner",
+                                "11 -Planung der perfekten Überraschungsparty",
+                                ("Planung der perfekten UÜberraschungsparty",
+                                 "Planning the perfect surprise party"), GROCERY_LINES[:2])
+
+    assert load_conversation(folder).topic_en == "Planning the perfect surprise party"
+
+
+def test_first_dialogue_line_is_kept_when_there_is_no_title_slide(tmp_path):
+    folder = write_conversation(tmp_path, "13 - Level 13 - A2 - Beginner", "7 -Im Park",
+                                ("Hallo, Anna!", "Hi, Anna!"), GROCERY_LINES[:2])
+
+    conv = load_conversation(folder)
+
+    assert conv.topic_en == ""
+    assert conv.lines[0].de == "Hallo, Anna!"
+
+
 def test_load_conversation_without_marker_keeps_every_line(tmp_path):
     folder = write_conversation(tmp_path, "3 - Level 3 - A1 - Beginner", "4 -An der Bushaltestelle",
                                 ("An der Bushaltestelle", "At the bus stop"), GROCERY_LINES[:3], marker=False)

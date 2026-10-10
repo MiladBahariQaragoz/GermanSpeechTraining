@@ -54,7 +54,7 @@ shared-modules-touched: []
 |---|---|---|
 | Level unit | **Course levels 1–40**, ≥40 drills each (A1 = levels 1–10 now) | User choice. 20 conversations/level → ~2 drills per conversation. |
 | Scope now | A1 only (levels 1–10, 200 conversations) | User choice. |
-| Question writing | **Claude writes the drills in-session** (no Jev, no local LLM) | User decision 2026-10-10: question writing needs a frontier LLM anyway, so the separate "decision maker" stage is dropped. Claude reads each level's digest, picks the most topic-relevant exchanges and writes ≥40 drills per level. |
+| Question writing | **Claude writes the drills in-session; from level 13 on, Jev shortlists the lines first** | User decision 2026-10-10: question writing needs a frontier LLM, so Claude writes every drill. Later the same day the user brought back the "decision maker" to speed up reading: Jev (TypeSafe System One) scores every transcript line for how valuable it is for the learner to practise (chosen in a bake-off, Task 13), and Claude writes drills from the 12 best lines per conversation instead of the full transcript. Jev only judges, it never writes drill text. Ollama was rejected: the 4 GB GPU cannot hold a 7B model and 7B German drafting is weak. |
 | Grounding | Every drill cites `source_lines` (line numbers in its conversation); the model answer reuses the course's own sentences wherever they fit | Practice stays tied to what the course taught; the validator checks the citation and the word overlap. |
 | TTS | **edge-tts** default (Florian questions, Killian answers); Piper (offline) and ElevenLabs as options | Changed 2026-10-10 after the user listened to level 1: Piper's German pronunciation was not good enough. The user picked the two Microsoft neural voices from a sample set. edge-tts is free but refuses ~50 % of requests (HTTP 403) at random, so requests are retried and every clip is cached. ElevenLabs free tier = 10k chars/month ≈ 1–2 levels/month. |
 | Video unit | One MP4 per course level, one chapter per drill | One practice session = one level (~12 min). |
@@ -138,6 +138,7 @@ GermanSpeechTraining/
 ├── src/gst/
 │   ├── transcript.py         # folder-name parsing, slides.json → Conversation
 │   ├── digest.py             # compact numbered per-level transcript for authoring
+│   ├── shortlist.py          # Q→A exchanges, Jev judgments + cache, ranked shortlist view
 │   ├── text.py               # tokenising, stop words, content words
 │   ├── drills.py             # Drill model, load/save, Markdown view
 │   ├── check.py              # success-criteria validator (1–4)
@@ -147,7 +148,7 @@ GermanSpeechTraining/
 │   ├── video.py              # ffmpeg segment encode + audio track + mux with chapters
 │   ├── render.py             # drills → cards, speech, segments → level MP4
 │   ├── config.py             # default paths (env-overridable)
-│   └── cli.py                # `gst digest|check|render`
+│   └── cli.py                # `gst digest|shortlist|check|render`
 └── tests/
     ├── fixtures/ocr/…        # tiny fake OCR tree (2 levels × 2 conversations)
     └── test_<module>.py      # one test file per module
@@ -276,8 +277,54 @@ thread dies before queueing the end marker. `_edge_fetch` now drives the async `
 error reaches the retry loop.
 
 ### Task 12: Author + render levels 2–10
-- [ ] Per level: digest → write `level-NN.json` → `gst check` → commit + push (one commit per level).
+- [x] Per level: digest → write `level-NN.json` → `gst check` → commit + push (one commit per level).
 - [ ] `gst render --levels 1-10`; user spot-checks criterion 5 on two levels.
+
+### Task 13: Jev shortlist — `src/gst/shortlist.py` (levels 13–40)
+Speeds up authoring: Claude reads a ranked shortlist (12 lines per conversation, ~340 lines per level)
+instead of the full digest (~1700 lines). Jev judges; code builds the requests, ranks and formats; Claude
+still writes every drill and `gst check` still validates it.
+
+Types: `Pick(conversation, line, rank)`; `Judge` protocol `ask(state: dict, questions: dict) -> dict[str, float]`
+(raw Score values); `JudgeError`.
+Functions: `line_state(conv, line)`, `shortlist(conversations, judge, per_conversation=12, workers=8)`,
+`shortlist_digest(conversations, picks)`.
+Classes: `JevJudge(client_factory, model=None)` (SDK `typesafe-sdk`, optional extra `jev`; wraps
+`TypeSafeError`/`ImportError` in `JudgeError`), `CachedJudge(inner, cache_dir)` (sha256 of state + questions + model;
+replays cost nothing).
+
+One Jev request per line. State: `learner` (CEFR level, goal "speak confidently in this situation", how they
+practise), `situation` (topic DE/EN), `context` (3 lines before, 1 after) and `candidate`. One 4-level Score,
+`value`: small talk or a bare reaction → only makes sense inside this dialogue → useful sentence for the
+situation → a sentence the learner would very likely need here; instructions list what to prefer and avoid.
+The shortlist shows the top 12 in line order; a picked answer gets its question above it for context.
+
+**Bake-off (2026-10-10), recall of the 180 hand-written drills of levels 10–12** (a drill counts as found when
+one of its `source_lines` is shortlisted):
+
+| Variant | Lines per conversation | Recall |
+|---|---|---|
+| A — question→answer pairs, `relevance` + `speaking_value` Scores, no learner framing (first version) | ~17 | 68 % |
+| B — whole conversation as one Choice, learner framing, top-k by probability | 12 | 67 % |
+| C — same Choice, pick / remove / ask again ×6 | 6 | 50 % |
+| **D — learner-framed Score per line with nearby context (chosen)** | **12** | **77 %** (76 % via `gst shortlist`) |
+
+Choice probabilities go flat after ~10 options (median 9 lines above 1 %), so its tail order is arbitrary.
+D costs ~1.4M input tokens and about a minute per level.
+
+Tests (`tests/test_shortlist.py`, fake judge, no network):
+- [x] `line_state` frames the learner and situation and holds the candidate with 3 lines before and 1 after,
+      clipped at the start of the conversation.
+- [x] `shortlist` asks once per line, keeps the best `per_conversation` by rank and returns them in line order.
+- [x] `CachedJudge` asks the inner judge once per distinct request, also across instances (on-disk cache).
+- [x] `JevJudge` sends SDK `Score` questions and returns each answer's `.score`; SDK errors become `JudgeError`.
+- [x] `shortlist_digest` shows the rank and `Line.number`, puts the question above a picked answer, and does not
+      repeat a question that is itself picked.
+- [x] CLI `gst shortlist --level 1` prints the shortlist with an injected fake judge; `JudgeError` → exit 1 with
+      the message.
+- [x] Real run on level 13: small talk is gone (e.g. the negotiation conversation now yields the price,
+      discount and delivery sentences instead of "Und dir?").
+- [ ] Drills for level 13 written from the shortlist pass `gst check`.
 
 ## 7. Output Validation Recipe
 - **PRODUCE:** `uv run gst check --levels 1-10 && uv run gst render --levels 1-10`, then open

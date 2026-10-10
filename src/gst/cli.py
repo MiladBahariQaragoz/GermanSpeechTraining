@@ -1,4 +1,4 @@
-"""`gst` command line: digest, check and render speaking drills."""
+"""`gst` command line: digest, shortlist, check and render speaking drills."""
 
 import argparse
 import subprocess
@@ -9,6 +9,7 @@ from gst.config import DRILLS_DIR, OCR_ROOT, WORK_DIR
 from gst.digest import level_digest
 from gst.drills import DrillError, level_markdown, load_level
 from gst.render import Voices, render_level
+from gst.shortlist import CachedJudge, JevJudge, Judge, JudgeError, shortlist, shortlist_digest
 from gst.transcript import iter_conversations
 from gst.tts import TTS, CachedTTS, EdgeTTS, ElevenLabsTTS, PiperTTS, TTSError
 
@@ -43,6 +44,24 @@ def _digest(args) -> int:
     if not conversations:
         return 1
     print(level_digest(conversations))
+    return 0
+
+
+def make_judge(model: str | None, work_dir: Path) -> Judge:
+    return CachedJudge(JevJudge(model=model), work_dir / "jev")
+
+
+def _shortlist(args) -> int:
+    conversations = _conversations(args.level, args)
+    if not conversations:
+        return 1
+    judge = make_judge(args.model, args.work_dir)
+    try:
+        picks = shortlist(conversations, judge, per_conversation=args.per_conversation)
+    except JudgeError as error:
+        print(f"level {args.level}: {error}")
+        return 1
+    print(shortlist_digest(conversations, picks))
     return 0
 
 
@@ -134,6 +153,14 @@ def build_parser() -> argparse.ArgumentParser:
     digest.add_argument("--level", type=int, required=True)
     digest.set_defaults(run=_digest)
 
+    ranked = commands.add_parser("shortlist",
+                                 help="print the lines of a level most worth practising, ranked by Jev")
+    ranked.add_argument("--level", type=int, required=True)
+    ranked.add_argument("--per-conversation", type=int, default=12)
+    ranked.add_argument("--model", help="System One model (default: the SDK's current default)")
+    ranked.add_argument("--work-dir", type=Path, default=WORK_DIR, help="holds the jev/ answer cache")
+    ranked.set_defaults(run=_shortlist)
+
     check = commands.add_parser("check", help="validate data/drills/level-NN.json and refresh level-NN.md")
     check.set_defaults(run=_check)
 
@@ -150,7 +177,7 @@ def build_parser() -> argparse.ArgumentParser:
         command.add_argument("--min-drills", type=int, default=40)
         command.add_argument("--cap", type=int, default=4, help="max drills per conversation")
         command.add_argument("--min-conversations", type=int, default=15)
-    for command in (digest, check, render):
+    for command in (digest, ranked, check, render):
         command.add_argument("--ocr-root", type=Path, default=OCR_ROOT)
     return parser
 
