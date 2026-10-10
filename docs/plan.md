@@ -277,8 +277,39 @@ thread dies before queueing the end marker. `_edge_fetch` now drives the async `
 error reaches the retry loop.
 
 ### Task 12: Author + render levels 2–10
-- [ ] Per level: digest → write `level-NN.json` → `gst check` → commit + push (one commit per level).
+- [x] Per level: digest → write `level-NN.json` → `gst check` → commit + push (one commit per level).
 - [ ] `gst render --levels 1-10`; user spot-checks criterion 5 on two levels.
+
+### Task 13: Jev shortlist — `src/gst/shortlist.py` (levels 13–40)
+Speeds up authoring: Claude reads a ranked shortlist (~6 exchanges per conversation, ~250 lines per level)
+instead of the full digest (~1700 lines). Jev judges; code builds candidates, ranks and formats; Claude still
+writes every drill and `gst check` still validates it.
+
+Types: `Exchange(conversation, question: Line, answers: tuple[Line, ...])`; `Judge` protocol
+`ask(state: dict, questions: dict) -> dict[str, float]` (raw Score values); `JudgeError`.
+Functions: `exchanges(conv, max_answer_lines=2)`, `shortlist(conversations, judge, per_conversation=6, workers=8)`,
+`shortlist_digest(picks)`.
+Classes: `JevJudge(client_factory, model=None)` (SDK `typesafe-sdk`, optional extra `jev`; wraps
+`TypeSafeError`/`ImportError` in `JudgeError`), `CachedJudge(inner, cache_dir)` (sha256 of state + questions + model;
+replays cost nothing).
+
+Jev questions per exchange (state = topic DE/EN + the exchange's lines DE/EN), both 4-level Scores:
+- `relevance`: greeting/small talk → loosely related → typical for the situation → core exchange of the situation.
+- `speaking_value`: bare yes/no or reaction → short sentence, little content → sentence with concrete
+  information (items, amounts, times, places, preferences, reasons) → several sentences of reusable information.
+Rank = mean of both, each normalised to 0–1; top `per_conversation` kept, shown in line order.
+
+Tests (`tests/test_shortlist.py`, fake judge, no network):
+- [ ] `exchanges` pairs each `?` line with up to 2 following non-question lines, stops at the next question,
+      skips questions with no answer line.
+- [ ] `shortlist` keeps the best `per_conversation` by rank and returns them in line order.
+- [ ] `CachedJudge` asks the inner judge once per distinct request, also across instances (on-disk cache).
+- [ ] `JevJudge` sends SDK `Score` questions and returns each answer's `.score`; SDK errors become `JudgeError`.
+- [ ] `shortlist_digest` shows the conversation header, the rank and `Line.number` for every line.
+- [ ] CLI `gst shortlist --level 1` prints the shortlist with an injected fake judge; `JudgeError` → exit 1 with
+      the message.
+- [ ] Real run: `uv run --env-file .env gst shortlist --level 13`; Claude checks that small talk is gone and
+      the drills written from it pass `gst check`.
 
 ## 7. Output Validation Recipe
 - **PRODUCE:** `uv run gst check --levels 1-10 && uv run gst render --levels 1-10`, then open
