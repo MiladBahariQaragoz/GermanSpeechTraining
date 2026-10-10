@@ -1,0 +1,1025 @@
+{
+ "level": 22,
+ "drills": [
+  {
+   "conversation": 1,
+   "question_de": "Wie willst du bei der Arbeit produktiver werden?",
+   "question_en": "How do you want to become more productive at work?",
+   "answer_de": "Ich möchte bei der Arbeit produktiver sein. Zuerst ist es wichtig, eine Liste zu machen.",
+   "answer_en": "I want to be more productive at work. First, it is important to make a list.",
+   "hints": [
+    "produktiver",
+    "wichtig",
+    "Liste"
+   ],
+   "source_lines": [
+    7,
+    10
+   ]
+  },
+  {
+   "conversation": 1,
+   "question_de": "Wie oft und wie lange solltest du bei der Arbeit Pausen machen?",
+   "question_en": "How often and for how long should you take breaks at work?",
+   "answer_de": "Ich sollte jede Stunde kurze Pausen machen. Etwa fünf bis zehn Minuten sind genug.",
+   "answer_en": "I should take short breaks every hour. About five to ten minutes is enough.",
+   "hints": [
+    "Stunde",
+    "kurze",
+    "Pausen",
+    "Minuten"
+   ],
+   "source_lines": [
+    41,
+    44
+   ]
+  },
+  {
+   "conversation": 1,
+   "question_de": "Wie gehst du mit vielen E-Mails und Ablenkungen um?",
+   "question_en": "How do you deal with many emails and distractions?",
+   "answer_de": "Ich überprüfe die E-Mails zu bestimmten Zeiten. Ich versuche, Ablenkungen zu begrenzen.",
+   "answer_en": "I check emails at specific times. I try to limit distractions.",
+   "hints": [
+    "E-Mails",
+    "bestimmten",
+    "Zeiten",
+    "Ablenkungen"
+   ],
+   "source_lines": [
+    48,
+    31
+   ]
+  },
+  {
+   "conversation": 2,
+   "question_de": "Wie viele Schlafzimmer und was für eine Küche möchtest du in deiner Wohnung?",
+   "question_en": "How many bedrooms and what kind of kitchen do you want in your apartment?",
+   "answer_de": "Ich möchte, dass sie zwei Schlafzimmer hat. Eine große Küche ist wichtig für mich.",
+   "answer_en": "I want it to have two bedrooms. A big kitchen is important for me.",
+   "hints": [
+    "Schlafzimmer",
+    "große",
+    "Küche",
+    "wichtig"
+   ],
+   "source_lines": [
+    12,
+    17
+   ]
+  },
+  {
+   "conversation": 2,
+   "question_de": "Möchtest du in der Stadt oder außerhalb der Stadt leben, und wo genau?",
+   "question_en": "Do you want to live in the city or outside the city, and where exactly?",
+   "answer_de": "Ich bevorzuge die Stadt. Ich möchte in der Nähe der Bus- und Bahnhöfe sein.",
+   "answer_en": "I prefer the city. I want to be close to the bus and train stations.",
+   "hints": [
+    "bevorzuge",
+    "Stadt",
+    "Nähe",
+    "Bahnhöfe"
+   ],
+   "source_lines": [
+    22,
+    28
+   ]
+  },
+  {
+   "conversation": 2,
+   "question_de": "Wie hoch ist dein Budget für die Wohnung, und brauchst du einen Parkplatz?",
+   "question_en": "What is your budget for the apartment, and do you need a parking space?",
+   "answer_de": "Ich kann etwa tausend Dollar pro Monat ausgeben. Ich habe kein Auto, daher ist Parken für mich nicht wichtig.",
+   "answer_en": "I can spend about a thousand dollars a month. I do not have a car, so parking is not important for me.",
+   "hints": [
+    "tausend",
+    "Dollar",
+    "Monat",
+    "Auto"
+   ],
+   "source_lines": [
+    44,
+    58
+   ]
+  },
+  {
+   "conversation": 3,
+   "question_de": "Was ist dir bei Bett und Zimmergröße im Hotel wichtig?",
+   "question_en": "What is important to you about the bed and room size in a hotel?",
+   "answer_de": "Ich denke, ein großes Bett ist wichtig. Ich mag ein weiches Bett und ein geräumiges Zimmer.",
+   "answer_en": "I think a big bed is important. I like a soft bed and a spacious room.",
+   "hints": [
+    "Bett",
+    "weiches",
+    "geräumiges",
+    "Zimmer"
+   ],
+   "source_lines": [
+    10,
+    14,
+    22
+   ]
+  },
+  {
+   "conversation": 3,
+   "question_de": "Was bevorzugen Sie beim Badezimmer, und was ist für Sie ein Muss?",
+   "question_en": "What do you prefer for the bathroom, and what is a must for you?",
+   "answer_de": "Ich bevorzuge ein privates Badezimmer, nicht geteilt. Eine Kaffeemaschine ist ein Muss für mich!",
+   "answer_en": "I prefer a private bathroom, not shared. A coffee machine is a must for me!",
+   "hints": [
+    "privates",
+    "Badezimmer",
+    "Kaffeemaschine",
+    "Muss"
+   ],
+   "source_lines": [
+    38,
+    54
+   ]
+  },
+  {
+   "conversation": 3,
+   "question_de": "Was ist in einem Hotelzimmer bei heißem Wetter unerlässlich, und was wäre wunderbar?",
+   "question_en": "What is essential in a hotel room in hot weather, and what would be wonderful?",
+   "answer_de": "Klimaanlage ist unerlässlich, besonders bei heißem Wetter. Eine schöne Aussicht wäre wunderbar!",
+   "answer_en": "Air conditioning is essential, especially in hot weather. A nice view would be wonderful!",
+   "hints": [
+    "Klimaanlage",
+    "unerlässlich",
+    "Aussicht",
+    "wunderbar"
+   ],
+   "source_lines": [
+    63,
+    72
+   ]
+  },
+  {
+   "conversation": 4,
+   "question_de": "Wie kann Solarenergie deine Stromrechnungen senken?",
+   "question_en": "How can solar energy lower your electricity bills?",
+   "answer_de": "Wenn du Solarpanels verwendest, erzeugst du deinen eigenen Strom. Es reduziert die Stromrechnungen.",
+   "answer_en": "When you use solar panels, you make your own electricity. It reduces electricity bills.",
+   "hints": [
+    "Solarpanels",
+    "eigenen",
+    "Strom",
+    "Stromrechnungen"
+   ],
+   "source_lines": [
+    20,
+    18
+   ]
+  },
+  {
+   "conversation": 4,
+   "question_de": "Sind Solarpanels teuer, und wie lange dauert es, bis sie sich lohnen?",
+   "question_en": "Are solar panels expensive, and how long does it take until they pay off?",
+   "answer_de": "Sie können teuer sein, aber sie sparen im Laufe der Zeit Geld. Es kann etwa fünf bis zehn Jahre dauern.",
+   "answer_en": "They can be expensive, but they save money over time. It can take about five to ten years.",
+   "hints": [
+    "teuer",
+    "sparen",
+    "Geld",
+    "Jahre"
+   ],
+   "source_lines": [
+    25,
+    27
+   ]
+  },
+  {
+   "conversation": 4,
+   "question_de": "Funktionieren Solarpanels an bewölkten Tagen, und wie helfen sie der Umwelt?",
+   "question_en": "Do solar panels work on cloudy days, and how do they help the environment?",
+   "answer_de": "Solarpanels funktionieren auch an bewölkten Tagen. Es reduziert die Nutzung fossiler Brennstoffe.",
+   "answer_en": "Solar panels also work on cloudy days. It reduces the use of fossil fuels.",
+   "hints": [
+    "Solarpanels",
+    "bewölkten",
+    "fossiler",
+    "Brennstoffe"
+   ],
+   "source_lines": [
+    34,
+    44
+   ]
+  },
+  {
+   "conversation": 5,
+   "question_de": "Welche Sehenswürdigkeit möchtest du in der Stadt zuerst sehen?",
+   "question_en": "Which landmark do you want to see first in the city?",
+   "answer_de": "Ich möchte zuerst das alte Schloss sehen. Es ist nicht weit von hier.",
+   "answer_en": "I want to see the old castle first. It is not far from here.",
+   "hints": [
+    "alte",
+    "Schloss",
+    "weit"
+   ],
+   "source_lines": [
+    11,
+    12,
+    26
+   ]
+  },
+  {
+   "conversation": 5,
+   "question_de": "Wie lange dauert es zu Fuß bis zum Schloss, und was seht ihr danach?",
+   "question_en": "How long does it take to walk to the castle, and what do you see afterwards?",
+   "answer_de": "Es wird ungefähr zwanzig Minuten dauern. Nach dem Schloss werden wir den großen Glockenturm sehen.",
+   "answer_en": "It will take about twenty minutes. After the castle, we will see the big clock tower.",
+   "hints": [
+    "ungefähr",
+    "zwanzig",
+    "Minuten",
+    "Glockenturm"
+   ],
+   "source_lines": [
+    29,
+    39
+   ]
+  },
+  {
+   "conversation": 5,
+   "question_de": "Wo könnt ihr in der Nähe des Glockenturms zu Mittag essen?",
+   "question_en": "Where can you have lunch near the clock tower?",
+   "answer_de": "Es gibt einen schönen Park in der Nähe des Glockenturms. Wir können im Park zu Mittag essen.",
+   "answer_en": "There is a nice park near the clock tower. We can have lunch in the park.",
+   "hints": [
+    "Park",
+    "Nähe",
+    "Glockenturms",
+    "Mittag"
+   ],
+   "source_lines": [
+    48,
+    52
+   ]
+  },
+  {
+   "conversation": 6,
+   "question_de": "Was möchtest du in einem Spa machen?",
+   "question_en": "What do you want to do at a spa?",
+   "answer_de": "Ich möchte mich entspannen und vielleicht eine Massage bekommen.",
+   "answer_en": "I want to relax and maybe get a massage.",
+   "hints": [
+    "entspannen",
+    "Massage",
+    "bekommen"
+   ],
+   "source_lines": [
+    12
+   ]
+  },
+  {
+   "conversation": 6,
+   "question_de": "Wie findest du ein gutes Spa in deiner Gegend?",
+   "question_en": "How do you find a good spa in your area?",
+   "answer_de": "Du solltest ein Spa mit guten Bewertungen finden. Du kannst online suchen.",
+   "answer_en": "You should find a spa with good reviews. You can look online.",
+   "hints": [
+    "Spa",
+    "guten",
+    "Bewertungen",
+    "online"
+   ],
+   "source_lines": [
+    23,
+    26
+   ]
+  },
+  {
+   "conversation": 6,
+   "question_de": "Welche Dienstleistungen und Preise haben die Spas?",
+   "question_en": "What services and prices do the spas have?",
+   "answer_de": "Sie haben Gesichtsbehandlungen, Körperpeelings und sogar eine Sauna. Die Preise sind angemessen.",
+   "answer_en": "They have facials, body scrubs, and even a sauna. The prices are reasonable.",
+   "hints": [
+    "Gesichtsbehandlungen",
+    "Körperpeelings",
+    "Sauna",
+    "Preise"
+   ],
+   "source_lines": [
+    61,
+    45
+   ]
+  },
+  {
+   "conversation": 7,
+   "question_de": "Wie fühlen Sie sich manchmal, und woran liegt das vielleicht?",
+   "question_en": "How do you sometimes feel, and what might be the reason?",
+   "answer_de": "Ich fühle mich manchmal müde. Ich glaube, ich schlafe nicht genug.",
+   "answer_en": "I sometimes feel tired. I think I don't sleep enough.",
+   "hints": [
+    "müde",
+    "glaube",
+    "schlafe",
+    "genug"
+   ],
+   "source_lines": [
+    19,
+    20
+   ]
+  },
+  {
+   "conversation": 7,
+   "question_de": "Wie viele Stunden schlafen Sie, und warum gehen Sie nicht früher ins Bett?",
+   "question_en": "How many hours do you sleep, and why don't you go to bed earlier?",
+   "answer_de": "Ich schlafe etwa fünf oder sechs Stunden. Es ist schwer, früh ins Bett zu gehen.",
+   "answer_en": "I sleep about five or six hours. It is hard to go to bed early.",
+   "hints": [
+    "Stunden",
+    "schwer",
+    "früh",
+    "Bett"
+   ],
+   "source_lines": [
+    23,
+    28
+   ]
+  },
+  {
+   "conversation": 7,
+   "question_de": "Wie oft kommen Sie zum Arzt, und was müssen Sie noch tun?",
+   "question_en": "How often do you come to the doctor, and what else do you need to do?",
+   "answer_de": "Ich versuche, alle sechs Monate zu kommen. Ich muss mehr Sport treiben.",
+   "answer_en": "I try to come every six months. I need to exercise more.",
+   "hints": [
+    "sechs",
+    "Monate",
+    "Sport",
+    "treiben"
+   ],
+   "source_lines": [
+    14,
+    54
+   ]
+  },
+  {
+   "conversation": 8,
+   "question_de": "Was möchten Sie in der Stadt machen, und welches Fahrrad wollen Sie?",
+   "question_en": "What do you want to do in the city, and which bike do you want?",
+   "answer_de": "Ich möchte die Stadt mit dem Fahrrad sehen. Ich möchte ein Stadtrad!",
+   "answer_en": "I want to see the city by bike. I want a city bike!",
+   "hints": [
+    "Stadt",
+    "Fahrrad",
+    "Stadtrad"
+   ],
+   "source_lines": [
+    4,
+    30
+   ]
+  },
+  {
+   "conversation": 8,
+   "question_de": "Wie lange möchten Sie das Fahrrad mieten, und welchen Ausweis haben Sie dabei?",
+   "question_en": "How long do you want to rent the bike, and which ID do you have with you?",
+   "answer_de": "Ich glaube, ich möchte es für vier Stunden. Ich habe meinen Reisepass.",
+   "answer_en": "I think I want it for four hours. I have my passport.",
+   "hints": [
+    "vier",
+    "Stunden",
+    "Reisepass"
+   ],
+   "source_lines": [
+    33,
+    36
+   ]
+  },
+  {
+   "conversation": 8,
+   "question_de": "Brauchen Sie auch einen Helm, und was möchten Sie jetzt tun?",
+   "question_en": "Do you also need a helmet, and what would you like to do now?",
+   "answer_de": "Ich möchte einen Helm. Ja, ich möchte die Stadt erkunden!",
+   "answer_en": "I want a helmet. Yes, I want to explore the city!",
+   "hints": [
+    "Helm",
+    "Stadt",
+    "erkunden"
+   ],
+   "source_lines": [
+    45,
+    70
+   ]
+  },
+  {
+   "conversation": 9,
+   "question_de": "Was magst du am Leben in einer kleinen Stadt?",
+   "question_en": "What do you like about life in a small town?",
+   "answer_de": "Ich mag, wie ruhig und friedlich es ist. Es gibt weniger Lärm als in großen Städten.",
+   "answer_en": "I like how quiet and peaceful it is. There is less noise than in big cities.",
+   "hints": [
+    "ruhig",
+    "friedlich",
+    "weniger",
+    "Lärm"
+   ],
+   "source_lines": [
+    10,
+    13
+   ]
+  },
+  {
+   "conversation": 9,
+   "question_de": "Warum fühlst du dich in einer kleinen Stadt sicher?",
+   "question_en": "Why do you feel safe in a small town?",
+   "answer_de": "Kleine Städte fühlen sich sicher an. Und ich kenne meine Nachbarn.",
+   "answer_en": "Small towns feel safe. And I know my neighbors.",
+   "hints": [
+    "Städte",
+    "sicher",
+    "kenne",
+    "Nachbarn"
+   ],
+   "source_lines": [
+    21,
+    24
+   ]
+  },
+  {
+   "conversation": 9,
+   "question_de": "Welche Vorteile haben das Einkaufen und die Luft in einer kleinen Stadt?",
+   "question_en": "What advantages do shopping and the air have in a small town?",
+   "answer_de": "Ich kann frische Lebensmittel von lokalen Bauern kaufen. Die Luft ist sauberer als in einer großen Stadt.",
+   "answer_en": "I can buy fresh food from local farmers. The air is cleaner than in a big city.",
+   "hints": [
+    "frische",
+    "Lebensmittel",
+    "Bauern",
+    "Luft",
+    "sauberer"
+   ],
+   "source_lines": [
+    44,
+    50
+   ]
+  },
+  {
+   "conversation": 10,
+   "question_de": "Wie kann dir eine starke Online-Präsenz helfen?",
+   "question_en": "How can a strong online presence help you?",
+   "answer_de": "Sie kann mir helfen, Jobs zu finden oder neue Freunde zu gewinnen.",
+   "answer_en": "It can help me find jobs or make new friends.",
+   "hints": [
+    "Jobs",
+    "finden",
+    "Freunde",
+    "gewinnen"
+   ],
+   "source_lines": [
+    14
+   ]
+  },
+  {
+   "conversation": 10,
+   "question_de": "Was postest du auf deinem Profil in sozialen Medien?",
+   "question_en": "What do you post on your social media profile?",
+   "answer_de": "Ich poste normalerweise über meine Reisen und meine Hobbys. Ich teile Bilder und Updates.",
+   "answer_en": "I usually post about my travels and my hobbies. I share pictures and updates.",
+   "hints": [
+    "Reisen",
+    "Hobbys",
+    "Bilder",
+    "Updates"
+   ],
+   "source_lines": [
+    21,
+    18
+   ]
+  },
+  {
+   "conversation": 10,
+   "question_de": "Welchen Seiten folgst du online?",
+   "question_en": "Which pages do you follow online?",
+   "answer_de": "Ich folge Seiten über Essen, Reisen und Technologie. Ich folge auch Seiten über Gesundheit und Fitness.",
+   "answer_en": "I follow pages about food, travel, and technology. I also follow pages about health and fitness.",
+   "hints": [
+    "Essen",
+    "Technologie",
+    "Gesundheit",
+    "Fitness"
+   ],
+   "source_lines": [
+    32,
+    34
+   ]
+  },
+  {
+   "conversation": 11,
+   "question_de": "Welchen Internetanbieter hast du gewählt, und worauf hast du geachtet?",
+   "question_en": "Which internet provider did you choose, and what did you pay attention to?",
+   "answer_de": "Ich habe ein lokales Unternehmen gewählt. Ich habe auf die Geschwindigkeit, den Preis und den Kundenservice geachtet.",
+   "answer_en": "I chose a local company. I looked at the speed, the price, and customer service.",
+   "hints": [
+    "lokales",
+    "Unternehmen",
+    "Geschwindigkeit",
+    "Kundenservice"
+   ],
+   "source_lines": [
+    15,
+    21
+   ]
+  },
+  {
+   "conversation": 11,
+   "question_de": "Wie viel Geld willst du für das Internet ausgeben, und was ist dir wichtig?",
+   "question_en": "How much money do you want to spend on the internet, and what is important to you?",
+   "answer_de": "Ich möchte nicht zu viel Geld ausgeben. Der Preis ist auch wichtig.",
+   "answer_en": "I don't want to spend too much money. The price is also important.",
+   "hints": [
+    "Geld",
+    "ausgeben",
+    "Preis",
+    "wichtig"
+   ],
+   "source_lines": [
+    30,
+    28
+   ]
+  },
+  {
+   "conversation": 11,
+   "question_de": "Wofür benutzt du das Internet?",
+   "question_en": "What do you use the internet for?",
+   "answer_de": "Ich will schnelles Internet für die Arbeit. Ich benutze es für E-Mails und Videos.",
+   "answer_en": "I want fast internet for work. I use it for emails and videos.",
+   "hints": [
+    "schnelles",
+    "Internet",
+    "Arbeit",
+    "E-Mails",
+    "Videos"
+   ],
+   "source_lines": [
+    69,
+    71
+   ]
+  },
+  {
+   "conversation": 12,
+   "question_de": "Was ist bei der Jobsuche dein erster Schritt, und wie lang soll dein Lebenslauf sein?",
+   "question_en": "What is your first step in a job search, and how long should your resume be?",
+   "answer_de": "Zuerst aktualisiere ich meinen Lebenslauf. Ich versuche, ihn auf eine Seite zu beschränken.",
+   "answer_en": "First, I update my resume. I try to keep it to one page.",
+   "hints": [
+    "aktualisiere",
+    "Lebenslauf",
+    "Seite",
+    "beschränken"
+   ],
+   "source_lines": [
+    13,
+    17
+   ]
+  },
+  {
+   "conversation": 12,
+   "question_de": "Wie bewirbst du dich bei mehreren Jobs gleichzeitig?",
+   "question_en": "How do you apply to several jobs at the same time?",
+   "answer_de": "Ich bewerbe mich bei mehreren, aber ich achte darauf, jede Bewerbung zu personalisieren.",
+   "answer_en": "I apply to several, but I make sure to personalize each application.",
+   "hints": [
+    "bewerbe",
+    "mehreren",
+    "Bewerbung",
+    "personalisieren"
+   ],
+   "source_lines": [
+    41
+   ]
+  },
+  {
+   "conversation": 12,
+   "question_de": "Was solltest du zum Vorstellungsgespräch mitbringen und vorher üben?",
+   "question_en": "What should you bring to the interview and practise beforehand?",
+   "answer_de": "Ich bringe Kopien meines Lebenslaufs und eine Liste von Fragen mit. Vorher übe ich gängige Interviewfragen.",
+   "answer_en": "I bring copies of my resume and a list of questions. Beforehand, I practise common interview questions.",
+   "hints": [
+    "Kopien",
+    "Lebenslaufs",
+    "Liste",
+    "Interviewfragen"
+   ],
+   "source_lines": [
+    59,
+    51
+   ]
+  },
+  {
+   "conversation": 13,
+   "question_de": "An welchem Tag und um welche Uhrzeit wollt ihr die Garagenfete beginnen?",
+   "question_en": "On which day and at what time do you want to start the garage sale?",
+   "answer_de": "Samstag passt mir. Lass uns um neun Uhr morgens anfangen.",
+   "answer_en": "Saturday works for me. Let's start at nine in the morning.",
+   "hints": [
+    "Samstag",
+    "neun",
+    "morgens",
+    "anfangen"
+   ],
+   "source_lines": [
+    17,
+    19
+   ]
+  },
+  {
+   "conversation": 13,
+   "question_de": "Was braucht ihr für die Schilder, und was schreibt ihr darauf?",
+   "question_en": "What do you need for the signs, and what do you write on them?",
+   "answer_de": "Wir brauchen Schilder für die Vorderseite des Hauses. Wir können Garagenfete und die Uhrzeit schreiben.",
+   "answer_en": "We need signs for the front of the house. We can write garage sale and the time.",
+   "hints": [
+    "Schilder",
+    "Vorderseite",
+    "Garagenfete",
+    "Uhrzeit"
+   ],
+   "source_lines": [
+    31,
+    33
+   ]
+  },
+  {
+   "conversation": 13,
+   "question_de": "Welche Preise legt ihr für die Artikel fest?",
+   "question_en": "What prices do you set for the items?",
+   "answer_de": "Wir müssen die Preise festlegen. Ein Dollar für kleine Dinge und vielleicht fünf Dollar für größere Artikel.",
+   "answer_en": "We need to decide the prices. One dollar for small things and maybe five dollars for bigger items.",
+   "hints": [
+    "Preise",
+    "Dollar",
+    "kleine",
+    "größere",
+    "Artikel"
+   ],
+   "source_lines": [
+    63,
+    64,
+    65
+   ]
+  },
+  {
+   "conversation": 14,
+   "question_de": "Worüber möchtest du in der Gemeinschaft sprechen, und warum?",
+   "question_en": "What do you want to talk about in the community, and why?",
+   "answer_de": "Ich möchte über die Sicherheit in der Gemeinschaft diskutieren. Ich denke, es ist sehr wichtig, sich in unserer Nachbarschaft sicher zu fühlen.",
+   "answer_en": "I want to discuss community safety. I think it is very important to feel safe in our neighborhood.",
+   "hints": [
+    "Sicherheit",
+    "Gemeinschaft",
+    "Nachbarschaft",
+    "sicher"
+   ],
+   "source_lines": [
+    10,
+    13
+   ]
+  },
+  {
+   "conversation": 14,
+   "question_de": "Was macht dir nachts Sorgen, und was versuchst du deshalb?",
+   "question_en": "What worries you at night, and what do you try to do because of it?",
+   "answer_de": "Ich sehe nachts einige seltsame Leute. Ich versuche, nachts nicht allein zu gehen.",
+   "answer_en": "I see some strange people at night. I try not to walk alone at night.",
+   "hints": [
+    "nachts",
+    "seltsame",
+    "Leute",
+    "allein"
+   ],
+   "source_lines": [
+    21,
+    26
+   ]
+  },
+  {
+   "conversation": 14,
+   "question_de": "Was könnt ihr in einer Sicherheitsgruppe tun?",
+   "question_en": "What can you do in a safety group?",
+   "answer_de": "Wir können uns treffen, um Sicherheitsprobleme zu besprechen. Wir können auch die Polizei einladen.",
+   "answer_en": "We can meet to discuss safety problems. We can also invite the police.",
+   "hints": [
+    "Sicherheitsprobleme",
+    "besprechen",
+    "Polizei",
+    "einladen"
+   ],
+   "source_lines": [
+    33,
+    38
+   ]
+  },
+  {
+   "conversation": 15,
+   "question_de": "Wie lange lebst du schon hier, und warum hast du diese Nachbarschaft gewählt?",
+   "question_en": "How long have you lived here, and why did you choose this neighborhood?",
+   "answer_de": "Ich lebe seit fünf Jahren hier. Ich mochte die Parks und die Schulen.",
+   "answer_en": "I have lived here for five years. I liked the parks and the schools.",
+   "hints": [
+    "fünf",
+    "Jahren",
+    "Parks",
+    "Schulen"
+   ],
+   "source_lines": [
+    10,
+    15
+   ]
+  },
+  {
+   "conversation": 15,
+   "question_de": "Was beunruhigt dich in deiner Nachbarschaft, und was wäre gut?",
+   "question_en": "What worries you in your neighborhood, and what would be good?",
+   "answer_de": "Manchmal fühle ich mich nachts besorgt. Es wäre gut, eine Sicherheitsgruppe zu bilden.",
+   "answer_en": "Sometimes I feel worried at night. It would be good to form a safety group.",
+   "hints": [
+    "nachts",
+    "besorgt",
+    "Sicherheitsgruppe",
+    "bilden"
+   ],
+   "source_lines": [
+    34,
+    38
+   ]
+  },
+  {
+   "conversation": 15,
+   "question_de": "Wie könnt ihr euch als Nachbarn gegenseitig unterstützen?",
+   "question_en": "How can you support each other as neighbors?",
+   "answer_de": "Wir können uns gegenseitig helfen. Später können wir unsere Telefonnummern austauschen.",
+   "answer_en": "We can help each other. Later we can exchange our phone numbers.",
+   "hints": [
+    "gegenseitig",
+    "helfen",
+    "Telefonnummern",
+    "austauschen"
+   ],
+   "source_lines": [
+    42,
+    61
+   ]
+  },
+  {
+   "conversation": 16,
+   "question_de": "Was solltest du zuerst tun, um dich auf den Wohltätigkeitslauf vorzubereiten?",
+   "question_en": "What should you do first to prepare for the charity run?",
+   "answer_de": "Zuerst sollte ich gute Laufschuhe wählen. Ich bin mir nicht sicher, ob meine Schuhe gut zum Laufen sind.",
+   "answer_en": "First, I should choose good running shoes. I am not sure if my shoes are good for running.",
+   "hints": [
+    "Laufschuhe",
+    "wählen",
+    "Schuhe",
+    "Laufen"
+   ],
+   "source_lines": [
+    11,
+    13
+   ]
+  },
+  {
+   "conversation": 16,
+   "question_de": "Was solltest du am Tag vor dem Lauf und am Tag des Laufs essen?",
+   "question_en": "What should you eat the day before the run and on the day of the run?",
+   "answer_de": "Am Tag vor dem Lauf versuche ich, Pasta oder Reis zu essen. Am Tag des Laufs esse ich ein leichtes Frühstück.",
+   "answer_en": "The day before the run, I try to eat pasta or rice. On the day of the run, I eat a light breakfast.",
+   "hints": [
+    "Pasta",
+    "Reis",
+    "leichtes",
+    "Frühstück"
+   ],
+   "source_lines": [
+    36,
+    42
+   ]
+  },
+  {
+   "conversation": 16,
+   "question_de": "Wann solltest du ankommen, und was musst du mitbringen?",
+   "question_en": "When should you arrive, and what do you need to bring?",
+   "answer_de": "Ich komme mindestens eine Stunde bevor der Lauf beginnt. Ich bringe mein Handy, Wasser und ein kleines Handtuch mit.",
+   "answer_en": "I arrive at least one hour before the run starts. I bring my phone, water, and a small towel.",
+   "hints": [
+    "Stunde",
+    "Handy",
+    "Wasser",
+    "Handtuch"
+   ],
+   "source_lines": [
+    46,
+    78
+   ]
+  },
+  {
+   "conversation": 17,
+   "question_de": "Wie sparst du auf Reisen Geld bei Verkehrsmitteln und Flügen?",
+   "question_en": "How do you save money on trips with transport and flights?",
+   "answer_de": "Ich benutze öffentliche Verkehrsmittel. Ich versuche, Flüge im Voraus zu buchen.",
+   "answer_en": "I use public transport. I try to book flights in advance.",
+   "hints": [
+    "öffentliche",
+    "Verkehrsmittel",
+    "Flüge",
+    "buchen"
+   ],
+   "source_lines": [
+    11,
+    19
+   ]
+  },
+  {
+   "conversation": 17,
+   "question_de": "Wo übernachtest du günstig auf Reisen, und wie isst du billig?",
+   "question_en": "Where do you stay cheaply when travelling, and how do you eat cheaply?",
+   "answer_de": "Ich nutze Hostels oder Budget-Hotels. Wenn mein Hostel eine Küche hat, nutze ich sie.",
+   "answer_en": "I use hostels or budget hotels. If my hostel has a kitchen, I use it.",
+   "hints": [
+    "Hostels",
+    "Budget-Hotels",
+    "Küche"
+   ],
+   "source_lines": [
+    23,
+    33
+   ]
+  },
+  {
+   "conversation": 17,
+   "question_de": "Was kann man in Städten kostenlos machen?",
+   "question_en": "What can you do for free in cities?",
+   "answer_de": "Viele Städte haben kostenlose Stadtführungen. Einige Museen haben an bestimmten Tagen freien Eintritt.",
+   "answer_en": "Many cities have free walking tours. Some museums have free entrance on certain days.",
+   "hints": [
+    "kostenlose",
+    "Stadtführungen",
+    "Museen",
+    "Eintritt"
+   ],
+   "source_lines": [
+    44,
+    48
+   ]
+  },
+  {
+   "conversation": 18,
+   "question_de": "Welche Art von Kunst magst du?",
+   "question_en": "What kind of art do you like?",
+   "answer_de": "Ich mag Gemälde, und ich mag klassische Kunst.",
+   "answer_en": "I like paintings, and I like classic art.",
+   "hints": [
+    "Gemälde",
+    "klassische",
+    "Kunst"
+   ],
+   "source_lines": [
+    8,
+    40
+   ]
+  },
+  {
+   "conversation": 18,
+   "question_de": "Was magst du an der Arbeit deiner Lieblingskünstlerin?",
+   "question_en": "What do you like about your favorite artist's work?",
+   "answer_de": "Ich mag die Arbeit einer lokalen Künstlerin. Ich mag, wie sie helle Farben verwendet.",
+   "answer_en": "I like the work of a local artist. I like the way she uses bright colors.",
+   "hints": [
+    "Arbeit",
+    "lokalen",
+    "Künstlerin",
+    "helle",
+    "Farben"
+   ],
+   "source_lines": [
+    27,
+    34
+   ]
+  },
+  {
+   "conversation": 18,
+   "question_de": "Was gefällt dir an den Farben in einem Gemälde?",
+   "question_en": "What do you like about the colors in a painting?",
+   "answer_de": "Die Farben sind so lebendig! Ich liebe, wie der Künstler die Farben gemischt hat.",
+   "answer_en": "The colors are so vibrant! I love how the artist mixed the colors.",
+   "hints": [
+    "Farben",
+    "lebendig",
+    "Künstler",
+    "gemischt"
+   ],
+   "source_lines": [
+    66,
+    68
+   ]
+  },
+  {
+   "conversation": 19,
+   "question_de": "Wann bist du in dein neues Zuhause eingezogen, und was machst du noch?",
+   "question_en": "When did you move into your new home, and what are you still doing?",
+   "answer_de": "Ich bin letzte Woche eingezogen. Ich packe immer noch aus.",
+   "answer_en": "I just moved in last week. I am still unpacking.",
+   "hints": [
+    "letzte",
+    "Woche",
+    "eingezogen",
+    "packe"
+   ],
+   "source_lines": [
+    11,
+    12
+   ]
+  },
+  {
+   "conversation": 19,
+   "question_de": "Welche Hobbys hast du?",
+   "question_en": "What hobbies do you have?",
+   "answer_de": "Ich male gerne und lese. Ich koche gerne und spiele Fußball.",
+   "answer_en": "I like painting and reading. I enjoy cooking and playing soccer.",
+   "hints": [
+    "male",
+    "lese",
+    "koche",
+    "Fußball"
+   ],
+   "source_lines": [
+    26,
+    28
+   ]
+  },
+  {
+   "conversation": 19,
+   "question_de": "Was machst du gerne am Wochenende, und was isst du gern?",
+   "question_en": "What do you like to do on weekends, and what do you like to eat?",
+   "answer_de": "Ich entspanne mich gerne und verbringe Zeit mit Freunden. Ich mag Gemüse und Fisch.",
+   "answer_en": "I like to relax and spend time with friends. I enjoy vegetables and fish.",
+   "hints": [
+    "entspanne",
+    "Zeit",
+    "Freunden",
+    "Gemüse",
+    "Fisch"
+   ],
+   "source_lines": [
+    68,
+    53
+   ]
+  },
+  {
+   "conversation": 20,
+   "question_de": "Was für ein Zuhause möchtest du kaufen?",
+   "question_en": "What kind of home do you want to buy?",
+   "answer_de": "Ich möchte ein kleines Haus mit einem Garten. Ich möchte ein paar Blumen und vielleicht einen kleinen Baum.",
+   "answer_en": "I want a small house with a garden. I want some flowers and maybe a small tree.",
+   "hints": [
+    "kleines",
+    "Haus",
+    "Garten",
+    "Blumen",
+    "Baum"
+   ],
+   "source_lines": [
+    13,
+    17
+   ]
+  },
+  {
+   "conversation": 20,
+   "question_de": "Was brauchst du in der Küche, und wie viele Schlafzimmer willst du?",
+   "question_en": "What do you need in the kitchen, and how many bedrooms do you want?",
+   "answer_de": "Ich brauche eine gute Küche zum Kochen, aber nicht zu groß. Ich brauche zwei Schlafzimmer.",
+   "answer_en": "I need a good kitchen for cooking, but not too big. I need two bedrooms.",
+   "hints": [
+    "Küche",
+    "Kochen",
+    "groß",
+    "Schlafzimmer"
+   ],
+   "source_lines": [
+    40,
+    42,
+    47
+   ]
+  },
+  {
+   "conversation": 20,
+   "question_de": "Wie hoch ist dein Budget für das erste Zuhause, und was suchst du?",
+   "question_en": "What is your budget for your first home, and what are you looking for?",
+   "answer_de": "Mein Budget ist ungefähr zweihunderttausend. Ich möchte ein gutes Angebot finden.",
+   "answer_en": "My budget is around two hundred thousand. I want to find a good deal.",
+   "hints": [
+    "Budget",
+    "zweihunderttausend",
+    "gutes",
+    "Angebot"
+   ],
+   "source_lines": [
+    54,
+    56,
+    59
+   ]
+  }
+ ]
+}
