@@ -5,10 +5,13 @@ import re
 import unicodedata
 from collections.abc import Iterable, Iterator
 from dataclasses import dataclass
+from difflib import SequenceMatcher
 from pathlib import Path
 
 # The EN-only slide between the natural dialogue and its "listen and repeat" replay.
 REPLAY_MARKER = "listen and repeat"
+# How close the first slide must be to the folder topic to count as the title slide.
+TITLE_SIMILARITY = 0.9
 
 _LEVEL_DIR = re.compile(r"^(\d+) - Level \d+ - ([ABC][12]) - ")
 _CONVERSATION_DIR = re.compile(r"^(\d+)\s*-\s*(.+)$")
@@ -49,9 +52,15 @@ def parse_conversation_dir(name: str) -> tuple[int, str]:
 
 
 def _fold(text: str) -> str:
-    """Casefold and strip accents, so OCR's "Cafe" matches the folder's "Café"."""
+    """Casefold and keep only base letters and digits, so OCR's "Cafe" matches "Café"
+    and "Check-in:" matches a folder name that could not hold the colon."""
     decomposed = unicodedata.normalize("NFKD", text.casefold())
-    return "".join(c for c in decomposed if not unicodedata.combining(c)).strip()
+    return "".join(c for c in decomposed if c.isalnum())
+
+
+def _is_title(text: str, topic: str) -> bool:
+    """True when `text` is the title slide for `topic`, tolerating a stray OCR character."""
+    return SequenceMatcher(None, _fold(text), _fold(topic)).ratio() >= TITLE_SIMILARITY
 
 
 def load_conversation(folder: Path) -> Conversation:
@@ -66,7 +75,7 @@ def load_conversation(folder: Path) -> Conversation:
     )
     first_pass = [s for s in slides[:marker] if s["german"]]
     topic_en = ""
-    if first_pass and _fold(first_pass[0]["german"]) == _fold(topic_de):
+    if first_pass and _is_title(first_pass[0]["german"], topic_de):
         topic_en = first_pass.pop(0)["english"]
 
     lines = [Line(n, s["german"], s["english"]) for n, s in enumerate(first_pass, start=1)]
