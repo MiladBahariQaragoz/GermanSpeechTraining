@@ -1,0 +1,1050 @@
+{
+ "level": 21,
+ "drills": [
+  {
+   "conversation": 1,
+   "question_de": "Was hast du zuletzt gemalt?",
+   "question_en": "What did you paint recently?",
+   "answer_de": "Ich habe eine Landschaft mit Bäumen und einem Fluss gemalt. Ich fühle mich ruhig, wenn ich etwas erschaffe.",
+   "answer_en": "I painted a landscape with trees and a river. I feel calm when I create something.",
+   "hints": [
+    "Landschaft",
+    "Bäumen",
+    "Fluss",
+    "ruhig"
+   ],
+   "source_lines": [
+    14,
+    39
+   ]
+  },
+  {
+   "conversation": 1,
+   "question_de": "Worüber schreibst du in deiner Freizeit?",
+   "question_en": "What do you write about in your free time?",
+   "answer_de": "Ich schreibe gerne Geschichten und Gedichte. Ich schreibe über meine Träume und mein tägliches Leben.",
+   "answer_en": "I like to write stories and poems. I write about my dreams and my daily life.",
+   "hints": [
+    "Geschichten",
+    "Gedichte",
+    "Träume",
+    "tägliches"
+   ],
+   "source_lines": [
+    42,
+    45
+   ]
+  },
+  {
+   "conversation": 1,
+   "question_de": "Spielst du ein Musikinstrument, und was möchtest du lernen?",
+   "question_en": "Do you play a musical instrument, and what would you like to learn?",
+   "answer_de": "Ich spiele ein wenig Gitarre. Ich würde gerne mehr über Fotografie lernen.",
+   "answer_en": "I play the guitar a little. I would like to learn more about photography.",
+   "hints": [
+    "Gitarre",
+    "Fotografie",
+    "lernen"
+   ],
+   "source_lines": [
+    56,
+    75
+   ]
+  },
+  {
+   "conversation": 2,
+   "question_de": "Was möchten Sie im Café bestellen?",
+   "question_en": "What would you like to order at the café?",
+   "answer_de": "Ich hätte gerne einen Cappuccino, bitte. Mein Freund nimmt einen Espresso.",
+   "answer_en": "I would like a cappuccino, please. My friend is having an espresso.",
+   "hints": [
+    "Cappuccino",
+    "Freund",
+    "Espresso"
+   ],
+   "source_lines": [
+    9,
+    11
+   ]
+  },
+  {
+   "conversation": 2,
+   "question_de": "Worüber möchtest du heute mit mir brainstormen?",
+   "question_en": "What would you like to brainstorm with me about today?",
+   "answer_de": "Ich möchte über unsere Projektideen sprechen. Wir brauchen eine einzigartige Idee für unsere Präsentation.",
+   "answer_en": "I want to discuss our project ideas. We need a unique idea for our presentation.",
+   "hints": [
+    "Projektideen",
+    "einzigartige",
+    "Idee",
+    "Präsentation"
+   ],
+   "source_lines": [
+    15,
+    18
+   ]
+  },
+  {
+   "conversation": 2,
+   "question_de": "Wie können wir unsere Arbeit am Projekt planen?",
+   "question_en": "How can we plan our work on the project?",
+   "answer_de": "Lass uns einen Zeitplan für unsere Arbeit festlegen. Wir könnten diese Woche die Recherche abschließen.",
+   "answer_en": "Let's set a timeline for our work. We could finish the research this week.",
+   "hints": [
+    "Zeitplan",
+    "Arbeit",
+    "Recherche",
+    "abschließen"
+   ],
+   "source_lines": [
+    70,
+    71
+   ]
+  },
+  {
+   "conversation": 3,
+   "question_de": "Was ist eine einfache Möglichkeit, Geld zu sparen?",
+   "question_en": "What is a simple way to save money?",
+   "answer_de": "Ich denke, zu Hause zu kochen ist eine Möglichkeit. Eine Einkaufsliste hilft auch.",
+   "answer_en": "I think cooking at home is one way. A shopping list helps too.",
+   "hints": [
+    "kochen",
+    "Möglichkeit",
+    "Einkaufsliste",
+    "hilft"
+   ],
+   "source_lines": [
+    12,
+    15
+   ]
+  },
+  {
+   "conversation": 3,
+   "question_de": "Was machst du, um zu Hause Energie zu sparen?",
+   "question_en": "What do you do to save energy at home?",
+   "answer_de": "Ich versuche, das Licht auszuschalten, wenn ich einen Raum verlasse. Ich ziehe auch Stecker von Geräten.",
+   "answer_en": "I try to turn off the lights when I leave a room. I also unplug devices.",
+   "hints": [
+    "Licht",
+    "auszuschalten",
+    "Raum",
+    "Stecker",
+    "Geräten"
+   ],
+   "source_lines": [
+    32,
+    35
+   ]
+  },
+  {
+   "conversation": 3,
+   "question_de": "Wie sparst du Geld bei der Unterhaltung?",
+   "question_en": "How do you save money on entertainment?",
+   "answer_de": "Ich genieße oft Filmabende zu Hause, anstatt ins Kino zu gehen. Ich leihe auch Bücher aus der Bibliothek.",
+   "answer_en": "I often enjoy movie nights at home instead of going to the cinema. I also borrow books from the library.",
+   "hints": [
+    "Filmabende",
+    "Kino",
+    "Bücher",
+    "Bibliothek"
+   ],
+   "source_lines": [
+    46,
+    61
+   ]
+  },
+  {
+   "conversation": 4,
+   "question_de": "Was machst du beruflich, und wie lange schon?",
+   "question_en": "What do you do for work, and for how long?",
+   "answer_de": "Ich bin Lehrerin an einer örtlichen Schule. Ich bin jetzt seit fünf Jahren Lehrerin.",
+   "answer_en": "I am a teacher at a local school. I have been a teacher for five years now.",
+   "hints": [
+    "Lehrerin",
+    "örtlichen",
+    "Schule",
+    "fünf",
+    "Jahren"
+   ],
+   "source_lines": [
+    11,
+    14
+   ]
+  },
+  {
+   "conversation": 4,
+   "question_de": "Wie hast du deinen Lehrpreis gewonnen?",
+   "question_en": "How did you win your teaching award?",
+   "answer_de": "Letztes Jahr habe ich einen Lehrpreis gewonnen. Ich habe eine neue Methode entwickelt, um Mathe zu unterrichten.",
+   "answer_en": "Last year I won a teaching award. I developed a new method for teaching math.",
+   "hints": [
+    "Lehrpreis",
+    "gewonnen",
+    "Methode",
+    "entwickelt",
+    "Mathe"
+   ],
+   "source_lines": [
+    20,
+    24
+   ]
+  },
+  {
+   "conversation": 4,
+   "question_de": "Was war dein größtes Projekt im letzten Jahr?",
+   "question_en": "What was your biggest project last year?",
+   "answer_de": "Ich habe letztes Jahr an einem großen Projekt gearbeitet. Wir haben einen Preis für das beste Design erhalten.",
+   "answer_en": "Last year I worked on a big project. We received an award for the best design.",
+   "hints": [
+    "großen",
+    "Projekt",
+    "Preis",
+    "beste",
+    "Design"
+   ],
+   "source_lines": [
+    59,
+    68
+   ]
+  },
+  {
+   "conversation": 5,
+   "question_de": "Wann sollte ich am ersten Tag im Büro ankommen?",
+   "question_en": "When should I arrive at the office on my first day?",
+   "answer_de": "Ich empfehle, etwa zehn Minuten früher zu kommen. Du solltest etwas Professionelles tragen.",
+   "answer_en": "I suggest arriving about ten minutes early. You should wear something professional.",
+   "hints": [
+    "empfehle",
+    "zehn",
+    "Minuten",
+    "früher",
+    "Professionelles"
+   ],
+   "source_lines": [
+    14,
+    18
+   ]
+  },
+  {
+   "conversation": 5,
+   "question_de": "Was sollte ich am ersten Arbeitstag mitbringen?",
+   "question_en": "What should I bring on my first day of work?",
+   "answer_de": "Bring ein Notizbuch und einen Stift mit. Vergiss deinen Ausweis nicht.",
+   "answer_en": "Bring a notebook and a pen. Don't forget your ID.",
+   "hints": [
+    "Notizbuch",
+    "Stift",
+    "vergiss",
+    "Ausweis"
+   ],
+   "source_lines": [
+    26,
+    30
+   ]
+  },
+  {
+   "conversation": 5,
+   "question_de": "Was soll ich tun, wenn ich die Aufgaben nicht verstehe?",
+   "question_en": "What should I do if I don't understand the tasks?",
+   "answer_de": "Du kannst deinen Vorgesetzten um Klärung bitten. Fehler passieren, also atme tief durch.",
+   "answer_en": "You can ask your manager for clarification. Mistakes happen, so take a deep breath.",
+   "hints": [
+    "Vorgesetzten",
+    "Klärung",
+    "Fehler",
+    "atme",
+    "tief"
+   ],
+   "source_lines": [
+    78,
+    56,
+    65
+   ]
+  },
+  {
+   "conversation": 6,
+   "question_de": "Was isst du normalerweise gern im Restaurant?",
+   "question_en": "What do you usually like to eat at a restaurant?",
+   "answer_de": "Ich mag normalerweise Hähnchen. Ich bevorzuge gegrilltes Essen.",
+   "answer_en": "I usually like chicken. I prefer grilled food.",
+   "hints": [
+    "Hähnchen",
+    "bevorzuge",
+    "gegrilltes",
+    "Essen"
+   ],
+   "source_lines": [
+    11,
+    21
+   ]
+  },
+  {
+   "conversation": 6,
+   "question_de": "Was bestellen Sie zum Hauptgericht?",
+   "question_en": "What are you ordering for the main course?",
+   "answer_de": "Ich hätte gerne das gegrillte Hähnchen mit Caesar-Salat.",
+   "answer_en": "I would like the grilled chicken with Caesar salad.",
+   "hints": [
+    "gegrillte",
+    "Hähnchen",
+    "Caesar-Salat"
+   ],
+   "source_lines": [
+    74
+   ]
+  },
+  {
+   "conversation": 6,
+   "question_de": "Was möchtet ihr zum Dessert?",
+   "question_en": "What would you like for dessert?",
+   "answer_de": "Zum Dessert möchten wir einen Schokoladenkuchen und eine Obsttorte.",
+   "answer_en": "For dessert, we would like a chocolate cake and a fruit tart.",
+   "hints": [
+    "Dessert",
+    "Schokoladenkuchen",
+    "Obsttorte"
+   ],
+   "source_lines": [
+    59
+   ]
+  },
+  {
+   "conversation": 7,
+   "question_de": "Wie fühlst du dich vor deiner Rede morgen?",
+   "question_en": "How do you feel before your speech tomorrow?",
+   "answer_de": "Ich fühle mich ein bisschen nervös. Ich muss morgen vor einer Gruppe sprechen.",
+   "answer_en": "I feel a bit nervous. I have to speak in front of a group tomorrow.",
+   "hints": [
+    "nervös",
+    "morgen",
+    "Gruppe",
+    "sprechen"
+   ],
+   "source_lines": [
+    6,
+    7
+   ]
+  },
+  {
+   "conversation": 7,
+   "question_de": "Was kannst du tun, wenn du deine Worte vergisst?",
+   "question_en": "What can you do if you forget your words?",
+   "answer_de": "Ich kann wichtige Punkte auf Karten schreiben. Ich werde Karten mit Hauptideen benutzen.",
+   "answer_en": "I can write key points on cards. I will use cards with main ideas.",
+   "hints": [
+    "wichtige",
+    "Punkte",
+    "Karten",
+    "Hauptideen"
+   ],
+   "source_lines": [
+    25,
+    27
+   ]
+  },
+  {
+   "conversation": 7,
+   "question_de": "Wie kannst du dich vor einem Vortrag entspannen?",
+   "question_en": "How can you relax before a talk?",
+   "answer_de": "Erstens übe ich meine Rede. Tiefes Atmen hilft mir, mich zu entspannen.",
+   "answer_en": "First, I practice my speech. Deep breaths help me relax.",
+   "hints": [
+    "übe",
+    "Rede",
+    "Atmen",
+    "entspannen"
+   ],
+   "source_lines": [
+    15,
+    29
+   ]
+  },
+  {
+   "conversation": 8,
+   "question_de": "Welchen Ort empfiehlst du mir in der Stadt?",
+   "question_en": "Which place do you recommend to me in the city?",
+   "answer_de": "Zuerst empfehle ich den alten Markt. Du kannst in etwa zehn Minuten dorthin laufen.",
+   "answer_en": "First, I recommend the old market. You can walk there in about ten minutes.",
+   "hints": [
+    "empfehle",
+    "alten",
+    "Markt",
+    "zehn",
+    "Minuten"
+   ],
+   "source_lines": [
+    11,
+    16
+   ]
+  },
+  {
+   "conversation": 8,
+   "question_de": "Wie komme ich zum alten Markt?",
+   "question_en": "How do I get to the old market?",
+   "answer_de": "Zuerst geh geradeaus diese Straße entlang. Danach geh für zwei Blöcke weiter.",
+   "answer_en": "First, go straight down this street. After that, keep walking for two blocks.",
+   "hints": [
+    "geradeaus",
+    "Straße",
+    "zwei",
+    "Blöcke"
+   ],
+   "source_lines": [
+    20,
+    25
+   ]
+  },
+  {
+   "conversation": 8,
+   "question_de": "Wie finde ich vom Museum das Stadtzentrum?",
+   "question_en": "How do I find the city center from the museum?",
+   "answer_de": "Vom Museum geh geradeaus zum Stadtzentrum. Es dauert etwa fünfzehn Minuten zu Fuß.",
+   "answer_en": "From the museum, walk straight to the city center. It takes about fifteen minutes on foot.",
+   "hints": [
+    "Museum",
+    "geradeaus",
+    "Stadtzentrum",
+    "fünfzehn",
+    "Minuten"
+   ],
+   "source_lines": [
+    66,
+    69
+   ]
+  },
+  {
+   "conversation": 9,
+   "question_de": "Was steht diese Woche in deinem Zeitplan?",
+   "question_en": "What is on your schedule this week?",
+   "answer_de": "Mein Zeitplan ist diese Woche voll. Ich habe Arbeit, Meetings und ein Familienessen.",
+   "answer_en": "My schedule is full this week. I have work, meetings, and a family dinner.",
+   "hints": [
+    "Zeitplan",
+    "voll",
+    "Arbeit",
+    "Meetings",
+    "Familienessen"
+   ],
+   "source_lines": [
+    7,
+    9
+   ]
+  },
+  {
+   "conversation": 9,
+   "question_de": "Wie bleibst du mit deinen Terminen organisiert?",
+   "question_en": "How do you stay organized with your appointments?",
+   "answer_de": "Ich benutze einen Planer. Er hilft mir, meine Aufgaben und Termine aufzuschreiben.",
+   "answer_en": "I use a planner. It helps me write down my tasks and appointments.",
+   "hints": [
+    "Planer",
+    "hilft",
+    "Aufgaben",
+    "Termine",
+    "aufzuschreiben"
+   ],
+   "source_lines": [
+    15,
+    21
+   ]
+  },
+  {
+   "conversation": 9,
+   "question_de": "Wann planst du deine Woche?",
+   "question_en": "When do you plan your week?",
+   "answer_de": "Ich plane meine Woche am Sonntag. Jeden Morgen schaue ich in meinen Planer.",
+   "answer_en": "I plan my week on Sunday. Every morning I check my planner.",
+   "hints": [
+    "plane",
+    "Woche",
+    "Sonntag",
+    "Morgen",
+    "Planer"
+   ],
+   "source_lines": [
+    50,
+    23
+   ]
+  },
+  {
+   "conversation": 10,
+   "question_de": "Was sind deine langfristigen Ziele?",
+   "question_en": "What are your long-term goals?",
+   "answer_de": "Ich möchte mehr reisen und eine neue Sprache lernen. Ich möchte Spanien, Mexiko und vielleicht Argentinien besuchen.",
+   "answer_en": "I want to travel more and learn a new language. I want to visit Spain, Mexico, and maybe Argentina.",
+   "hints": [
+    "reisen",
+    "Sprache",
+    "Spanien",
+    "Mexiko",
+    "Argentinien"
+   ],
+   "source_lines": [
+    10,
+    29
+   ]
+  },
+  {
+   "conversation": 10,
+   "question_de": "Wie sparst du Geld für ein Haus?",
+   "question_en": "How do you save money for a house?",
+   "answer_de": "Ich möchte Geld sparen, um in den nächsten fünf Jahren ein Haus zu kaufen. Ich werde jeden Monat ein wenig sparen.",
+   "answer_en": "I want to save money to buy a house in the next five years. I will save a little each month.",
+   "hints": [
+    "Geld",
+    "sparen",
+    "Haus",
+    "Monat"
+   ],
+   "source_lines": [
+    19,
+    22
+   ]
+  },
+  {
+   "conversation": 10,
+   "question_de": "Wie überprüfst du deinen Fortschritt?",
+   "question_en": "How do you check your progress?",
+   "answer_de": "Ich überprüfe jeden Monat, ob ich auf Kurs bin. Ich habe einen Budgetplan für meine Ersparnisse.",
+   "answer_en": "I check every month whether I am on track. I have a budget plan for my savings.",
+   "hints": [
+    "überprüfe",
+    "Monat",
+    "Kurs",
+    "Budgetplan",
+    "Ersparnisse"
+   ],
+   "source_lines": [
+    59,
+    55
+   ]
+  },
+  {
+   "conversation": 11,
+   "question_de": "Welchen Kurs hast du im Fitnessstudio gemacht?",
+   "question_en": "Which class did you take at the gym?",
+   "answer_de": "Ich habe einen Yoga-Kurs gemacht. Wir machen verschiedene Posen und Atemübungen.",
+   "answer_en": "I took a yoga class. We do different poses and breathing exercises.",
+   "hints": [
+    "Yoga-Kurs",
+    "verschiedene",
+    "Posen",
+    "Atemübungen"
+   ],
+   "source_lines": [
+    12,
+    26
+   ]
+  },
+  {
+   "conversation": 11,
+   "question_de": "Welche anderen Kurse gibt es im Fitnessstudio?",
+   "question_en": "What other classes are there at the gym?",
+   "answer_de": "Sie haben Spinning-, Zumba- und Body Pump-Kurse. Der Zumba-Kurs dauert auch eine Stunde.",
+   "answer_en": "They have spinning, Zumba, and body pump classes. The Zumba class is also one hour long.",
+   "hints": [
+    "Spinning-",
+    "Zumba-",
+    "Body",
+    "Pump-Kurse",
+    "Stunde"
+   ],
+   "source_lines": [
+    38,
+    47
+   ]
+  },
+  {
+   "conversation": 11,
+   "question_de": "Wie viele Kurse machst du pro Woche?",
+   "question_en": "How many classes do you take per week?",
+   "answer_de": "Ich gehe zu drei Kursen. Wir können nächste Woche Zumba zusammen ausprobieren.",
+   "answer_en": "I go to three classes. We can try Zumba together next week.",
+   "hints": [
+    "drei",
+    "Kursen",
+    "Zumba",
+    "ausprobieren"
+   ],
+   "source_lines": [
+    51,
+    65
+   ]
+  },
+  {
+   "conversation": 12,
+   "question_de": "Welche Fähigkeit ist im Kundenservice am wichtigsten?",
+   "question_en": "Which skill is most important in customer service?",
+   "answer_de": "Ich glaube, Zuhören ist die erste Fähigkeit. Kunden möchten sich gehört fühlen.",
+   "answer_en": "I believe listening is the first skill. Customers want to feel heard.",
+   "hints": [
+    "Zuhören",
+    "Fähigkeit",
+    "Kunden",
+    "gehört"
+   ],
+   "source_lines": [
+    15,
+    16
+   ]
+  },
+  {
+   "conversation": 12,
+   "question_de": "Wie gehst du mit Kunden um, die mehr Zeit brauchen?",
+   "question_en": "How do you deal with customers who need more time?",
+   "answer_de": "Einige Kunden brauchen mehr Zeit, um ihre Probleme zu erklären. Es ist wichtig, ruhig zu bleiben und sie nicht zu drängen.",
+   "answer_en": "Some customers need more time to explain their problems. It is important to stay calm and not rush them.",
+   "hints": [
+    "Kunden",
+    "Zeit",
+    "Probleme",
+    "ruhig",
+    "drängen"
+   ],
+   "source_lines": [
+    26,
+    28
+   ]
+  },
+  {
+   "conversation": 12,
+   "question_de": "Was machst du, wenn du ein Problem nicht lösen kannst?",
+   "question_en": "What do you do when you can't solve a problem?",
+   "answer_de": "Wenn wir das Problem nicht lösen können, sollten wir erklären, warum. Eine Nachverfolgung zeigt, dass wir uns um sie kümmern.",
+   "answer_en": "If we can't solve the problem, we should explain why. A follow-up shows that we care about them.",
+   "hints": [
+    "Problem",
+    "erklären",
+    "Nachverfolgung",
+    "kümmern"
+   ],
+   "source_lines": [
+    55,
+    60
+   ]
+  },
+  {
+   "conversation": 13,
+   "question_de": "Was bringst du zur Familienfeier mit?",
+   "question_en": "What are you bringing to the family celebration?",
+   "answer_de": "Ich werde einen großen Salat machen. Ich werde auch einige Getränke mitbringen.",
+   "answer_en": "I will make a big salad. I will also bring some drinks.",
+   "hints": [
+    "großen",
+    "Salat",
+    "Getränke",
+    "mitbringen"
+   ],
+   "source_lines": [
+    22,
+    29
+   ]
+  },
+  {
+   "conversation": 13,
+   "question_de": "Wie können wir die Kinder auf der Feier unterhalten?",
+   "question_en": "How can we entertain the children at the party?",
+   "answer_de": "Wir sollten Spiele für die Kinder haben. Wir könnten ein kleines Fußballspiel organisieren.",
+   "answer_en": "We should have games for the kids. We could organize a small soccer game.",
+   "hints": [
+    "Spiele",
+    "Kinder",
+    "kleines",
+    "Fußballspiel",
+    "organisieren"
+   ],
+   "source_lines": [
+    34,
+    38
+   ]
+  },
+  {
+   "conversation": 13,
+   "question_de": "Wie kannst du bei der Feier mit Musik helfen?",
+   "question_en": "How can you help with music at the party?",
+   "answer_de": "Ich kann meinen Lautsprecher und einige lustige Lieder mitbringen. Ich kann helfen, alles aufzubauen.",
+   "answer_en": "I can bring my speaker and some fun songs. I can help set everything up.",
+   "hints": [
+    "Lautsprecher",
+    "lustige",
+    "Lieder",
+    "helfen",
+    "aufzubauen"
+   ],
+   "source_lines": [
+    71,
+    73
+   ]
+  },
+  {
+   "conversation": 14,
+   "question_de": "Wohin und auf welcher Route fahrt ihr beim Roadtrip?",
+   "question_en": "Where are you going on the road trip, and by which route?",
+   "answer_de": "Ich dachte, wir könnten zu den Bergen fahren. Wir könnten die Autobahn nehmen.",
+   "answer_en": "I was thinking we could drive to the mountains. We could take the highway.",
+   "hints": [
+    "Bergen",
+    "fahren",
+    "Autobahn",
+    "nehmen"
+   ],
+   "source_lines": [
+    6,
+    13
+   ]
+  },
+  {
+   "conversation": 14,
+   "question_de": "Wie lange dauert die Reise, und was nehmt ihr mit?",
+   "question_en": "How long does the trip take, and what do you bring?",
+   "answer_de": "Ich denke, es wird etwa drei Stunden dauern. Wir können Früchte, Nüsse und etwas Schokolade mitnehmen.",
+   "answer_en": "I think it will take about three hours. We can take fruits, nuts, and some chocolate.",
+   "hints": [
+    "drei",
+    "Stunden",
+    "Früchte",
+    "Nüsse",
+    "Schokolade"
+   ],
+   "source_lines": [
+    26,
+    43
+   ]
+  },
+  {
+   "conversation": 14,
+   "question_de": "Wann möchtest du losfahren, und was prüfst du vorher?",
+   "question_en": "When do you want to leave, and what do you check beforehand?",
+   "answer_de": "Wie wäre es mit neun Uhr? Ich werde das Wetter auf meinem Handy überprüfen.",
+   "answer_en": "How about nine o'clock? I will check the weather on my phone.",
+   "hints": [
+    "neun",
+    "Uhr",
+    "Wetter",
+    "Handy",
+    "überprüfen"
+   ],
+   "source_lines": [
+    66,
+    76
+   ]
+  },
+  {
+   "conversation": 15,
+   "question_de": "Wie oft darfst du dein Schmerzmittel nehmen?",
+   "question_en": "How often may you take your painkiller?",
+   "answer_de": "Es steht, man soll eine Tablette nehmen. Es steht, alle sechs Stunden nach Bedarf.",
+   "answer_en": "It says to take one tablet. It says every six hours as needed.",
+   "hints": [
+    "Tablette",
+    "nehmen",
+    "sechs",
+    "Stunden",
+    "Bedarf"
+   ],
+   "source_lines": [
+    18,
+    21
+   ]
+  },
+  {
+   "conversation": 15,
+   "question_de": "Was machst du, wenn du eine Dosis vergessen hast?",
+   "question_en": "What do you do if you have forgotten a dose?",
+   "answer_de": "Wenn du es vergisst, nimm es, sobald du daran denkst. Wenn es fast Zeit für die nächste Dosis ist, lass die vergessene Dosis aus.",
+   "answer_en": "If you forget, take it as soon as you remember. If it is almost time for the next dose, skip the missed dose.",
+   "hints": [
+    "vergisst",
+    "denkst",
+    "nächste",
+    "Dosis",
+    "aus"
+   ],
+   "source_lines": [
+    53,
+    54,
+    55
+   ]
+  },
+  {
+   "conversation": 15,
+   "question_de": "Woran erkennt man, dass man zu viel genommen hat?",
+   "question_en": "How can you tell that you have taken too much?",
+   "answer_de": "Du könntest sehr müde oder schwindelig werden. Ich überprüfe immer die Anweisungen.",
+   "answer_en": "You might become very sleepy or dizzy. I always check the instructions.",
+   "hints": [
+    "müde",
+    "schwindelig",
+    "überprüfe",
+    "Anweisungen"
+   ],
+   "source_lines": [
+    33,
+    39
+   ]
+  },
+  {
+   "conversation": 16,
+   "question_de": "Was ist das für eine Wohltätigkeitsveranstaltung?",
+   "question_en": "What kind of charity event is it?",
+   "answer_de": "Sie organisieren einen Spaßlauf. Es wird Essen, Musik und Spiele für Kinder geben.",
+   "answer_en": "They are organizing a fun run. There will be food, music, and games for kids.",
+   "hints": [
+    "organisieren",
+    "Spaßlauf",
+    "Essen",
+    "Musik",
+    "Spiele"
+   ],
+   "source_lines": [
+    13,
+    46
+   ]
+  },
+  {
+   "conversation": 16,
+   "question_de": "Wie melde ich mich für den Spaßlauf an?",
+   "question_en": "How do I sign up for the fun run?",
+   "answer_de": "Du kannst dich online anmelden. Trag einfach bequeme Kleidung und gute Schuhe.",
+   "answer_en": "You can sign up online. Just wear comfortable clothes and good shoes.",
+   "hints": [
+    "online",
+    "anmelden",
+    "bequeme",
+    "Kleidung",
+    "Schuhe"
+   ],
+   "source_lines": [
+    26,
+    40
+   ]
+  },
+  {
+   "conversation": 16,
+   "question_de": "Welche anderen Aktivitäten gibt es bei der Veranstaltung?",
+   "question_en": "What other activities are there at the event?",
+   "answer_de": "Es wird einen Kuchenverkauf und eine Tombola geben. Sie werden Geschenkkörbe, Spielzeug und Gutscheine haben.",
+   "answer_en": "There will be a bake sale and a raffle. They will have gift baskets, toys, and vouchers.",
+   "hints": [
+    "Kuchenverkauf",
+    "Tombola",
+    "Geschenkkörbe",
+    "Spielzeug",
+    "Gutscheine"
+   ],
+   "source_lines": [
+    50,
+    55
+   ]
+  },
+  {
+   "conversation": 17,
+   "question_de": "Was bedeutet ein ausgewogener Lebensstil für dich?",
+   "question_en": "What does a balanced lifestyle mean to you?",
+   "answer_de": "Ein ausgewogener Lebensstil bedeutet, eine gute Mischung aus Arbeit, Ruhe und Freizeit zu haben. Zeit für die Familie ist auch wichtig.",
+   "answer_en": "A balanced lifestyle means having a good mix of work, rest, and play. Time for family is important too.",
+   "hints": [
+    "ausgewogener",
+    "Lebensstil",
+    "Mischung",
+    "Arbeit",
+    "Familie"
+   ],
+   "source_lines": [
+    10,
+    18
+   ]
+  },
+  {
+   "conversation": 17,
+   "question_de": "Was kannst du essen und trinken, um gesund zu bleiben?",
+   "question_en": "What can you eat and drink to stay healthy?",
+   "answer_de": "Obst und Gemüse zu essen hilft uns, uns gut zu fühlen. Genug Wasser zu trinken ist auch wichtig.",
+   "answer_en": "Eating fruits and vegetables helps us feel good. Drinking enough water is important too.",
+   "hints": [
+    "Obst",
+    "Gemüse",
+    "Wasser",
+    "trinken"
+   ],
+   "source_lines": [
+    49,
+    50
+   ]
+  },
+  {
+   "conversation": 17,
+   "question_de": "Was machst du, um nach der Arbeit zu entspannen?",
+   "question_en": "What do you do to relax after work?",
+   "answer_de": "Ich lese gerne oder schaue ein paar Serien. Ich höre gerne Musik oder gehe spazieren.",
+   "answer_en": "I like to read or watch some shows. I enjoy listening to music or going for a walk.",
+   "hints": [
+    "lese",
+    "Serien",
+    "Musik",
+    "spazieren"
+   ],
+   "source_lines": [
+    64,
+    66
+   ]
+  },
+  {
+   "conversation": 18,
+   "question_de": "Für welche Stelle schreibst du ein Bewerbungsschreiben?",
+   "question_en": "What job are you writing an application letter for?",
+   "answer_de": "Ich muss ein Bewerbungsschreiben für einen Job schreiben. Es ist für eine Marketingposition bei einem lokalen Unternehmen.",
+   "answer_en": "I need to write an application letter for a job. It is for a marketing position at a local company.",
+   "hints": [
+    "Bewerbungsschreiben",
+    "Marketingposition",
+    "lokalen",
+    "Unternehmen"
+   ],
+   "source_lines": [
+    9,
+    12
+   ]
+  },
+  {
+   "conversation": 18,
+   "question_de": "Wie sollte ich ein Bewerbungsschreiben beginnen?",
+   "question_en": "How should I begin an application letter?",
+   "answer_de": "Du solltest mit deiner Adresse und dem Datum beginnen. Als nächstes schreibst du eine Anrede.",
+   "answer_en": "You should start with your address and the date. Next, you write a greeting.",
+   "hints": [
+    "Adresse",
+    "Datum",
+    "beginnen",
+    "Anrede"
+   ],
+   "source_lines": [
+    27,
+    33
+   ]
+  },
+  {
+   "conversation": 18,
+   "question_de": "Was sollte ich in meiner Bewerbung erwähnen?",
+   "question_en": "What should I mention in my application?",
+   "answer_de": "Nenne die relevantesten Qualifikationen für den Job. Beschreibe deine bisherigen Jobs im Bereich Marketing.",
+   "answer_en": "Mention the most relevant qualifications for the job. Describe your past jobs in the field of marketing.",
+   "hints": [
+    "relevantesten",
+    "Qualifikationen",
+    "bisherigen",
+    "Jobs",
+    "Marketing"
+   ],
+   "source_lines": [
+    48,
+    50
+   ]
+  },
+  {
+   "conversation": 19,
+   "question_de": "Was möchten Sie auf der Konferenz erreichen?",
+   "question_en": "What would you like to achieve at the conference?",
+   "answer_de": "Ich möchte lernen und mein Netzwerk erweitern. Ich möchte heute einige Redner treffen.",
+   "answer_en": "I want to learn and grow my network. I want to meet some speakers today.",
+   "hints": [
+    "lernen",
+    "Netzwerk",
+    "erweitern",
+    "Redner",
+    "treffen"
+   ],
+   "source_lines": [
+    64,
+    18
+   ]
+  },
+  {
+   "conversation": 19,
+   "question_de": "Welcher Vortrag interessiert Sie am meisten?",
+   "question_en": "Which talk interests you the most?",
+   "answer_de": "Mir gefällt das Thema über Technologie und Gesellschaft sehr. Ich möchte den Vortrag über Nachhaltigkeit sehen.",
+   "answer_en": "I really like the topic about technology and society. I want to see the talk about sustainability.",
+   "hints": [
+    "Thema",
+    "Technologie",
+    "Gesellschaft",
+    "Vortrag",
+    "Nachhaltigkeit"
+   ],
+   "source_lines": [
+    24,
+    44
+   ]
+  },
+  {
+   "conversation": 19,
+   "question_de": "Wie bleiben wir nach der Konferenz in Kontakt?",
+   "question_en": "How do we stay in touch after the conference?",
+   "answer_de": "Lassen Sie uns nach der Konferenz in Kontakt bleiben. Haben Sie eine Visitenkarte?",
+   "answer_en": "Let's stay in touch after the conference. Do you have a business card?",
+   "hints": [
+    "Konferenz",
+    "Kontakt",
+    "bleiben",
+    "Visitenkarte"
+   ],
+   "source_lines": [
+    61,
+    52
+   ]
+  },
+  {
+   "conversation": 20,
+   "question_de": "Warum möchtest du deinen Job wechseln?",
+   "question_en": "Why do you want to change your job?",
+   "answer_de": "Ich bin mit meinem aktuellen Job nicht glücklich. Ich möchte einen Job, der aufregender ist.",
+   "answer_en": "I am not happy in my current job. I want a job that is more exciting.",
+   "hints": [
+    "aktuellen",
+    "Job",
+    "glücklich",
+    "aufregender"
+   ],
+   "source_lines": [
+    13,
+    16
+   ]
+  },
+  {
+   "conversation": 20,
+   "question_de": "Welche Erfahrung hast du im Verkauf?",
+   "question_en": "What experience do you have in sales?",
+   "answer_de": "Ich habe zwei Jahre im Einzelhandel gearbeitet. Ich habe Kunden geholfen und Produkte verkauft.",
+   "answer_en": "I worked in retail for two years. I helped customers and sold products.",
+   "hints": [
+    "zwei",
+    "Jahre",
+    "Einzelhandel",
+    "Kunden",
+    "Produkte"
+   ],
+   "source_lines": [
+    32,
+    35
+   ]
+  },
+  {
+   "conversation": 20,
+   "question_de": "Was musst du tun, bevor du dich bewirbst?",
+   "question_en": "What do you need to do before you apply?",
+   "answer_de": "Ich muss zuerst meinen Lebenslauf aktualisieren. Ich möchte, dass mein Lebenslauf heraussticht.",
+   "answer_en": "I need to update my resume first. I want my resume to stand out.",
+   "hints": [
+    "zuerst",
+    "Lebenslauf",
+    "aktualisieren",
+    "heraussticht"
+   ],
+   "source_lines": [
+    41,
+    68
+   ]
+  }
+ ]
+}
