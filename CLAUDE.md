@@ -14,7 +14,8 @@ plays the correct answer. The full plan and the definition of success live in `d
 - `CLAUDE.md` and `docs/` are committed to this repo (decided 2026-10-10).
 - Drills are **written by Claude in-session**, not by a pipeline LLM. Code does everything mechanical:
   transcript loading, the authoring digest, validation, TTS and video rendering.
-- Default TTS is local Piper (free, offline). ElevenLabs is an optional backend.
+- Default TTS is edge-tts (Microsoft neural voices, free, retried on HTTP 403). The user rejected
+  Piper's German pronunciation; Piper and ElevenLabs remain optional backends.
 - Only A1 (levels 1–10) is OCR'd so far. Other levels need `_slide_ocr/slide_ocr.py` first.
 
 ## Paths
