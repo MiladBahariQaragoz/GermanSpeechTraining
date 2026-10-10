@@ -14,9 +14,12 @@ plays the correct answer. The full plan and the definition of success live in `d
 - `CLAUDE.md` and `docs/` are committed to this repo (decided 2026-10-10).
 - Drills are **written by Claude in-session**, not by a pipeline LLM. Code does everything mechanical:
   transcript loading, the authoring digest, validation, TTS and video rendering.
+- From level 13 on, **Jev (TypeSafe System One) shortlists** each conversation's question→answer
+  exchanges first (`gst shortlist`), so Claude reads ~250 lines per level instead of ~1700. Jev only
+  judges; it never writes drill text. Ollama was rejected (4 GB GPU, weak 7B German).
 - Default TTS is edge-tts (Microsoft neural voices, free, retried on HTTP 403). The user rejected
   Piper's German pronunciation; Piper and ElevenLabs remain optional backends.
-- Only A1 (levels 1–10) is OCR'd so far. Other levels need `_slide_ocr/slide_ocr.py` first.
+- OCR for levels 11–40 runs with `_slide_ocr/slide_ocr.py --level A2 … --level C2` (log: `_slide_ocr/run.log`).
 
 ## Paths
 
@@ -32,6 +35,7 @@ plays the correct answer. The full plan and the definition of success live in `d
 uv run pytest                 # tests
 uv run ruff check .           # lint
 uv run gst digest --level 1   # numbered transcript digest for authoring
+uv run --env-file .env gst shortlist --level 13   # Jev-ranked best exchanges (needs TYPESAFE_API_KEY)
 uv run gst check --levels 1-10
 uv run gst render --levels 1-10
 ```
@@ -40,7 +44,10 @@ Run `uv run ruff check . && uv run pytest` before every commit.
 
 ## Authoring a level
 
-1. `uv run gst digest --level N` and read the whole digest.
+1. Levels 1–12: `uv run gst digest --level N` and read the whole digest. From level 13:
+   `uv run --env-file .env gst shortlist --level N > .cache/shortlist-NN.txt` and read that instead
+   (line numbers are the same as the digest's; open the digest only for context the shortlist lacks).
+   Jev answers are cached in `$GST_WORK_DIR/jev`, so a rerun costs nothing.
 2. Write `data/drills/level-NN.json` with at least 40 drills, about 2 per conversation and at most 4.
    Pick the exchanges most relevant to each conversation's topic. Phrase questions to the learner so
    they can be answered without seeing the dialogue. Build the model answer from the cited
