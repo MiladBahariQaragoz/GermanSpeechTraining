@@ -108,8 +108,8 @@ class EdgeTTS:
         self,
         fetch: Callable[[str, str], bytes] = _edge_fetch,
         sleep: Callable[[float], None] = time.sleep,
-        attempts: int = 5,
-        backoff: float = 8.0,
+        attempts: int = 8,  # about half of all requests get a 403 at random
+        backoff: float = 2.0,
     ):
         self.fetch = fetch
         self.sleep = sleep

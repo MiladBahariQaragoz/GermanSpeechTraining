@@ -150,10 +150,17 @@ def test_edge_retries_with_growing_pauses_when_the_service_refuses(tmp_path):
     fetch = FlakyFetch(_mp3(tmp_path, 0.5), failures=2)
     pauses = []
 
-    EdgeTTS(fetch=fetch, sleep=pauses.append).synthesize("Hallo!", "v", tmp_path / "out.wav")
+    EdgeTTS(fetch=fetch, sleep=pauses.append, backoff=2.0).synthesize("Hallo!", "v", tmp_path / "out.wav")
 
     assert len(fetch.calls) == 3
-    assert pauses == [8, 16]
+    assert pauses == [2, 4]
+
+
+def test_edge_defaults_tolerate_frequent_refusals():
+    edge = EdgeTTS(fetch=lambda text, voice: b"", sleep=lambda s: None)
+
+    assert edge.attempts >= 8
+    assert edge.backoff <= 2.0
 
 
 def test_edge_gives_up_after_the_last_attempt(tmp_path):
