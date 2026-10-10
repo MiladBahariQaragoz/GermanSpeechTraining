@@ -26,3 +26,18 @@ uv run gst render --levels 1-10    # synthesize speech and render one MP4 per le
 ```
 
 Videos are written to `$GST_WORK_DIR/videos/level-NN.mp4`.
+
+### Voices
+
+The default backend is [Piper](https://github.com/OHF-Voice/piper1-gpl): free, offline, downloaded on
+first use. Questions use `de_DE-kerstin-low`, answers use `de_DE-thorsten-high` (the answers are what you
+imitate, so they get the clearer voice). Pick others with `--question-voice` / `--answer-voice`, e.g.
+`de_DE-ramona-low`, `de_DE-eva_k-x_low`.
+
+To use ElevenLabs instead (its free tier covers roughly one or two levels per month):
+
+```bash
+uv sync --extra elevenlabs
+export ELEVENLABS_API_KEY=...
+uv run gst render --levels 1 --tts elevenlabs --question-voice <voice id> --answer-voice <voice id>
+```
