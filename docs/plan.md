@@ -54,7 +54,7 @@ shared-modules-touched: []
 |---|---|---|
 | Level unit | **Course levels 1–40**, ≥40 drills each (A1 = levels 1–10 now) | User choice. 20 conversations/level → ~2 drills per conversation. |
 | Scope now | A1 only (levels 1–10, 200 conversations) | User choice. |
-| Question writing | **Claude writes the drills in-session** (no Jev, no local LLM) | User decision 2026-10-10: question writing needs a frontier LLM anyway, so the separate "decision maker" stage is dropped. Claude reads each level's digest, picks the most topic-relevant exchanges and writes ≥40 drills per level. |
+| Question writing | **Claude writes the drills in-session; from level 13 on, Jev shortlists the exchanges first** | User decision 2026-10-10: question writing needs a frontier LLM, so Claude writes every drill. Later the same day the user brought back the "decision maker" to speed up reading: Jev (TypeSafe System One) scores every question→answer pair for topic relevance and speaking value, and Claude writes drills from the ~6 best pairs per conversation instead of the full transcript. Jev only judges, it never writes drill text. Ollama was rejected: the 4 GB GPU cannot hold a 7B model and 7B German drafting is weak. |
 | Grounding | Every drill cites `source_lines` (line numbers in its conversation); the model answer reuses the course's own sentences wherever they fit | Practice stays tied to what the course taught; the validator checks the citation and the word overlap. |
 | TTS | **edge-tts** default (Florian questions, Killian answers); Piper (offline) and ElevenLabs as options | Changed 2026-10-10 after the user listened to level 1: Piper's German pronunciation was not good enough. The user picked the two Microsoft neural voices from a sample set. edge-tts is free but refuses ~50 % of requests (HTTP 403) at random, so requests are retried and every clip is cached. ElevenLabs free tier = 10k chars/month ≈ 1–2 levels/month. |
 | Video unit | One MP4 per course level, one chapter per drill | One practice session = one level (~12 min). |
@@ -138,6 +138,7 @@ GermanSpeechTraining/
 ├── src/gst/
 │   ├── transcript.py         # folder-name parsing, slides.json → Conversation
 │   ├── digest.py             # compact numbered per-level transcript for authoring
+│   ├── shortlist.py          # Q→A exchanges, Jev judgments + cache, ranked shortlist view
 │   ├── text.py               # tokenising, stop words, content words
 │   ├── drills.py             # Drill model, load/save, Markdown view
 │   ├── check.py              # success-criteria validator (1–4)
@@ -147,7 +148,7 @@ GermanSpeechTraining/
 │   ├── video.py              # ffmpeg segment encode + audio track + mux with chapters
 │   ├── render.py             # drills → cards, speech, segments → level MP4
 │   ├── config.py             # default paths (env-overridable)
-│   └── cli.py                # `gst digest|check|render`
+│   └── cli.py                # `gst digest|shortlist|check|render`
 └── tests/
     ├── fixtures/ocr/…        # tiny fake OCR tree (2 levels × 2 conversations)
     └── test_<module>.py      # one test file per module
