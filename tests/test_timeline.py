@@ -44,3 +44,9 @@ def test_level_wraps_drills_in_intro_and_outro_with_chapters():
         "Intro", "L01-D01 · Frage 1?", "L01-D02 · Frage 2?", "L01-D03 · Frage 3?",
     ]
     assert [c.start for c in chapters] == pytest.approx([0.0, 3.0, 16.3, 29.6])
+
+
+def test_segment_lengths_are_whole_video_frames():
+    segments = plan_drill(drill(), Q_AUDIO, 2.01, A_AUDIO, 3.0, TimelineConfig(fps=30))
+
+    assert segments[0].duration == pytest.approx(78 / 30)
