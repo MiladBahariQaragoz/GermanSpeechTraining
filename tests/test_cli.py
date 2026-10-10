@@ -3,6 +3,7 @@ import json
 import pytest
 
 from gst.cli import main, parse_levels
+from tests.fakes import FakeTTS
 from tests.test_drills import GROCERY_DRILL, LIBRARY_DRILL
 
 ROUTE_DRILL = {
@@ -70,3 +71,33 @@ def test_check_reports_missing_drill_file(ocr_root, tmp_path, capsys):
 
     assert code == 1
     assert "level-01.json not found" in capsys.readouterr().out
+
+
+def _render(ocr_root, folder, work, *extra):
+    return main([
+        "render", "--levels", "1", "--ocr-root", str(ocr_root), "--drills-dir", str(folder),
+        "--work-dir", str(work), *extra,
+    ])
+
+
+def test_render_builds_a_video_per_passing_level(ocr_root, tmp_path, monkeypatch, capsys):
+    folder = _drills_dir(tmp_path, [GROCERY_DRILL, LIBRARY_DRILL, ROUTE_DRILL])
+    fake = FakeTTS(seconds_per_char=0.005)
+    monkeypatch.setattr("gst.cli.make_tts", lambda name, work_dir: fake)
+
+    code = _render(ocr_root, folder, tmp_path / "work", *LENIENT)
+
+    assert code == 0
+    assert (tmp_path / "work" / "videos" / "level-01.mp4").exists()
+    assert "level-01.mp4" in capsys.readouterr().out
+    assert ("Wo ist der Bahnhof?", "de_DE-kerstin-low") in fake.calls
+
+
+def test_render_refuses_levels_that_fail_the_check(ocr_root, tmp_path, monkeypatch, capsys):
+    folder = _drills_dir(tmp_path, [GROCERY_DRILL])
+    monkeypatch.setattr("gst.cli.make_tts", lambda name, work_dir: FakeTTS())
+
+    code = _render(ocr_root, folder, tmp_path / "work", *LENIENT)
+
+    assert code == 1
+    assert not (tmp_path / "work" / "videos" / "level-01.mp4").exists()
