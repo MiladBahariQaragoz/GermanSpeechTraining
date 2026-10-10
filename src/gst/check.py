@@ -7,10 +7,11 @@ from gst.text import content_words, normalise, words
 from gst.transcript import Conversation
 
 MIN_GROUNDING = 0.5
+TEXT_FIELDS = ("question_de", "question_en", "answer_de", "answer_en")
 
 
 def _drill_problems(d: Drill, conv: Conversation) -> list[str]:
-    problems = []
+    problems = [f"{d.id}: {field} is empty" for field in TEXT_FIELDS if not getattr(d, field).strip()]
     if not d.question_de.rstrip().endswith("?"):
         problems.append(f"{d.id}: question does not end with '?'")
 
@@ -18,7 +19,9 @@ def _drill_problems(d: Drill, conv: Conversation) -> list[str]:
         problems.append(f"{d.id}: {len(d.hints)} hints, need 2 to 5")
     answer_words = set(words(d.answer_de))
     for hint in d.hints:
-        if not set(words(hint)) <= answer_words:
+        if not words(hint):
+            problems.append(f"{d.id}: hint {hint!r} has no words")
+        elif not set(words(hint)) <= answer_words:
             problems.append(f"{d.id}: hint {hint!r} is not in the answer")
 
     count = len(conv.lines)
@@ -26,9 +29,11 @@ def _drill_problems(d: Drill, conv: Conversation) -> list[str]:
         problems.append(f"{d.id}: source_lines {d.source_lines} not within 1..{count}")
         return problems
 
-    answer = content_words(d.answer_de)
+    # Short answers can consist of function words only ("Ja, ich auch."); then compare every word.
+    pick = content_words if content_words(d.answer_de) else words
+    answer = pick(d.answer_de)
     if answer:
-        source = set(content_words(" ".join(conv.lines[n - 1].de for n in d.source_lines)))
+        source = set(pick(" ".join(conv.lines[n - 1].de for n in d.source_lines)))
         grounded = sum(w in source for w in answer) / len(answer)
         if grounded < MIN_GROUNDING:
             problems.append(f"{d.id}: only {grounded:.0%} of the answer's words are in its source lines")

@@ -100,3 +100,25 @@ def test_duplicate_questions(conversations):
     problems = check(drills, conversations)
 
     assert "L01-D02: duplicate of L01-D01's question" in problems
+
+
+@pytest.mark.parametrize("field", ["question_de", "question_en", "answer_de", "answer_en"])
+def test_text_fields_must_not_be_blank(conversations, field):
+    drills = valid_level()
+    drills[0] = drill(1, **{field: "  "})
+
+    assert f"L01-D01: {field} is empty" in check(drills, conversations)
+
+
+def test_hint_without_any_word_is_rejected(conversations):
+    drills = valid_level()
+    drills[0] = drill(1, hints=["Pasta", "…"])
+
+    assert check(drills, conversations) == ["L01-D01: hint '…' has no words"]
+
+
+def test_answer_of_only_function_words_is_still_checked_for_grounding(conversations):
+    drills = valid_level()
+    drills[0] = drill(1, answer_de="Ja, ich auch.", hints=["ich", "auch"])
+
+    assert check(drills, conversations) == ["L01-D01: only 33% of the answer's words are in its source lines"]
