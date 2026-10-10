@@ -6,7 +6,7 @@ from PIL import Image
 from gst.cards import BAR, question_card
 from gst.timeline import Chapter
 from gst.tts import wav_duration
-from gst.video import FPS, build_audio, encode_segment, mux, probe, quantize
+from gst.video import build_audio, encode_segment, mux, probe
 from tests.fakes import write_silence
 from tests.test_timeline import drill
 
@@ -29,11 +29,6 @@ def _frame(video, seconds, out):
 def _bar_fill(image):
     x, y, width, height = BAR
     return sum(1 for px in range(x, x + width) if image.getpixel((px, y + height // 2)) < 100)
-
-
-def test_quantize_rounds_to_whole_frames():
-    assert quantize(1.0) == pytest.approx(1.0)
-    assert quantize(1.01) * FPS == pytest.approx(round(1.01 * FPS))
 
 
 def test_segment_is_a_silent_video_of_the_requested_length(still, tmp_path):

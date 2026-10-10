@@ -17,11 +17,6 @@ FPS = 30
 RATE = 44100
 
 
-def quantize(seconds: float) -> float:
-    """Round to whole video frames so video and audio agree on every segment's length."""
-    return round(seconds * FPS) / FPS
-
-
 def _ffmpeg(*args: str) -> None:
     subprocess.run(["ffmpeg", "-v", "error", "-y", *args], check=True)
 
