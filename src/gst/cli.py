@@ -9,10 +9,13 @@ from gst.digest import level_digest
 from gst.drills import DrillError, level_markdown, load_level
 from gst.render import Voices, render_level
 from gst.transcript import iter_conversations
-from gst.tts import TTS, CachedTTS, ElevenLabsTTS, PiperTTS
+from gst.tts import TTS, CachedTTS, EdgeTTS, ElevenLabsTTS, PiperTTS
 
-# Answers use the higher-quality voice, since they are what the learner imitates.
-PIPER_VOICES = Voices(question="de_DE-kerstin-low", answer="de_DE-thorsten-high")
+# Chosen by listening. Answers get the slower, clearer voice, since they are what the learner imitates.
+DEFAULT_VOICES = {
+    "edge": Voices(question="de-DE-FlorianMultilingualNeural", answer="de-DE-KillianNeural"),
+    "piper": Voices(question="de_DE-kerstin-low", answer="de_DE-thorsten-high"),
+}
 
 
 def parse_levels(text: str) -> list[int]:
@@ -70,15 +73,18 @@ def _check(args) -> int:
 def make_tts(name: str, work_dir: Path) -> TTS:
     if name == "elevenlabs":
         return ElevenLabsTTS()
-    return PiperTTS(work_dir / "voices")
+    if name == "piper":
+        return PiperTTS(work_dir / "voices")
+    return EdgeTTS()
 
 
 def _render(args) -> int:
-    if args.tts == "elevenlabs" and not (args.question_voice and args.answer_voice):
-        print("ElevenLabs needs --question-voice and --answer-voice (voice ids)")
+    defaults = DEFAULT_VOICES.get(args.tts)
+    if defaults is None and not (args.question_voice and args.answer_voice):
+        print(f"{args.tts} needs --question-voice and --answer-voice")
         return 1
-    defaults = PIPER_VOICES if args.tts == "piper" else Voices("", "")
-    voices = Voices(args.question_voice or defaults.question, args.answer_voice or defaults.answer)
+    question = args.question_voice or defaults.question
+    voices = Voices(question, args.answer_voice or defaults.answer)
     tts = CachedTTS(make_tts(args.tts, args.work_dir), args.work_dir / "tts")
     failed = False
     for level in args.levels:
@@ -110,9 +116,9 @@ def build_parser() -> argparse.ArgumentParser:
     check.set_defaults(run=_check)
 
     render = commands.add_parser("render", help="synthesize speech and render one video per level")
-    render.add_argument("--tts", choices=["piper", "elevenlabs"], default="piper")
-    render.add_argument("--question-voice", help=f"default (piper): {PIPER_VOICES.question}")
-    render.add_argument("--answer-voice", help=f"default (piper): {PIPER_VOICES.answer}")
+    render.add_argument("--tts", choices=["edge", "piper", "elevenlabs"], default="edge")
+    render.add_argument("--question-voice", help=f"default for edge: {DEFAULT_VOICES['edge'].question}")
+    render.add_argument("--answer-voice", help=f"default for edge: {DEFAULT_VOICES['edge'].answer}")
     render.add_argument("--work-dir", type=Path, default=WORK_DIR)
     render.set_defaults(run=_render)
 

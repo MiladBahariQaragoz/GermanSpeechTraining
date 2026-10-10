@@ -90,7 +90,8 @@ def test_render_builds_a_video_per_passing_level(ocr_root, tmp_path, monkeypatch
     assert code == 0
     assert (tmp_path / "work" / "videos" / "level-01.mp4").exists()
     assert "level-01.mp4" in capsys.readouterr().out
-    assert ("Wo ist der Bahnhof?", "de_DE-kerstin-low") in fake.calls
+    assert ("Wo ist der Bahnhof?", "de-DE-FlorianMultilingualNeural") in fake.calls
+    assert ("Der Bahnhof ist geradeaus.", "de-DE-KillianNeural") in fake.calls
 
 
 def test_render_refuses_levels_that_fail_the_check(ocr_root, tmp_path, monkeypatch, capsys):
@@ -101,3 +102,13 @@ def test_render_refuses_levels_that_fail_the_check(ocr_root, tmp_path, monkeypat
 
     assert code == 1
     assert not (tmp_path / "work" / "videos" / "level-01.mp4").exists()
+
+
+def test_render_can_still_use_piper_voices(ocr_root, tmp_path, monkeypatch):
+    folder = _drills_dir(tmp_path, [GROCERY_DRILL, LIBRARY_DRILL, ROUTE_DRILL])
+    fake = FakeTTS(seconds_per_char=0.005)
+    monkeypatch.setattr("gst.cli.make_tts", lambda name, work_dir: fake)
+
+    assert _render(ocr_root, folder, tmp_path / "work", "--tts", "piper", *LENIENT) == 0
+
+    assert ("Wo ist der Bahnhof?", "de_DE-kerstin-low") in fake.calls
