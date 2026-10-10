@@ -26,6 +26,8 @@ target-version = "py312"
 
 [tool.ruff.lint]
 select = ["E", "F", "W", "I", "B", "UP", "SIM"]
+# Word lists read better as one whitespace-separated block than as huge list literals.
+ignore = ["SIM905"]
 
 [dependency-groups]
 dev = [
