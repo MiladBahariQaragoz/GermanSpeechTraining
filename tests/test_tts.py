@@ -9,6 +9,7 @@ from gst.tts import (
     ElevenLabsTTS,
     PiperTTS,
     TTSError,
+    _edge_fetch,
     compose_phonemes,
     wav_duration,
 )
@@ -171,3 +172,33 @@ def test_edge_speaks_german_for_real(tmp_path):
     EdgeTTS().synthesize("Hallo, wie geht's?", "de-DE-KillianNeural", out)
 
     assert wav_duration(out) > 0.5
+
+
+class RefusingCommunicate:
+    """Stands in for edge_tts.Communicate when the service answers 403."""
+
+    def __init__(self, text, voice):
+        pass
+
+    async def stream(self):
+        raise ConnectionError("403, message='Invalid response status'")
+        yield  # pragma: no cover - makes this an async generator
+
+
+class SpeakingCommunicate:
+    def __init__(self, text, voice):
+        pass
+
+    async def stream(self):
+        yield {"type": "WordBoundary"}
+        yield {"type": "audio", "data": b"abc"}
+        yield {"type": "audio", "data": b"def"}
+
+
+def test_edge_fetch_raises_instead_of_hanging_when_the_service_refuses():
+    with pytest.raises(ConnectionError, match="403"):
+        _edge_fetch("Hallo!", "v", communicate=RefusingCommunicate)
+
+
+def test_edge_fetch_joins_the_audio_chunks():
+    assert _edge_fetch("Hallo!", "v", communicate=SpeakingCommunicate) == b"abcdef"

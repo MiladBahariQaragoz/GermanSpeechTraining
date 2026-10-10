@@ -1,5 +1,6 @@
 """Text-to-speech backends and an on-disk cache of synthesized WAV files."""
 
+import asyncio
 import hashlib
 import os
 import subprocess
@@ -76,16 +77,23 @@ class PiperTTS:
             self._voice(voice).synthesize_wav(text, wav, syn_config=config)
 
 
-def _edge_fetch(text: str, voice: str) -> bytes:
-    import edge_tts
+def _edge_fetch(text: str, voice: str, communicate=None) -> bytes:
+    """MP3 bytes for `text`. Drives the async stream directly: edge_tts's own stream_sync()
+    blocks forever when the service refuses (e.g. HTTP 403), so retries would never run."""
+    if communicate is None:
+        from edge_tts import Communicate as communicate
 
-    audio = bytearray()
-    for chunk in edge_tts.Communicate(text, voice).stream_sync():
-        if chunk["type"] == "audio":
-            audio += chunk["data"]
+    async def collect() -> bytes:
+        audio = bytearray()
+        async for chunk in communicate(text, voice).stream():
+            if chunk["type"] == "audio":
+                audio += chunk["data"]
+        return bytes(audio)
+
+    audio = asyncio.run(collect())
     if not audio:
         raise TTSError(f"edge-tts returned no audio for {text!r}")
-    return bytes(audio)
+    return audio
 
 
 class EdgeTTS:
