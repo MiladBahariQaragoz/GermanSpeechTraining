@@ -300,13 +300,13 @@ Jev questions per exchange (state = topic DE/EN + the exchange's lines DE/EN), b
 Rank = mean of both, each normalised to 0–1; top `per_conversation` kept, shown in line order.
 
 Tests (`tests/test_shortlist.py`, fake judge, no network):
-- [ ] `exchanges` pairs each `?` line with up to 2 following non-question lines, stops at the next question,
+- [x] `exchanges` pairs each `?` line with up to 2 following non-question lines, stops at the next question,
       skips questions with no answer line.
-- [ ] `shortlist` keeps the best `per_conversation` by rank and returns them in line order.
-- [ ] `CachedJudge` asks the inner judge once per distinct request, also across instances (on-disk cache).
-- [ ] `JevJudge` sends SDK `Score` questions and returns each answer's `.score`; SDK errors become `JudgeError`.
-- [ ] `shortlist_digest` shows the conversation header, the rank and `Line.number` for every line.
-- [ ] CLI `gst shortlist --level 1` prints the shortlist with an injected fake judge; `JudgeError` → exit 1 with
+- [x] `shortlist` keeps the best `per_conversation` by rank and returns them in line order.
+- [x] `CachedJudge` asks the inner judge once per distinct request, also across instances (on-disk cache).
+- [x] `JevJudge` sends SDK `Score` questions and returns each answer's `.score`; SDK errors become `JudgeError`.
+- [x] `shortlist_digest` shows the conversation header, the rank and `Line.number` for every line.
+- [x] CLI `gst shortlist --level 1` prints the shortlist with an injected fake judge; `JudgeError` → exit 1 with
       the message.
 - [ ] Real run: `uv run --env-file .env gst shortlist --level 13`; Claude checks that small talk is gone and
       the drills written from it pass `gst check`.
