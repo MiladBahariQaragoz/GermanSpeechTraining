@@ -7,7 +7,9 @@ authors = [
     { name = "MiladBahariQaragoz", email = "milaawd@outlook.com" }
 ]
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "piper-tts>=1.8.0",
+]
 
 [project.scripts]
 gst = "gst.cli:main"
