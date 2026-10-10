@@ -209,3 +209,29 @@ def test_edge_fetch_raises_instead_of_hanging_when_the_service_refuses():
 
 def test_edge_fetch_joins_the_audio_chunks():
     assert _edge_fetch("Hallo!", "v", communicate=SpeakingCommunicate) == b"abcdef"
+
+
+def test_cached_tts_separates_backend_settings(tmp_path):
+    slow = FakeTTS()
+    slow.settings = "length_scale=1.2"
+
+    assert CachedTTS(FakeTTS(), tmp_path).get("Hallo!", "v") != CachedTTS(slow, tmp_path).get("Hallo!", "v")
+
+
+def test_backends_describe_their_audio_settings(tmp_path):
+    assert PiperTTS(tmp_path, length_scale=1.2).settings == "length_scale=1.2"
+    assert ElevenLabsTTS(api_key="k", model_id="m").settings == "m|pcm_22050"
+
+
+def test_edge_clips_cached_before_settings_existed_are_still_found(tmp_path):
+    import hashlib
+
+    legacy = hashlib.sha256(b"edge\0de-DE-KillianNeural\0Hallo!").hexdigest()[:20]
+    write_silence(tmp_path / f"{legacy}.wav", 0.5)
+
+    def no_network(text, voice):
+        raise AssertionError("should have used the cached clip")
+
+    path = CachedTTS(EdgeTTS(fetch=no_network), tmp_path).get("Hallo!", "de-DE-KillianNeural")
+
+    assert path == tmp_path / f"{legacy}.wav"

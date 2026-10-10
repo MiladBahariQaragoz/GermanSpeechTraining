@@ -18,6 +18,7 @@ class TTSError(RuntimeError):
 
 class TTS(Protocol):
     name: str
+    settings: str  # anything besides voice and text that changes the audio; part of the cache key
 
     def synthesize(self, text: str, voice: str, out: Path) -> None: ...
 
@@ -52,6 +53,7 @@ class PiperTTS:
     def __init__(self, voices_dir: Path, length_scale: float = 1.0):
         self.voices_dir = Path(voices_dir)
         self.length_scale = length_scale
+        self.settings = f"length_scale={length_scale}"
         self._voices = {}
 
     def _voice(self, name: str):
@@ -103,6 +105,7 @@ class EdgeTTS:
     """
 
     name = "edge"
+    settings = ""
 
     def __init__(
         self,
@@ -158,6 +161,7 @@ class ElevenLabsTTS:
             raise TTSError("set ELEVENLABS_API_KEY to use the ElevenLabs backend")
         self.post = post
         self.model_id = model_id
+        self.settings = f"{model_id}|pcm_{self.RATE}"
 
     def synthesize(self, text: str, voice: str, out: Path) -> None:
         pcm = self.post(
@@ -180,7 +184,11 @@ class CachedTTS:
         self.cache_dir = Path(cache_dir)
 
     def get(self, text: str, voice: str) -> Path:
-        key = hashlib.sha256(f"{self.inner.name}\0{voice}\0{text}".encode()).hexdigest()[:20]
+        identity = f"{self.inner.name}\0{voice}\0{text}"
+        settings = getattr(self.inner, "settings", "")
+        if settings:  # backends without settings keep the keys of clips cached before settings existed
+            identity += f"\0{settings}"
+        key = hashlib.sha256(identity.encode()).hexdigest()[:20]
         path = self.cache_dir / f"{key}.wav"
         if not path.exists():
             self.cache_dir.mkdir(parents=True, exist_ok=True)
