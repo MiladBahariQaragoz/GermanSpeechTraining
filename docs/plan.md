@@ -144,7 +144,9 @@ GermanSpeechTraining/
 │   ├── tts.py                # TTS protocol, PiperTTS, ElevenLabsTTS, audio cache
 │   ├── timeline.py           # pure segment/chapter planning
 │   ├── cards.py              # Pillow card rendering
-│   ├── video.py              # ffmpeg segment encode + concat + chapters
+│   ├── video.py              # ffmpeg segment encode + audio track + mux with chapters
+│   ├── render.py             # drills → cards, speech, segments → level MP4
+│   ├── config.py             # default paths (env-overridable)
 │   └── cli.py                # `gst digest|check|render`
 └── tests/
     ├── fixtures/ocr/…        # tiny fake OCR tree (2 levels × 2 conversations)
@@ -165,97 +167,108 @@ feedback lands before the bulk of the writing.
 
 ### Task 0: Scaffold
 **Files:** `pyproject.toml`, `.gitignore`, `README.md`, `CLAUDE.md`, `src/gst/__init__.py`, `tests/__init__.py`
-- [ ] `uv init --package --python 3.12`; deps `pillow`, `piper-tts`; optional extra `elevenlabs = ["httpx"]`; dev deps `pytest`, `ruff`.
-- [ ] `.gitignore`: `node_modules/`, `.env`, `.env.local`, `.env.*.local`, `dist/`, `build/`, `.next/`, `.DS_Store`, `.venv/`, `__pycache__/`, `*.wav`, `*.mp4`, `.cache/`.
-- [ ] `uv run pytest` and `uv run ruff check .` run clean. Commit `chore: scaffold uv project`.
+- [x] `uv init --package --python 3.12`; deps `pillow`, `piper-tts`; optional extra `elevenlabs = ["httpx"]`; dev deps `pytest`, `ruff`.
+- [x] `.gitignore`: `node_modules/`, `.env`, `.env.local`, `.env.*.local`, `dist/`, `build/`, `.next/`, `.DS_Store`, `.venv/`, `__pycache__/`, `*.wav`, `*.mp4`, `.cache/`.
+- [x] `uv run pytest` and `uv run ruff check .` run clean. Commit `chore: scaffold uv project`.
 
 ### Task 1: Transcript loader — `src/gst/transcript.py`
 Types: `Line(number:int, de:str, en:str)` (1-based), `Conversation(level, cefr, number, topic_de, topic_en, lines, path)`.
 Functions: `parse_level_dir(name)`, `parse_conversation_dir(name)`, `load_conversation(dir)`, `iter_conversations(root, levels)`.
 
 Tests (`tests/test_transcript.py`):
-- [ ] `parse_level_dir("1 - Level 1 - A1 - Beginner") == (1, "A1")`; `"29 - Level 29 - B2 - Intermediate"` → `(29, "B2")`; garbage → `ValueError`.
-- [ ] `parse_conversation_dir("1 -Im Lebensmittelgeschäft") == (1, "Im Lebensmittelgeschäft")`; `"12 - Kleidung einkaufen"` → `(12, "Kleidung einkaufen")`.
-- [ ] Fixture with intro, title, 6 dialogue lines, marker, pass 2 → exactly the 6 pass-1 lines, numbered 1..6.
-- [ ] `topic_en` comes from the title slide; the title slide is not in `lines`.
-- [ ] No marker slide → all DE lines after the title are kept.
-- [ ] `iter_conversations(root, levels=[2])` yields only level 2, natural-sorted (2 before 10).
+- [x] `parse_level_dir("1 - Level 1 - A1 - Beginner") == (1, "A1")`; `"29 - Level 29 - B2 - Intermediate"` → `(29, "B2")`; garbage → `ValueError`.
+- [x] `parse_conversation_dir("1 -Im Lebensmittelgeschäft") == (1, "Im Lebensmittelgeschäft")`; `"12 - Kleidung einkaufen"` → `(12, "Kleidung einkaufen")`.
+- [x] Fixture with intro, title, 6 dialogue lines, marker, pass 2 → exactly the 6 pass-1 lines, numbered 1..6.
+- [x] `topic_en` comes from the title slide; the title slide is not in `lines`.
+- [x] No marker slide → all DE lines after the title are kept.
+- [x] `iter_conversations(root, levels=[2])` yields only level 2, natural-sorted (2 before 10).
 
 ### Task 2: Text helpers — `src/gst/text.py`
 Functions: `normalise(text)`, `words(text)`, `content_words(text)` (drops German stop words + punctuation).
 Tests (`tests/test_text.py`):
-- [ ] `words("Ich möchte Pasta machen.") == ["ich", "möchte", "pasta", "machen"]`; handles `geht's`, `z. B.`, `–`.
-- [ ] `content_words("Ich möchte Pasta machen.") == ["möchte", "pasta", "machen"]`.
-- [ ] `normalise("Was wirst du kochen?") == normalise("was wirst du kochen")`.
+- [x] `words("Ich möchte Pasta machen.") == ["ich", "möchte", "pasta", "machen"]`; handles `geht's`, `z. B.`, `–`.
+- [x] `content_words("Ich möchte Pasta machen.") == ["möchte", "pasta", "machen"]`.
+- [x] `normalise("Was wirst du kochen?") == normalise("was wirst du kochen")`.
 
 ### Task 3: Digest — `src/gst/digest.py`
 `level_digest(conversations) -> str`: per conversation a header `## C01 · Im Lebensmittelgeschäft — At the grocery store`,
 then one line per sentence: `09 ? Was wirst du kochen? | What will you cook?` (`?` marks question lines).
 Tests (`tests/test_digest.py`):
-- [ ] Header and numbering match the fixture; question lines carry the `?` marker; EN after `|`.
-- [ ] Line numbers in the digest equal `Line.number` (so `source_lines` can be checked).
+- [x] Header and numbering match the fixture; question lines carry the `?` marker; EN after `|`.
+- [x] Line numbers in the digest equal `Line.number` (so `source_lines` can be checked).
 
 ### Task 4: Drill model — `src/gst/drills.py`
 `Drill` dataclass (authored fields from §4 + derived `id`, `level`, `cefr`, `topic_de`, `topic_en`).
 `load_level(path, conversations) -> list[Drill]`, `write_markdown(path, drills)`.
 Tests (`tests/test_drills.py`):
-- [ ] Loading fills `id` (`L01-D01`…), `level`, `cefr`, `topic_de`, `topic_en` from the conversation.
-- [ ] Unknown conversation number → `DrillError` naming the drill.
-- [ ] Missing required field → `DrillError` naming the field.
-- [ ] Markdown view lists every question, answer and hint line; UTF-8 umlauts preserved.
+- [x] Loading fills `id` (`L01-D01`…), `level`, `cefr`, `topic_de`, `topic_en` from the conversation.
+- [x] Unknown conversation number → `DrillError` naming the drill.
+- [x] Missing required field → `DrillError` naming the field.
+- [x] Markdown view lists every question, answer and hint line; UTF-8 umlauts preserved.
 
 ### Task 5: Validator — `src/gst/check.py`
 `check_level(drills, conversations, min_drills=40, cap=4, min_conversations=15) -> list[str]` (empty = pass).
 Tests (`tests/test_check.py`), one failing case per rule of success criteria 1–4:
-- [ ] fewer than `min_drills`; hint not in answer; 1 or 6 hints; `source_lines` empty or out of range;
+- [x] fewer than `min_drills`; hint not in answer; 1 or 6 hints; `source_lines` empty or out of range;
       answer content words < 50 % in source lines; > `cap` drills from one conversation;
       < `min_conversations` represented; duplicate normalised question.
-- [ ] A valid level returns `[]`.
+- [x] A valid level returns `[]`.
 
 ### Task 6: Author level 1 (Claude, in-session)
-- [ ] `uv run gst digest --level 1 > .cache/digest-01.txt`; read it in full.
-- [ ] Write `data/drills/level-01.json` (≥ 40 drills, ~2 per conversation, most topic-relevant exchanges,
+- [x] `uv run gst digest --level 1 > .cache/digest-01.txt`; read it in full.
+- [x] Write `data/drills/level-01.json` (≥ 40 drills, ~2 per conversation, most topic-relevant exchanges,
       questions phrased to the learner and answerable without the dialogue, level-appropriate German).
-- [ ] `uv run gst check --levels 1` passes; commit `feat: add level 1 speaking drills`.
+- [x] `uv run gst check --levels 1` passes; commit `feat: add level 1 speaking drills`.
 
 ### Task 7: TTS — `src/gst/tts.py`
 `TTS` protocol: `synthesize(text, voice, out) -> None` (WAV). `PiperTTS(models_dir)`, `ElevenLabsTTS(api_key, post)`,
 `CachedTTS(inner, cache_dir).get(text, voice) -> Path` (file name = sha256(backend, voice, text)). `wav_duration(path)`.
 Voices: question = `de_DE-thorsten-high`, answer = a female Piper voice (pick after a listening test).
 Tests (`tests/test_tts.py`):
-- [ ] `wav_duration` of a generated 1.5 s silent WAV == 1.5.
-- [ ] `CachedTTS` returns the same path twice and calls the inner backend once.
-- [ ] `ElevenLabsTTS` sends `xi-api-key` and the text to `/v1/text-to-speech/{voice}` (fake `post`); missing key → clear error.
-- [ ] `@pytest.mark.slow` — real Piper gives a WAV > 0.5 s for `"Hallo, wie geht's?"` (skipped when the model is absent).
+- [x] `wav_duration` of a generated 1.5 s silent WAV == 1.5.
+- [x] `CachedTTS` returns the same path twice and calls the inner backend once.
+- [x] `ElevenLabsTTS` sends `xi-api-key` and the text to `/v1/text-to-speech/{voice}` (fake `post`); missing key → clear error.
+- [x] `@pytest.mark.slow` — real Piper gives a WAV > 0.5 s for `"Hallo, wie geht's?"` (skipped when the model is absent).
 
 ### Task 8: Timeline — `src/gst/timeline.py` (pure, no I/O)
 `TimelineConfig`, `Segment(kind, drill_id, duration, audio)`, `Chapter(title, start)`,
 `plan_drill(drill, q_audio, q_dur, a_audio, a_dur, cfg)`, `plan_level(level_label, items, cfg) -> (segments, chapters)`.
 Tests (`tests/test_timeline.py`):
-- [ ] q=2.0, a=3.0 → durations `[2.6, 6.5, 4.2]`; a=1.0 → speak uses the 5.0 s floor.
-- [ ] 3 drills → intro + 9 + outro segments; chapter starts are cumulative sums.
+- [x] q=2.0, a=3.0 → durations `[2.6, 6.5, 4.2]`; a=1.0 → speak uses the 5.0 s floor.
+- [x] 3 drills → intro + 9 + outro segments; chapter starts are cumulative sums.
 
 ### Task 9: Cards — `src/gst/cards.py`
 *Run `/taste-skill` first.* `wrap(text, font, max_width)`, `question_card(drill, label)`, `answer_card(drill, label)`, `title_card(title, subtitle)`.
 Font via `fc-match` (Noto Sans → DejaVu Sans fallback).
 Tests (`tests/test_cards.py`):
-- [ ] Every card is 1280×720 RGB; `wrap` never exceeds `max_width` nor drops words.
-- [ ] 200-character answer renders without overflow (font steps down); `ÄÖÜäöüß` have non-empty bboxes.
+- [x] Every card is 1280×720 RGB; `wrap` never exceeds `max_width` nor drops words.
+- [x] 200-character answer renders without overflow (font steps down); `ÄÖÜäöüß` have non-empty bboxes.
 
 ### Task 10: Video — `src/gst/video.py`
-`encode_segment(image, audio, duration, out, countdown=False)`, `concat(paths, chapters, out)`, `probe(path)`.
-Shared codec params (1280×720, 30 fps, yuv420p, H.264, AAC 44.1 kHz mono) so concat is `-c copy`.
+`encode_segment(image, duration, out, countdown=False)` (silent H.264), `build_audio(parts, out)`,
+`mux(segments, audio, chapters, out)`, `probe(path)`.
+*Changed during implementation:* segments are video-only and the whole level's audio is assembled
+sample-exact in one WAV, then muxed once. Per-segment AAC would add encoder priming to each of ~180
+segments and drift out of sync. The timeline rounds every segment to whole frames so audio, video and
+chapters agree. `drawbox` cannot animate its width, so the countdown fill is an `overlay` sliding out of
+a bar-sized canvas.
 Tests (`tests/test_video.py`, real ffmpeg, tiny inputs):
-- [ ] 1.0 s still + 0.5 s audio → 1.0 s ± 0.05, one video + one audio stream; silent segment still has audio.
-- [ ] Concat of 3 segments → duration = sum ± 0.1 s; chapters present with the given titles.
+- [x] 1.0 s still → silent 1.0 s ± 0.05 video; countdown bar shrinks over the segment.
+- [x] `build_audio` fills each slot exactly (clips padded with silence, resampled to 44.1 kHz).
+- [x] Mux of 3 segments + audio → duration = sum ± 0.1 s; chapters present with the given titles.
 
 ### Task 11: CLI + first video — `src/gst/cli.py`
 `gst digest --level N`, `gst check --levels 1-10`, `gst render --levels 1-10 [--tts piper|elevenlabs]`; `parse_levels("1-3,7") == [1,2,3,7]`.
 Tests (`tests/test_cli.py`):
-- [ ] `parse_levels` valid + invalid cases.
-- [ ] `render` end-to-end on `tests/fixtures/ocr` with a fake TTS and a 2-drill fixture → MP4 that `probe` accepts.
-- [ ] Second `render` → 0 TTS calls.
+- [x] `parse_levels` valid + invalid cases.
+- [x] `render` end-to-end on `tests/fixtures/ocr` with a fake TTS and a 2-drill fixture → MP4 that `probe` accepts.
+- [x] Second `render` → 0 TTS calls.
 - [ ] Render level 1 for real; **user watches it** and gives format feedback (criteria 8–9) before Task 12.
+
+**Found while rendering level 1:** espeak writes the ich-sound as `c` + combining cedilla, which the
+low-quality German Piper voices (kerstin, ramona, eva_k) do not know — "ich" lost its ç. Fixed in
+`tts.compose_phonemes` (merges into the precomposed `ç` those voices do know). Only the French nasal in
+"Restaurant" still loses its tilde on the question voice.
 
 ### Task 12: Author + render levels 2–10
 - [ ] Per level: digest → write `level-NN.json` → `gst check` → commit + push (one commit per level).
