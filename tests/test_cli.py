@@ -3,6 +3,7 @@ import json
 import pytest
 
 from gst.cli import main, parse_levels
+from gst.tts import TTSError
 from tests.fakes import FakeTTS
 from tests.test_drills import GROCERY_DRILL, LIBRARY_DRILL
 
@@ -112,3 +113,46 @@ def test_render_can_still_use_piper_voices(ocr_root, tmp_path, monkeypatch):
     assert _render(ocr_root, folder, tmp_path / "work", "--tts", "piper", *LENIENT) == 0
 
     assert ("Wo ist der Bahnhof?", "de_DE-kerstin-low") in fake.calls
+
+
+def test_digest_reports_a_level_without_conversations(ocr_root, capsys):
+    assert main(["digest", "--level", "5", "--ocr-root", str(ocr_root)]) == 1
+
+    assert "no conversations for level 5" in capsys.readouterr().out
+
+
+def test_check_reports_a_level_without_conversations(ocr_root, tmp_path, capsys):
+    folder = tmp_path / "drills"
+    folder.mkdir()
+    (folder / "level-05.json").write_text(json.dumps({"level": 5, "drills": [GROCERY_DRILL]}))
+
+    code = main(["check", "--levels", "5", "--ocr-root", str(ocr_root), "--drills-dir", str(folder)])
+
+    assert code == 1
+    assert "no conversations for level 5" in capsys.readouterr().out
+
+
+class BrokenTTS(FakeTTS):
+    def synthesize(self, text, voice, out):
+        raise TTSError("edge-tts failed 8 times for 'Hallo': 403")
+
+
+def test_render_reports_speech_failures_without_a_traceback(ocr_root, tmp_path, monkeypatch, capsys):
+    folder = _drills_dir(tmp_path, [GROCERY_DRILL, LIBRARY_DRILL, ROUTE_DRILL])
+    monkeypatch.setattr("gst.cli.make_tts", lambda name, work_dir: BrokenTTS())
+
+    code = _render(ocr_root, folder, tmp_path / "work", *LENIENT)
+
+    assert code == 1
+    assert "level 1: edge-tts failed 8 times" in capsys.readouterr().out
+
+
+def test_render_reports_a_missing_elevenlabs_key(ocr_root, tmp_path, monkeypatch, capsys):
+    folder = _drills_dir(tmp_path, [GROCERY_DRILL, LIBRARY_DRILL, ROUTE_DRILL])
+    monkeypatch.delenv("ELEVENLABS_API_KEY", raising=False)
+
+    code = _render(ocr_root, folder, tmp_path / "work", "--tts", "elevenlabs",
+                   "--question-voice", "q", "--answer-voice", "a", *LENIENT)
+
+    assert code == 1
+    assert "ELEVENLABS_API_KEY" in capsys.readouterr().out

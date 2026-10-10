@@ -1,6 +1,7 @@
 """`gst` command line: digest, check and render speaking drills."""
 
 import argparse
+import subprocess
 from pathlib import Path
 
 from gst.check import check_level
@@ -9,7 +10,7 @@ from gst.digest import level_digest
 from gst.drills import DrillError, level_markdown, load_level
 from gst.render import Voices, render_level
 from gst.transcript import iter_conversations
-from gst.tts import TTS, CachedTTS, EdgeTTS, ElevenLabsTTS, PiperTTS
+from gst.tts import TTS, CachedTTS, EdgeTTS, ElevenLabsTTS, PiperTTS, TTSError
 
 # Chosen by listening. Answers get the slower, clearer voice, since they are what the learner imitates.
 DEFAULT_VOICES = {
@@ -30,8 +31,18 @@ def parse_levels(text: str) -> list[int]:
     return levels
 
 
+def _conversations(level: int, args) -> list:
+    conversations = list(iter_conversations(args.ocr_root, levels=[level]))
+    if not conversations:
+        print(f"level {level}: no conversations for level {level} under {args.ocr_root} (OCR not run yet?)")
+    return conversations
+
+
 def _digest(args) -> int:
-    print(level_digest(list(iter_conversations(args.ocr_root, levels=[args.level]))))
+    conversations = _conversations(args.level, args)
+    if not conversations:
+        return 1
+    print(level_digest(conversations))
     return 0
 
 
@@ -41,7 +52,9 @@ def _checked_drills(level: int, args) -> list | None:
     if not path.exists():
         print(f"level {level}: {path} not found")
         return None
-    conversations = list(iter_conversations(args.ocr_root, levels=[level]))
+    conversations = _conversations(level, args)
+    if not conversations:
+        return None
     try:
         drills = load_level(path, conversations)
     except DrillError as error:
@@ -85,14 +98,23 @@ def _render(args) -> int:
         return 1
     question = args.question_voice or defaults.question
     voices = Voices(question, args.answer_voice or defaults.answer)
-    tts = CachedTTS(make_tts(args.tts, args.work_dir), args.work_dir / "tts")
+    try:
+        tts = CachedTTS(make_tts(args.tts, args.work_dir), args.work_dir / "tts")
+    except TTSError as error:
+        print(error)
+        return 1
     failed = False
     for level in args.levels:
         drills = _checked_drills(level, args)
         if drills is None:
             failed = True
             continue
-        video = render_level(drills, tts, voices, args.work_dir)
+        try:
+            video = render_level(drills, tts, voices, args.work_dir)
+        except (TTSError, subprocess.CalledProcessError) as error:
+            print(f"level {level}: {error}")
+            failed = True
+            continue
         print(f"level {level}: {video}")
     return 1 if failed else 0
 
