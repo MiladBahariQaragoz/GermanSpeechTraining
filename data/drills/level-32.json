@@ -1,0 +1,1031 @@
+{
+ "level": 32,
+ "drills": [
+  {
+   "conversation": 1,
+   "question_de": "Was hat dir auf deinen Reisen in andere Länder am meisten gefallen?",
+   "question_en": "What did you enjoy the most on your trips to other countries?",
+   "answer_de": "Ich habe das Essen in jedem Land wirklich geliebt.",
+   "answer_en": "I really loved the food in each country.",
+   "hints": [
+    "Essen",
+    "Land",
+    "geliebt"
+   ],
+   "source_lines": [
+    10
+   ]
+  },
+  {
+   "conversation": 1,
+   "question_de": "Wie war es für dich, ein Gericht mit Insekten zu probieren?",
+   "question_en": "What was it like for you to try a dish made with insects?",
+   "answer_de": "Das Gericht war anders, aber ich habe es genossen, etwas Neues auszuprobieren.",
+   "answer_en": "The dish was different, but I enjoyed trying something new.",
+   "hints": [
+    "Gericht",
+    "anders",
+    "genossen",
+    "Neues"
+   ],
+   "source_lines": [
+    14,
+    19
+   ]
+  },
+  {
+   "conversation": 1,
+   "question_de": "Welche besonderen Traditionen gibt es in deiner Kultur?",
+   "question_en": "What special traditions are there in your culture?",
+   "answer_de": "In meiner Kultur haben wir eine besondere Kaffeezeremonie und einen Tanz, der eine Geschichte durch Bewegung erzählt.",
+   "answer_en": "In my culture, we have a special coffee ceremony and a dance that tells a story through movement.",
+   "hints": [
+    "Kaffeezeremonie",
+    "Tanz",
+    "Geschichte",
+    "Bewegung"
+   ],
+   "source_lines": [
+    32,
+    55
+   ]
+  },
+  {
+   "conversation": 2,
+   "question_de": "Was war dein erster Schritt, als du dein Café eröffnet hast?",
+   "question_en": "What was your first step when you opened your café?",
+   "answer_de": "Der erste Schritt war, einen Geschäftsplan zu erstellen. Darin habe ich meine Ziele, Zielkunden und den Standort des Cafés aufgeschrieben.",
+   "answer_en": "The first step was to create a business plan. In it, I wrote down my goals, target customers and the location of the café.",
+   "hints": [
+    "Geschäftsplan",
+    "Ziele",
+    "Zielkunden",
+    "Standort"
+   ],
+   "source_lines": [
+    14,
+    18
+   ]
+  },
+  {
+   "conversation": 2,
+   "question_de": "Wie hast du den Standort für dein Café ausgewählt?",
+   "question_en": "How did you choose the location for your café?",
+   "answer_de": "Ich habe andere Cafés in der Umgebung analysiert und eine belebte Straße mit viel Fußverkehr gewählt.",
+   "answer_en": "I analyzed other cafés in the area and chose a busy street with lots of foot traffic.",
+   "hints": [
+    "Cafés",
+    "analysiert",
+    "belebte",
+    "Fußverkehr"
+   ],
+   "source_lines": [
+    21,
+    31
+   ]
+  },
+  {
+   "conversation": 2,
+   "question_de": "Welche Herausforderung hattest du bei der Gründung deines Unternehmens?",
+   "question_en": "What challenge did you face when founding your business?",
+   "answer_de": "Eine große Herausforderung war, die richtigen Genehmigungen und Lizenzen zu bekommen.",
+   "answer_en": "One big challenge was getting the right permits and licenses.",
+   "hints": [
+    "Herausforderung",
+    "Genehmigungen",
+    "Lizenzen"
+   ],
+   "source_lines": [
+    36
+   ]
+  },
+  {
+   "conversation": 3,
+   "question_de": "Hast du ein Budget, und kontrollierst du es regelmäßig?",
+   "question_en": "Do you have a budget, and do you check it regularly?",
+   "answer_de": "Ich versuche, ein Budget zu führen, aber ich vergesse oft, es zu überprüfen.",
+   "answer_en": "I try to keep a budget, but I often forget to check it.",
+   "hints": [
+    "Budget",
+    "vergesse",
+    "überprüfen"
+   ],
+   "source_lines": [
+    19
+   ]
+  },
+  {
+   "conversation": 3,
+   "question_de": "Welche Kategorien habt ihr für eure Ausgaben?",
+   "question_en": "What categories do you have for your expenses?",
+   "answer_de": "Wir haben Kategorien wie Wohnen, Essen und Unterhaltung. Für das Wohnen zahle ich Miete und einige Nebenkosten.",
+   "answer_en": "We have categories like housing, food and entertainment. For housing, I pay rent and some utility bills.",
+   "hints": [
+    "Kategorien",
+    "Wohnen",
+    "Miete",
+    "Nebenkosten"
+   ],
+   "source_lines": [
+    35,
+    39
+   ]
+  },
+  {
+   "conversation": 3,
+   "question_de": "Wie wollt ihr sparen und euch auf unerwartete Ausgaben vorbereiten?",
+   "question_en": "How do you want to save and prepare for unexpected expenses?",
+   "answer_de": "Wir können mit zehn Prozent unseres Einkommens anfangen und einen Notfallfonds erstellen.",
+   "answer_en": "We can start with ten percent of our income and create an emergency fund.",
+   "hints": [
+    "zehn",
+    "Prozent",
+    "Einkommens",
+    "Notfallfonds"
+   ],
+   "source_lines": [
+    58,
+    65
+   ]
+  },
+  {
+   "conversation": 4,
+   "question_de": "Was planst du zu kaufen, und warum?",
+   "question_en": "What are you planning to buy, and why?",
+   "answer_de": "Ich möchte ein neues Auto kaufen, weil mein altes Auto oft ausfällt und die Reparaturen teuer werden.",
+   "answer_en": "I want to buy a new car because my old car often breaks down and the repairs are getting expensive.",
+   "hints": [
+    "neues",
+    "Auto",
+    "Reparaturen",
+    "teuer"
+   ],
+   "source_lines": [
+    8,
+    15
+   ]
+  },
+  {
+   "conversation": 4,
+   "question_de": "Wie viel möchtest du ausgeben, und wie willst du den Kauf finanzieren?",
+   "question_en": "How much do you want to spend, and how do you want to finance the purchase?",
+   "answer_de": "Ich möchte etwa zwanzigtausend Dollar ausgeben. Ich werde wahrscheinlich einen Kredit benötigen und mindestens zwanzig Prozent anzahlen.",
+   "answer_en": "I want to spend around twenty thousand dollars. I will probably need a loan and put down at least twenty percent.",
+   "hints": [
+    "zwanzigtausend",
+    "Dollar",
+    "Kredit",
+    "anzahlen"
+   ],
+   "source_lines": [
+    26,
+    34,
+    41
+   ]
+  },
+  {
+   "conversation": 4,
+   "question_de": "Welche Eigenschaften soll dein neues Auto haben?",
+   "question_en": "What features should your new car have?",
+   "answer_de": "Ich hätte gerne ein Auto mit guter Kraftstoffeffizienz und Sicherheitsmerkmalen. Außerdem bevorzuge ich eine neutrale Farbe, wie grau oder schwarz.",
+   "answer_en": "I would like a car with good fuel efficiency and safety features. I also prefer a neutral color, like gray or black.",
+   "hints": [
+    "Kraftstoffeffizienz",
+    "Sicherheitsmerkmalen",
+    "neutrale",
+    "Farbe"
+   ],
+   "source_lines": [
+    44,
+    51
+   ]
+  },
+  {
+   "conversation": 5,
+   "question_de": "Wohin möchtest du als Nächstes reisen, und was möchtest du dort sehen?",
+   "question_en": "Where would you like to travel next, and what would you like to see there?",
+   "answer_de": "Ich habe überlegt, nach Südostasien zu gehen. Ich möchte die Strände und die Tempel dort sehen.",
+   "answer_en": "I was considering going to Southeast Asia. I want to see the beaches and the temples there.",
+   "hints": [
+    "Südostasien",
+    "Strände",
+    "Tempel"
+   ],
+   "source_lines": [
+    14,
+    17
+   ]
+  },
+  {
+   "conversation": 5,
+   "question_de": "Warst du schon einmal in Thailand, und was hat dir dort gefallen?",
+   "question_en": "Have you ever been to Thailand, and what did you like there?",
+   "answer_de": "Ich war vor ein paar Jahren in Thailand. Die Strände waren atemberaubend und das Essen war köstlich!",
+   "answer_en": "I went to Thailand a few years ago. The beaches were stunning, and the food was delicious!",
+   "hints": [
+    "Strände",
+    "atemberaubend",
+    "Essen",
+    "köstlich"
+   ],
+   "source_lines": [
+    19,
+    21,
+    24
+   ]
+  },
+  {
+   "conversation": 5,
+   "question_de": "Wie lange sollte ich in Thailand bleiben, und welchen Tipp hast du für die Reise?",
+   "question_en": "How long should I stay in Thailand, and what tip do you have for the trip?",
+   "answer_de": "Ich empfehle mindestens zwei Wochen. Lerne vorher ein paar grundlegende Wörter in der Landessprache.",
+   "answer_en": "I recommend at least two weeks. Learn a few basic words in the local language beforehand.",
+   "hints": [
+    "mindestens",
+    "Wochen",
+    "grundlegende",
+    "Wörter",
+    "Landessprache"
+   ],
+   "source_lines": [
+    57,
+    71
+   ]
+  },
+  {
+   "conversation": 6,
+   "question_de": "Warum ist Familie für dich so wichtig?",
+   "question_en": "Why is family so important to you?",
+   "answer_de": "Ich fühle mich sicher und glücklich, wenn ich mit meiner Familie bin. Sie ist in guten und in schlechten Zeiten bei mir.",
+   "answer_en": "I feel safe and happy when I am with my family. They are with me in good times and bad times.",
+   "hints": [
+    "sicher",
+    "glücklich",
+    "Familie",
+    "Zeiten"
+   ],
+   "source_lines": [
+    14,
+    16
+   ]
+  },
+  {
+   "conversation": 6,
+   "question_de": "Welche Traditionen hat deine Familie, und wie hältst du Kontakt?",
+   "question_en": "What traditions does your family have, and how do you keep in touch?",
+   "answer_de": "Wir haben jeden Sonntag ein großes Abendessen. Ich versuche, meine Familie jede Woche anzurufen.",
+   "answer_en": "We have a big dinner every Sunday. I try to call my family every week.",
+   "hints": [
+    "Sonntag",
+    "Abendessen",
+    "versuche",
+    "anzurufen"
+   ],
+   "source_lines": [
+    22,
+    54
+   ]
+  },
+  {
+   "conversation": 6,
+   "question_de": "Was können Familien tun, um zusammen glücklich zu bleiben?",
+   "question_en": "What can families do to stay happy together?",
+   "answer_de": "Ich denke, Zeit miteinander zu verbringen, ist der Schlüssel. Am Ende des Tages bedeutet Familie, füreinander da zu sein.",
+   "answer_en": "I think spending time together is key. At the end of the day, family means being there for each other.",
+   "hints": [
+    "Zeit",
+    "verbringen",
+    "Schlüssel",
+    "füreinander"
+   ],
+   "source_lines": [
+    81,
+    91
+   ]
+  },
+  {
+   "conversation": 7,
+   "question_de": "Wie hast du deine Folien für die Präsentation vorbereitet?",
+   "question_en": "How did you prepare your slides for the presentation?",
+   "answer_de": "Ich habe mich auf die Hauptpunkte konzentriert und ein paar visuelle Elemente hinzugefügt, um die Folien interessanter zu machen.",
+   "answer_en": "I focused on the main points and added a few visuals to make the slides more interesting.",
+   "hints": [
+    "Hauptpunkte",
+    "konzentriert",
+    "visuelle",
+    "Elemente"
+   ],
+   "source_lines": [
+    21,
+    26
+   ]
+  },
+  {
+   "conversation": 7,
+   "question_de": "Wie wirst du deine Präsentation beginnen?",
+   "question_en": "How will you start your presentation?",
+   "answer_de": "Ich werde mit einer überraschenden Tatsache über mein Thema beginnen.",
+   "answer_en": "I will start with a surprising fact about my topic.",
+   "hints": [
+    "überraschenden",
+    "Tatsache",
+    "Thema",
+    "beginnen"
+   ],
+   "source_lines": [
+    37
+   ]
+  },
+  {
+   "conversation": 7,
+   "question_de": "Hast du Tipps für den Umgang mit Fragen nach der Präsentation?",
+   "question_en": "Do you have any tips for dealing with questions after the presentation?",
+   "answer_de": "Ich denke, man sollte aufmerksam zuhören und sich Zeit zum Antworten nehmen.",
+   "answer_en": "I think you should listen carefully and take your time to answer.",
+   "hints": [
+    "aufmerksam",
+    "zuhören",
+    "Zeit",
+    "Antworten"
+   ],
+   "source_lines": [
+    64
+   ]
+  },
+  {
+   "conversation": 8,
+   "question_de": "Warum ist Bildung der Schlüssel zu einem besseren Leben?",
+   "question_en": "Why is education the key to a better life?",
+   "answer_de": "Bildung hilft uns, bessere Jobs zu finden und mehr Geld zu verdienen. Sie hilft uns auch, kritisch zu denken und bessere Entscheidungen zu treffen.",
+   "answer_en": "Education helps us find better jobs and earn more money. It also helps us think critically and make better decisions.",
+   "hints": [
+    "bessere",
+    "Jobs",
+    "kritisch",
+    "Entscheidungen"
+   ],
+   "source_lines": [
+    11,
+    16,
+    19,
+    21
+   ]
+  },
+  {
+   "conversation": 8,
+   "question_de": "Was ist deiner Meinung nach die größte Herausforderung in der Bildung heute?",
+   "question_en": "What do you think is the biggest challenge in education today?",
+   "answer_de": "Ich denke, der Zugang zur Bildung ist eine große Herausforderung. Bildung sollte ein Recht für alle sein.",
+   "answer_en": "I think access to education is a huge challenge. Education should be a right for everyone.",
+   "hints": [
+    "Zugang",
+    "Bildung",
+    "Herausforderung",
+    "Recht"
+   ],
+   "source_lines": [
+    38,
+    40
+   ]
+  },
+  {
+   "conversation": 8,
+   "question_de": "Warum endet Bildung nicht mit einem Abschluss?",
+   "question_en": "Why doesn't education end with a degree?",
+   "answer_de": "Bildung ist ein lebenslanger Prozess. Wir lernen unser ganzes Leben lang neue Dinge.",
+   "answer_en": "Education is a lifelong process. We learn new things throughout our lives.",
+   "hints": [
+    "lebenslanger",
+    "Prozess",
+    "lernen",
+    "Dinge"
+   ],
+   "source_lines": [
+    24,
+    26
+   ]
+  },
+  {
+   "conversation": 9,
+   "question_de": "Was liegt dir wegen des Projekts auf dem Herzen?",
+   "question_en": "What is on your mind regarding the project?",
+   "answer_de": "Ich habe das Gefühl, dass wir einige Missverständnisse über das Projekt haben. Wir haben unterschiedliche Ideen.",
+   "answer_en": "I feel like we have some misunderstandings about the project. We have different ideas.",
+   "hints": [
+    "Missverständnisse",
+    "Projekt",
+    "unterschiedliche",
+    "Ideen"
+   ],
+   "source_lines": [
+    5,
+    9
+   ]
+  },
+  {
+   "conversation": 9,
+   "question_de": "Was schlägst du vor, wenn ihr im Team über Budget und Qualität streitet?",
+   "question_en": "What do you suggest when your team argues about budget and quality?",
+   "answer_de": "Wir können spezifische Treffen ansetzen, um regelmäßig Updates zu besprechen. Wenn einer von uns ein Anliegen hat, sollten wir sofort darüber reden.",
+   "answer_en": "We can set specific meetings to discuss updates regularly. If one of us has a concern, we should talk about it right away.",
+   "hints": [
+    "Treffen",
+    "regelmäßig",
+    "Anliegen",
+    "sofort"
+   ],
+   "source_lines": [
+    31,
+    32,
+    36
+   ]
+  },
+  {
+   "conversation": 9,
+   "question_de": "Wie bereitet ihr euch auf das Gespräch über den Konflikt vor?",
+   "question_en": "How do you prepare for the conversation about the conflict?",
+   "answer_de": "Wir bereiten eine Agenda vor, um die Dinge organisiert zu halten. Ich werde die Hauptpunkte aufschreiben, die wir besprechen wollen.",
+   "answer_en": "We prepare an agenda to keep things organized. I will write down the main points we want to discuss.",
+   "hints": [
+    "Agenda",
+    "organisiert",
+    "Hauptpunkte",
+    "aufschreiben"
+   ],
+   "source_lines": [
+    53,
+    54
+   ]
+  },
+  {
+   "conversation": 10,
+   "question_de": "Warum denkst du über persönliches Wachstum nach?",
+   "question_en": "Why are you thinking about personal growth?",
+   "answer_de": "Ich habe das Gefühl, dass ich schon lange in meinem Job feststecke. Ich möchte mich verbessern.",
+   "answer_en": "I feel like I have been stuck in my job for a long time. I want to improve myself.",
+   "hints": [
+    "lange",
+    "Job",
+    "feststecke",
+    "verbessern"
+   ],
+   "source_lines": [
+    10,
+    11
+   ]
+  },
+  {
+   "conversation": 10,
+   "question_de": "Welche Ziele hast du für dein persönliches Wachstum?",
+   "question_en": "What goals do you have for your personal growth?",
+   "answer_de": "Ich möchte neue Fähigkeiten erlernen und neue Menschen kennenlernen. Außerdem möchte ich einen Kurs über Öffentlichkeitsarbeit besuchen.",
+   "answer_en": "I want to learn new skills and meet new people. I also want to take a course on public relations.",
+   "hints": [
+    "Fähigkeiten",
+    "Menschen",
+    "Kurs",
+    "Öffentlichkeitsarbeit"
+   ],
+   "source_lines": [
+    15,
+    17
+   ]
+  },
+  {
+   "conversation": 10,
+   "question_de": "Warum sollte man manchmal Risiken eingehen, und hast du das schon getan?",
+   "question_en": "Why should you sometimes take risks, and have you done that yourself?",
+   "answer_de": "Manchmal müssen wir Risiken eingehen, um neue Dinge zu lernen. Ich habe meine Grenzen getestet, und das war lohnend.",
+   "answer_en": "Sometimes we need to take risks to learn new things. I pushed my limits, and it was rewarding.",
+   "hints": [
+    "Risiken",
+    "Grenzen",
+    "getestet",
+    "lohnend"
+   ],
+   "source_lines": [
+    50,
+    59
+   ]
+  },
+  {
+   "conversation": 11,
+   "question_de": "Was müsst ihr bei eurem Familienunternehmen im Marketing verbessern?",
+   "question_en": "What do you need to improve in your family business's marketing?",
+   "answer_de": "Unsere Online-Präsenz ist nicht sehr stark. Wir könnten Konten auf verschiedenen Plattformen erstellen und regelmäßig posten.",
+   "answer_en": "Our online presence is not very strong. We could create accounts on different platforms and post regularly.",
+   "hints": [
+    "Konten",
+    "Plattformen",
+    "regelmäßig",
+    "posten"
+   ],
+   "source_lines": [
+    10,
+    13
+   ]
+  },
+  {
+   "conversation": 11,
+   "question_de": "Was könnt ihr tun, wenn euch manchmal beliebte Artikel ausgehen?",
+   "question_en": "What can you do when you sometimes run out of popular items?",
+   "answer_de": "Wir sollten unsere Verkäufe besser verfolgen. Vielleicht könnten wir ein Softwareprogramm zur Verwaltung unseres Inventars nutzen.",
+   "answer_en": "We should track our sales better. Maybe we could use a software program to manage our inventory.",
+   "hints": [
+    "Verkäufe",
+    "verfolgen",
+    "Softwareprogramm",
+    "Inventars"
+   ],
+   "source_lines": [
+    40,
+    42,
+    44
+   ]
+  },
+  {
+   "conversation": 11,
+   "question_de": "Wie bereitet ihr das Treffen mit der Familie vor?",
+   "question_en": "How do you prepare for the meeting with the family?",
+   "answer_de": "Wir setzen ein Treffen für dieses Wochenende an. Ich werde eine Liste von Themen vorbereiten, die wir behandeln sollten.",
+   "answer_en": "We set a meeting for this weekend. I will prepare a list of topics we should cover.",
+   "hints": [
+    "Treffen",
+    "Wochenende",
+    "Liste",
+    "Themen"
+   ],
+   "source_lines": [
+    81,
+    83
+   ]
+  },
+  {
+   "conversation": 12,
+   "question_de": "Warum machst du Yoga, und wie oft?",
+   "question_en": "Why do you do yoga, and how often?",
+   "answer_de": "Ich möchte mich gesünder fühlen und mehr Energie haben. Deshalb mache ich dreimal pro Woche Yoga.",
+   "answer_en": "I want to feel healthier and have more energy. That's why I do yoga three times a week.",
+   "hints": [
+    "gesünder",
+    "Energie",
+    "dreimal",
+    "Yoga"
+   ],
+   "source_lines": [
+    4,
+    11
+   ]
+  },
+  {
+   "conversation": 12,
+   "question_de": "Wie ernährst du dich gesund?",
+   "question_en": "How do you eat healthily?",
+   "answer_de": "Ich versuche, mehr Proteine und Gemüse zu essen und zu viel Zucker zu vermeiden. Außerdem mache ich Smoothies mit Früchten und Spinat.",
+   "answer_en": "I try to eat more protein and vegetables and avoid too much sugar. I also make smoothies with fruits and spinach.",
+   "hints": [
+    "Proteine",
+    "Gemüse",
+    "Zucker",
+    "Smoothies"
+   ],
+   "source_lines": [
+    20,
+    23,
+    35
+   ]
+  },
+  {
+   "conversation": 12,
+   "question_de": "Wie beginnst du den Tag, und was möchtest du noch ausprobieren?",
+   "question_en": "How do you start your day, and what else do you want to try?",
+   "answer_de": "Ich meditiere jeden Morgen zehn Minuten. Außerdem möchte ich mehr pflanzliche Mahlzeiten ausprobieren.",
+   "answer_en": "I meditate for ten minutes every morning. I also want to try more plant-based meals.",
+   "hints": [
+    "meditiere",
+    "Morgen",
+    "pflanzliche",
+    "Mahlzeiten"
+   ],
+   "source_lines": [
+    60,
+    70
+   ]
+  },
+  {
+   "conversation": 13,
+   "question_de": "Wann sollen wir das Fest für die Nachbarschaft veranstalten, und wann sollen wir beginnen?",
+   "question_en": "When should we hold the neighborhood event, and when should we start?",
+   "answer_de": "Wir können in zwei Wochen feiern, an einem Samstag. Ich schlage vor, um elf Uhr zu beginnen.",
+   "answer_en": "We can celebrate in two weeks, on a Saturday. I suggest starting at eleven o'clock.",
+   "hints": [
+    "Wochen",
+    "Samstag",
+    "elf",
+    "Uhr"
+   ],
+   "source_lines": [
+    19,
+    20,
+    23
+   ]
+  },
+  {
+   "conversation": 13,
+   "question_de": "Was für Essen und Getränke sollten wir für die Veranstaltung haben?",
+   "question_en": "What kind of food and drinks should we have for the event?",
+   "answer_de": "Wir können alle bitten, ein Gericht mitzubringen. Vielleicht können wir einige Getränke kaufen, und andere können mehr mitbringen.",
+   "answer_en": "We can ask everyone to bring a dish. Maybe we can buy some drinks, and others can bring more.",
+   "hints": [
+    "Gericht",
+    "mitzubringen",
+    "Getränke",
+    "kaufen"
+   ],
+   "source_lines": [
+    27,
+    45
+   ]
+  },
+  {
+   "conversation": 13,
+   "question_de": "Wann treffen wir uns, um alles zu planen, und was kannst du mitbringen?",
+   "question_en": "When do we meet to plan everything, and what can you bring?",
+   "answer_de": "Wir können uns morgen um zehn Uhr auf einen Kaffee treffen. Ich kann ein paar Klappstühle mitbringen.",
+   "answer_en": "We can meet for coffee tomorrow at ten o'clock. I can bring some folding chairs.",
+   "hints": [
+    "morgen",
+    "Kaffee",
+    "treffen",
+    "Klappstühle"
+   ],
+   "source_lines": [
+    38,
+    65,
+    66
+   ]
+  },
+  {
+   "conversation": 14,
+   "question_de": "Warum hast du kaum Zeit für dich selbst?",
+   "question_en": "Why do you hardly have any time for yourself?",
+   "answer_de": "Ich habe jeden Tag viele Meetings und bleibe oft lange im Büro. Ich habe das Gefühl, ich muss hart arbeiten.",
+   "answer_en": "I have a lot of meetings every day and often stay late at the office. I feel like I have to work hard.",
+   "hints": [
+    "Meetings",
+    "lange",
+    "Büro",
+    "hart"
+   ],
+   "source_lines": [
+    11,
+    15,
+    19
+   ]
+  },
+  {
+   "conversation": 14,
+   "question_de": "Wie entspannst du dich nach der Arbeit?",
+   "question_en": "How do you relax after work?",
+   "answer_de": "Ich gehe normalerweise spazieren oder lese ein Buch. Spaziergänge helfen, meinen Kopf freizubekommen.",
+   "answer_en": "I usually go for a walk or read a book. Walking helps clear my mind.",
+   "hints": [
+    "spazieren",
+    "Buch",
+    "Spaziergänge",
+    "Kopf"
+   ],
+   "source_lines": [
+    22,
+    25
+   ]
+  },
+  {
+   "conversation": 14,
+   "question_de": "Machst du viel Sport?",
+   "question_en": "Do you exercise a lot?",
+   "answer_de": "Ich versuche, dreimal pro Woche ins Fitnessstudio zu gehen, aber ich finde es schwer, Zeit zu finden.",
+   "answer_en": "I try to go to the gym three times a week, but I find it hard to find time.",
+   "hints": [
+    "dreimal",
+    "Fitnessstudio",
+    "schwer",
+    "Zeit"
+   ],
+   "source_lines": [
+    36,
+    45
+   ]
+  },
+  {
+   "conversation": 15,
+   "question_de": "Warum möchtest du dich freiwillig engagieren?",
+   "question_en": "Why do you want to volunteer?",
+   "answer_de": "Ich denke, Freiwilligenarbeit kann eine großartige Möglichkeit sein, Menschen zu helfen. Ich interessiere mich dafür, in einem Tierheim zu helfen.",
+   "answer_en": "I think volunteering can be a great way to help people. I am interested in helping at an animal shelter.",
+   "hints": [
+    "Freiwilligenarbeit",
+    "großartige",
+    "Möglichkeit",
+    "Tierheim"
+   ],
+   "source_lines": [
+    5,
+    9
+   ]
+  },
+  {
+   "conversation": 15,
+   "question_de": "Welche Vorteile hat Freiwilligenarbeit?",
+   "question_en": "What are the benefits of volunteering?",
+   "answer_de": "Man kann neue Menschen kennenlernen und Freunde finden, die sich für die gleichen Dinge interessieren. Außerdem entwickelt man Fähigkeiten für die Karriere.",
+   "answer_en": "You can meet new people and find friends who care about the same things. You also develop skills for your career.",
+   "hints": [
+    "Menschen",
+    "Freunde",
+    "Fähigkeiten",
+    "Karriere"
+   ],
+   "source_lines": [
+    16,
+    18,
+    39
+   ]
+  },
+  {
+   "conversation": 15,
+   "question_de": "Was hast du bei deiner Freiwilligenarbeit im Gemeindezentrum gemacht?",
+   "question_en": "What did you do during your volunteering at the community center?",
+   "answer_de": "Ich habe dabei geholfen, Veranstaltungen für Kinder zu organisieren. Ich habe gelernt, wie man im Team arbeitet und Aktivitäten plant.",
+   "answer_en": "I helped organize events for children. I learned how to work in a team and plan activities.",
+   "hints": [
+    "Veranstaltungen",
+    "Kinder",
+    "Team",
+    "Aktivitäten"
+   ],
+   "source_lines": [
+    26,
+    35
+   ]
+  },
+  {
+   "conversation": 16,
+   "question_de": "Warum ist Nachhaltigkeit wichtig?",
+   "question_en": "Why is sustainability important?",
+   "answer_de": "Ich denke, Nachhaltigkeit ist sehr wichtig für unseren Planeten. Der Klimawandel ist ein großes Problem, denn das Eis schmilzt und der Meeresspiegel steigt.",
+   "answer_en": "I think sustainability is very important for our planet. Climate change is a big problem, because the ice is melting and sea levels are rising.",
+   "hints": [
+    "Klimawandel",
+    "Eis",
+    "schmilzt",
+    "Meeresspiegel"
+   ],
+   "source_lines": [
+    15,
+    20,
+    25
+   ]
+  },
+  {
+   "conversation": 16,
+   "question_de": "Was tust du im Alltag für die Umwelt?",
+   "question_en": "What do you do in your daily life for the environment?",
+   "answer_de": "Ich versuche, eine wiederverwendbare Tasche zu benutzen, wenn ich einkaufen gehe. Ich mache auch das Licht aus, wenn ich einen Raum verlasse.",
+   "answer_en": "I try to use a reusable bag when I go shopping. I also turn off the lights when I leave a room.",
+   "hints": [
+    "wiederverwendbare",
+    "Tasche",
+    "Licht",
+    "Raum"
+   ],
+   "source_lines": [
+    35,
+    48
+   ]
+  },
+  {
+   "conversation": 16,
+   "question_de": "Wie kann man beim Verkehr und beim Essen die Umwelt schützen?",
+   "question_en": "How can you protect the environment with transport and food?",
+   "answer_de": "Mit dem Bus oder Zug zu fahren, kann die Verschmutzung reduzieren. Weniger Fleisch zu essen, kann auch der Umwelt helfen.",
+   "answer_en": "Using the bus or train can reduce pollution. Eating less meat can also help the environment.",
+   "hints": [
+    "Bus",
+    "Zug",
+    "Verschmutzung",
+    "Fleisch"
+   ],
+   "source_lines": [
+    55,
+    63
+   ]
+  },
+  {
+   "conversation": 17,
+   "question_de": "Was müsst ihr als Erstes für die nächsten Monate machen?",
+   "question_en": "What do you need to do first for the next few months?",
+   "answer_de": "Ich denke, wir müssen ein Budget für die nächsten Monate machen. Danach können wir unsere Fixkosten, wie die Miete, betrachten.",
+   "answer_en": "I think we need to make a budget for the next few months. After that, we can look at our fixed costs, like the rent.",
+   "hints": [
+    "Budget",
+    "Monate",
+    "Fixkosten",
+    "Miete"
+   ],
+   "source_lines": [
+    4,
+    13
+   ]
+  },
+  {
+   "conversation": 17,
+   "question_de": "Wie hoch sind eure Nebenkosten und eure Ausgaben für Lebensmittel?",
+   "question_en": "How high are your utility costs and your grocery expenses?",
+   "answer_de": "Die Nebenkosten sind etwa einhundertfünfzig Dollar. Lebensmittel kosten uns normalerweise etwa vierhundert Dollar im Monat.",
+   "answer_en": "Utilities are about one hundred fifty dollars. Groceries usually cost us around four hundred dollars a month.",
+   "hints": [
+    "Nebenkosten",
+    "einhundertfünfzig",
+    "Lebensmittel",
+    "vierhundert"
+   ],
+   "source_lines": [
+    20,
+    21
+   ]
+  },
+  {
+   "conversation": 17,
+   "question_de": "Wofür wollt ihr Geld zurücklegen, und wie viel wollt ihr für Restaurantbesuche einplanen?",
+   "question_en": "What do you want to put money aside for, and how much do you want to plan for restaurant visits?",
+   "answer_de": "Wir sollten etwas Geld für Notfälle sparen. Für einmal im Monat essen gehen budgetieren wir hundert Dollar.",
+   "answer_en": "We should save some money for emergencies. For going out to dinner once a month, we budget one hundred dollars.",
+   "hints": [
+    "Notfälle",
+    "sparen",
+    "budgetieren",
+    "hundert"
+   ],
+   "source_lines": [
+    30,
+    40,
+    42
+   ]
+  },
+  {
+   "conversation": 18,
+   "question_de": "Wie kann ein Führer dafür sorgen, dass sich jeder im Team einbezogen fühlt?",
+   "question_en": "How can a leader make everyone on the team feel included?",
+   "answer_de": "Ich denke, ein Führer sollte auf die Ideen aller hören. Ein guter Führer sollte auch zuverlässig sein.",
+   "answer_en": "I think a leader should listen to everyone's ideas. A good leader should also be reliable.",
+   "hints": [
+    "Führer",
+    "Ideen",
+    "hören",
+    "zuverlässig"
+   ],
+   "source_lines": [
+    16,
+    22
+   ]
+  },
+  {
+   "conversation": 18,
+   "question_de": "Warum sind Teamrollen wichtig?",
+   "question_en": "Why are team roles important?",
+   "answer_de": "Ich denke, es ist wichtig, dass jeder seine Rolle kennt. Wenn jeder seine Aufgaben kennt, funktioniert das Team besser.",
+   "answer_en": "I think it's important for everyone to know their role. When everyone knows their responsibilities, the team works better.",
+   "hints": [
+    "Rolle",
+    "Aufgaben",
+    "funktioniert",
+    "Team"
+   ],
+   "source_lines": [
+    31,
+    33
+   ]
+  },
+  {
+   "conversation": 18,
+   "question_de": "Wie können wir mehr Unterstützung in unserem Team schaffen?",
+   "question_en": "How can we create more support in our team?",
+   "answer_de": "Wir können regelmäßige Meetings einrichten, um den Fortschritt des anderen zu überprüfen. Außerdem sollten wir ein System einrichten, bei dem jeder leicht um Hilfe bitten kann.",
+   "answer_en": "We can set up regular meetings to check on each other's progress. We should also set up a system where everyone can easily ask for help.",
+   "hints": [
+    "Meetings",
+    "Fortschritt",
+    "System",
+    "Hilfe"
+   ],
+   "source_lines": [
+    47,
+    61
+   ]
+  },
+  {
+   "conversation": 19,
+   "question_de": "Warum interessierst du dich für eine Karriere im Management?",
+   "question_en": "Why are you interested in a career in management?",
+   "answer_de": "Ich ziehe eine Karriere im Management in Betracht. Ich mag die Idee, ein Team zu leiten und Entscheidungen zu treffen.",
+   "answer_en": "I am considering a career in management. I like the idea of leading a team and making decisions.",
+   "hints": [
+    "Karriere",
+    "Management",
+    "Team",
+    "Entscheidungen"
+   ],
+   "source_lines": [
+    8,
+    12
+   ]
+  },
+  {
+   "conversation": 19,
+   "question_de": "Welche Erfahrung hast du im Management, und wie hast du Konflikte gelöst?",
+   "question_en": "What experience do you have in management, and how did you resolve conflicts?",
+   "answer_de": "Ich habe kleine Teams geleitet. Ich habe beiden Seiten zugehört und versucht, eine Lösung zu finden, die für alle funktioniert.",
+   "answer_en": "I managed small teams. I listened to both sides and tried to find a solution that worked for everyone.",
+   "hints": [
+    "Teams",
+    "geleitet",
+    "zugehört",
+    "Lösung"
+   ],
+   "source_lines": [
+    20,
+    28
+   ]
+  },
+  {
+   "conversation": 19,
+   "question_de": "Was willst du tun, um deine Karriere voranzubringen?",
+   "question_en": "What do you want to do to advance your career?",
+   "answer_de": "Ich sollte Meetups besuchen und einen Mentor finden. Außerdem werde ich daran arbeiten, meinen Lebenslauf zu aktualisieren.",
+   "answer_en": "I should attend meetups and find a mentor. I will also work on updating my resume.",
+   "hints": [
+    "Meetups",
+    "Mentor",
+    "Lebenslauf",
+    "aktualisieren"
+   ],
+   "source_lines": [
+    46,
+    62,
+    72
+   ]
+  },
+  {
+   "conversation": 20,
+   "question_de": "Was ist deiner Meinung nach die größte Veränderung durch Technologie?",
+   "question_en": "What do you think is the biggest change brought by technology?",
+   "answer_de": "Ich denke, Kommunikation ist die größte Veränderung. Videoanrufe lassen es so erscheinen, als würden wir uns von Angesicht zu Angesicht unterhalten.",
+   "answer_en": "I think communication is the biggest change. Video calls make it feel like we are talking face-to-face.",
+   "hints": [
+    "Kommunikation",
+    "Veränderung",
+    "Videoanrufe",
+    "Angesicht"
+   ],
+   "source_lines": [
+    10,
+    16
+   ]
+  },
+  {
+   "conversation": 20,
+   "question_de": "Welche Nachteile haben Handys und soziale Medien?",
+   "question_en": "What disadvantages do phones and social media have?",
+   "answer_de": "Die Leute können echte Momente im Leben verpassen, weil sie mit ihren Handys beschäftigt sind. Soziale Medien können auch Druck erzeugen, perfekt auszusehen.",
+   "answer_en": "People can miss real-life moments because they are busy with their phones. Social media can also create pressure to look perfect.",
+   "hints": [
+    "Momente",
+    "verpassen",
+    "Handys",
+    "Druck"
+   ],
+   "source_lines": [
+    22,
+    35
+   ]
+  },
+  {
+   "conversation": 20,
+   "question_de": "Was denkst du über Online-Lernen?",
+   "question_en": "What do you think about online learning?",
+   "answer_de": "Online-Lernen hat vielen Menschen, die nicht zu traditionellen Schulen gehen können, viele Möglichkeiten eröffnet. Aber es kann schwer sein, motiviert zu bleiben.",
+   "answer_en": "Online learning has opened many opportunities for people who can't attend traditional schools. But it can be hard to stay motivated.",
+   "hints": [
+    "Menschen",
+    "Schulen",
+    "Möglichkeiten",
+    "motiviert"
+   ],
+   "source_lines": [
+    41,
+    43
+   ]
+  }
+ ]
+}

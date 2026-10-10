@@ -1,0 +1,1032 @@
+{
+ "level": 30,
+ "drills": [
+  {
+   "conversation": 1,
+   "question_de": "Welche Berufe ziehst du für deine Karriere in Betracht?",
+   "question_en": "Which careers are you considering?",
+   "answer_de": "Ich arbeite jetzt im Marketing, aber ich bin neugierig auf das Unterrichten. Ich ziehe auch eine Karriere im Grafikdesign in Betracht.",
+   "answer_en": "I work in marketing now, but I'm curious about teaching. I'm also considering a career in graphic design.",
+   "hints": [
+    "Marketing",
+    "neugierig",
+    "Unterrichten",
+    "Grafikdesign"
+   ],
+   "source_lines": [
+    13,
+    29
+   ]
+  },
+  {
+   "conversation": 1,
+   "question_de": "Warum interessiert dich das Unterrichten?",
+   "question_en": "Why are you interested in teaching?",
+   "answer_de": "Ich liebe es, Wissen mit anderen zu teilen. Ich würde gerne Erwachsene unterrichten, vielleicht in einer Sprachschule.",
+   "answer_en": "I love sharing knowledge with others. I would like to teach adults, maybe at a language school.",
+   "hints": [
+    "Wissen",
+    "teilen",
+    "Erwachsene",
+    "Sprachschule"
+   ],
+   "source_lines": [
+    17,
+    25
+   ]
+  },
+  {
+   "conversation": 1,
+   "question_de": "Wie planst du den Übergang zum Unterrichten oder zum Design?",
+   "question_en": "How do you plan to transition into teaching or design?",
+   "answer_de": "Ich möchte zuerst als Lehrerin freiwillig arbeiten und sehen, ob es mir gefällt. Für Grafikdesign möchte ich anfangen, freiberufliche Projekte zu übernehmen.",
+   "answer_en": "I want to volunteer as a teacher first and see if I enjoy it. For graphic design, I want to start taking freelance projects.",
+   "hints": [
+    "Lehrerin",
+    "freiwillig",
+    "freiberufliche",
+    "Projekte"
+   ],
+   "source_lines": [
+    75,
+    77
+   ]
+  },
+  {
+   "conversation": 2,
+   "question_de": "Wie sieht ein typischer Sonntag in deiner Familie aus?",
+   "question_en": "What does a typical Sunday in your family look like?",
+   "answer_de": "Jeden Sonntag gibt es ein großes Familientreffen zum Mittagessen. Wir haben oft Pasta oder einen herzhaften Eintopf.",
+   "answer_en": "Every Sunday we have a big family lunch. We often have pasta or a hearty stew.",
+   "hints": [
+    "Sonntag",
+    "Familientreffen",
+    "Mittagessen",
+    "Eintopf"
+   ],
+   "source_lines": [
+    10,
+    14
+   ]
+  },
+  {
+   "conversation": 2,
+   "question_de": "Was macht ihr in eurer Familie an Weihnachten?",
+   "question_en": "What do you do in your family at Christmas?",
+   "answer_de": "An Weihnachten backen wir gemeinsam Plätzchen.",
+   "answer_en": "At Christmas we bake cookies together.",
+   "hints": [
+    "Weihnachten",
+    "backen",
+    "gemeinsam",
+    "Plätzchen"
+   ],
+   "source_lines": [
+    25
+   ]
+  },
+  {
+   "conversation": 2,
+   "question_de": "Wie feiert ihr Silvester in eurer Familie?",
+   "question_en": "How does your family celebrate New Year's Eve?",
+   "answer_de": "Zu Silvester kommen wir zusammen und haben ein großes Abendessen mit viel Essen. Wir heben unsere Gläser und wünschen uns ein gutes Jahr.",
+   "answer_en": "On New Year's Eve we gather and have a big dinner with lots of food. We raise our glasses and wish each other a good year.",
+   "hints": [
+    "Silvester",
+    "Abendessen",
+    "Gläser",
+    "Jahr"
+   ],
+   "source_lines": [
+    36,
+    38,
+    46
+   ]
+  },
+  {
+   "conversation": 3,
+   "question_de": "Was machst du bei deinem Freiwilligendienst?",
+   "question_en": "What do you do in your volunteer work?",
+   "answer_de": "Ich helfe, Essensspenden zu organisieren und Mahlzeiten an Bedürftige auszugeben.",
+   "answer_en": "I help organize food donations and serve meals to people in need.",
+   "hints": [
+    "Essensspenden",
+    "organisieren",
+    "Mahlzeiten",
+    "Bedürftige"
+   ],
+   "source_lines": [
+    11
+   ]
+  },
+  {
+   "conversation": 3,
+   "question_de": "Welche Vorteile hat der Freiwilligendienst für dich?",
+   "question_en": "What are the benefits of volunteering for you?",
+   "answer_de": "Ich treffe ständig neue Leute und habe gelernt, im Team zu arbeiten und Veranstaltungen zu planen. Außerdem kann Freiwilligendienst das Selbstvertrauen stärken.",
+   "answer_en": "I meet new people all the time and have learned to work in a team and plan events. Also, volunteering can boost self-confidence.",
+   "hints": [
+    "Leute",
+    "Team",
+    "Veranstaltungen",
+    "Selbstvertrauen"
+   ],
+   "source_lines": [
+    16,
+    25,
+    29
+   ]
+  },
+  {
+   "conversation": 3,
+   "question_de": "Wo kannst du dich als Freiwilliger engagieren?",
+   "question_en": "Where can you get involved as a volunteer?",
+   "answer_de": "Ich kann in Schulen, Parks oder Krankenhäusern helfen, aber ich interessiere mich dafür, Tieren zu helfen.",
+   "answer_en": "I can help at schools, parks, or hospitals, but I am interested in helping animals.",
+   "hints": [
+    "Schulen",
+    "Parks",
+    "Krankenhäusern",
+    "Tieren"
+   ],
+   "source_lines": [
+    44,
+    49
+   ]
+  },
+  {
+   "conversation": 4,
+   "question_de": "Wie viel gebt ihr im Monat für Lebensmittel aus?",
+   "question_en": "How much do you spend on groceries each month?",
+   "answer_de": "Wir geben etwa dreihundert Dollar für Lebensmittel aus.",
+   "answer_en": "We spend about three hundred dollars on groceries.",
+   "hints": [
+    "dreihundert",
+    "Dollar",
+    "Lebensmittel"
+   ],
+   "source_lines": [
+    11
+   ]
+  },
+  {
+   "conversation": 4,
+   "question_de": "Wie könnt ihr eure Ausgaben fürs Essen gehen senken?",
+   "question_en": "How can you cut your spending on eating out?",
+   "answer_de": "Wir essen ungefähr einmal pro Woche auswärts. Vielleicht können wir das Essen gehen auf zweimal im Monat beschränken.",
+   "answer_en": "We eat out about once a week. Maybe we can limit eating out to twice a month.",
+   "hints": [
+    "auswärts",
+    "einmal",
+    "zweimal",
+    "beschränken"
+   ],
+   "source_lines": [
+    25,
+    29
+   ]
+  },
+  {
+   "conversation": 4,
+   "question_de": "Wie könnt ihr bei den Nebenkosten und der Internetrechnung sparen?",
+   "question_en": "How can you save on utilities and the internet bill?",
+   "answer_de": "Wir können die Heizung abstellen, wenn wir sie nicht brauchen, und die Tarife vergleichen, um ein besseres Angebot zu bekommen.",
+   "answer_en": "We can turn off the heat when we don't need it and compare plans to get a better deal.",
+   "hints": [
+    "Heizung",
+    "abstellen",
+    "Tarife",
+    "Angebot"
+   ],
+   "source_lines": [
+    40,
+    43
+   ]
+  },
+  {
+   "conversation": 5,
+   "question_de": "Was für ein Geschäft möchtest du eines Tages gründen?",
+   "question_en": "What kind of business would you like to start one day?",
+   "answer_de": "Ich denke an einen Online-Shop. Ich möchte handgemachte Kunsthandwerke und Geschenke verkaufen.",
+   "answer_en": "I'm thinking about an online store. I want to sell handmade crafts and gifts.",
+   "hints": [
+    "Online-Shop",
+    "handgemachte",
+    "Kunsthandwerke",
+    "Geschenke"
+   ],
+   "source_lines": [
+    18,
+    22
+   ]
+  },
+  {
+   "conversation": 5,
+   "question_de": "Wie willst du in deinem Job vorankommen?",
+   "question_en": "How do you want to advance in your job?",
+   "answer_de": "Ich möchte vielleicht Managerin werden und mache einige Online-Kurse, um meine Fähigkeiten zu verbessern. Ich plane auch, mehr mit meinen Kollegen zu netzwerken.",
+   "answer_en": "I might want to become a manager and am taking some online courses to improve my skills. I also plan to network more with my colleagues.",
+   "hints": [
+    "Managerin",
+    "Online-Kurse",
+    "Fähigkeiten",
+    "netzwerken"
+   ],
+   "source_lines": [
+    33,
+    36,
+    40
+   ]
+  },
+  {
+   "conversation": 5,
+   "question_de": "Welche persönlichen Ziele hast du für die Zukunft?",
+   "question_en": "What personal goals do you have for the future?",
+   "answer_de": "Ich möchte mehr reisen. Ich möchte wirklich einige Länder in Europa besuchen.",
+   "answer_en": "I want to travel more. I really want to visit some countries in Europe.",
+   "hints": [
+    "reisen",
+    "Länder",
+    "Europa",
+    "besuchen"
+   ],
+   "source_lines": [
+    53,
+    57
+   ]
+  },
+  {
+   "conversation": 6,
+   "question_de": "Wie bereitest du dich auf das wichtige Treffen vor?",
+   "question_en": "How are you preparing for the important meeting?",
+   "answer_de": "Ich habe den ganzen Tag meine Notizen durchgesehen. Ich habe meine Präsentation fertig und versuche, einige Folien dafür zu erstellen.",
+   "answer_en": "I've been going over my notes all day. I have my presentation ready and am trying to create some slides for it.",
+   "hints": [
+    "Notizen",
+    "Präsentation",
+    "Folien",
+    "erstellen"
+   ],
+   "source_lines": [
+    5,
+    9,
+    22
+   ]
+  },
+  {
+   "conversation": 6,
+   "question_de": "Was möchtest du mit deiner Präsentation zeigen?",
+   "question_en": "What do you want to show with your presentation?",
+   "answer_de": "Ich möchte zeigen, wie unser Projekt die Effizienz des Unternehmens verbessern wird. Ich möchte einen guten Eindruck machen.",
+   "answer_en": "I want to show how our project will improve the company's efficiency. I want to make a good impression.",
+   "hints": [
+    "Projekt",
+    "Effizienz",
+    "Unternehmens",
+    "Eindruck"
+   ],
+   "source_lines": [
+    14,
+    51
+   ]
+  },
+  {
+   "conversation": 6,
+   "question_de": "Wann und wo treffen wir uns, um deine Folien durchzugehen?",
+   "question_en": "When and where do we meet to go over your slides?",
+   "answer_de": "Wir treffen uns nach der Arbeit bei mir, sagen wir um achtzehn Uhr.",
+   "answer_en": "We meet after work at my place, let's say at six o'clock.",
+   "hints": [
+    "treffen",
+    "Arbeit",
+    "achtzehn",
+    "Uhr"
+   ],
+   "source_lines": [
+    29,
+    30,
+    33
+   ]
+  },
+  {
+   "conversation": 7,
+   "question_de": "Was kann man auf Reisen über andere Kulturen lernen?",
+   "question_en": "What can you learn about other cultures while traveling?",
+   "answer_de": "Reisen kann uns viel über verschiedene Kulturen beibringen. Ich konnte einheimische Menschen treffen und ihre Traditionen lernen.",
+   "answer_en": "Traveling can teach us a lot about different cultures. I got to meet local people and learn their traditions.",
+   "hints": [
+    "Kulturen",
+    "einheimische",
+    "Traditionen",
+    "lernen"
+   ],
+   "source_lines": [
+    12,
+    14
+   ]
+  },
+  {
+   "conversation": 7,
+   "question_de": "Wie kann Reisen dir helfen, dich zu erholen?",
+   "question_en": "How can traveling help you recover?",
+   "answer_de": "Reisen hilft mir, mich zu entspannen, und ist eine großartige Möglichkeit, dem täglichen Stress zu entkommen.",
+   "answer_en": "Traveling helps me relax and is a great way to escape from daily stress.",
+   "hints": [
+    "entspannen",
+    "großartige",
+    "Möglichkeit",
+    "Stress"
+   ],
+   "source_lines": [
+    55,
+    56
+   ]
+  },
+  {
+   "conversation": 7,
+   "question_de": "Warum findest du Reisen gut für Freundschaften?",
+   "question_en": "Why do you think traveling is good for friendships?",
+   "answer_de": "Reisen kann mir helfen, Freunde auf der ganzen Welt zu finden. Reisen lässt die Welt kleiner und verbundener erscheinen.",
+   "answer_en": "Traveling can help me make friends worldwide. It makes the world feel smaller and more connected.",
+   "hints": [
+    "Freunde",
+    "Welt",
+    "kleiner",
+    "verbundener"
+   ],
+   "source_lines": [
+    47,
+    49
+   ]
+  },
+  {
+   "conversation": 8,
+   "question_de": "Wohin möchtest du mit der Familie fahren und was willst du dort machen?",
+   "question_en": "Where do you want to go with the family and what do you want to do there?",
+   "answer_de": "Ich habe an den Strand gedacht. Ich würde gerne schwimmen, Sandburgen bauen und vielleicht eine Bootsfahrt machen.",
+   "answer_en": "I was thinking about the beach. I'd love to swim, build sandcastles, and maybe go for a boat ride.",
+   "hints": [
+    "Strand",
+    "schwimmen",
+    "Sandburgen",
+    "Bootsfahrt"
+   ],
+   "source_lines": [
+    8,
+    20
+   ]
+  },
+  {
+   "conversation": 8,
+   "question_de": "Was müssen wir für den Strandurlaub unbedingt einpacken?",
+   "question_en": "What do we absolutely have to pack for the beach vacation?",
+   "answer_de": "Wir brauchen auf jeden Fall Badeanzüge, Handtücher und Sonnencreme, und auch eine leichte Jacke.",
+   "answer_en": "We need swimming suits, towels, and sunscreen for sure, and also a light jacket.",
+   "hints": [
+    "Badeanzüge",
+    "Handtücher",
+    "Sonnencreme",
+    "Jacke"
+   ],
+   "source_lines": [
+    37,
+    56
+   ]
+  },
+  {
+   "conversation": 8,
+   "question_de": "Wie suchst du eine Unterkunft für den Familienausflug?",
+   "question_en": "How do you look for accommodation for the family trip?",
+   "answer_de": "Ich suche online nach Hotels oder Ferienwohnungen mit einer Küche.",
+   "answer_en": "I search online for hotels or vacation rentals with a kitchen.",
+   "hints": [
+    "online",
+    "Hotels",
+    "Ferienwohnungen",
+    "Küche"
+   ],
+   "source_lines": [
+    70,
+    72
+   ]
+  },
+  {
+   "conversation": 9,
+   "question_de": "Wie fühlst du dich manchmal als Elternteil im Alltag?",
+   "question_en": "How do you sometimes feel as a parent in everyday life?",
+   "answer_de": "Manchmal fühle ich mich überfordert mit all den Aufgaben. Ich habe das Gefühl, dass ich immer beschäftigt bin.",
+   "answer_en": "I sometimes feel overwhelmed with all the tasks. I feel like I'm always busy.",
+   "hints": [
+    "überfordert",
+    "Aufgaben",
+    "Gefühl",
+    "beschäftigt"
+   ],
+   "source_lines": [
+    9,
+    13
+   ]
+  },
+  {
+   "conversation": 9,
+   "question_de": "Wie sieht dein Morgen mit den Kindern aus?",
+   "question_en": "What does your morning with the kids look like?",
+   "answer_de": "Ich wache früh auf, mache Frühstück für meine Kinder und bereite sie für die Schule vor.",
+   "answer_en": "I wake up early, make breakfast for my kids, and get them ready for school.",
+   "hints": [
+    "früh",
+    "Frühstück",
+    "Kinder",
+    "Schule"
+   ],
+   "source_lines": [
+    18,
+    25
+   ]
+  },
+  {
+   "conversation": 9,
+   "question_de": "Wie möchtest du deinen Kindern Verantwortung beibringen?",
+   "question_en": "How do you want to teach your kids responsibility?",
+   "answer_de": "Ich möchte, dass meine Kinder Verantwortung lernen. Ich könnte meine Kinder bitten, ihre Spielsachen wegzuräumen.",
+   "answer_en": "I want my kids to learn responsibility. I could ask my kids to put away their toys.",
+   "hints": [
+    "Kinder",
+    "Verantwortung",
+    "Spielsachen",
+    "wegzuräumen"
+   ],
+   "source_lines": [
+    34,
+    38
+   ]
+  },
+  {
+   "conversation": 10,
+   "question_de": "Welche Ziele hast du für deine Karriere?",
+   "question_en": "What goals do you have for your career?",
+   "answer_de": "Ich möchte in meiner Karriere vorankommen und hoffe, in den nächsten Jahren Manager zu werden. Dafür habe ich letzten Monat einen Führungskurs gemacht.",
+   "answer_en": "I want to advance in my career and hope to become a manager in the next few years. For that I took a leadership course last month.",
+   "hints": [
+    "Karriere",
+    "vorankommen",
+    "Manager",
+    "Führungskurs"
+   ],
+   "source_lines": [
+    11,
+    12,
+    15
+   ]
+  },
+  {
+   "conversation": 10,
+   "question_de": "Welchen Traum hast du für die Zukunft?",
+   "question_en": "What dream do you have for the future?",
+   "answer_de": "Ich habe den Traum, um die Welt zu reisen. Ich möchte verschiedene Kulturen sehen und neue Menschen treffen.",
+   "answer_en": "I have a dream of traveling around the world. I want to see different cultures and meet new people.",
+   "hints": [
+    "Traum",
+    "Welt",
+    "Kulturen",
+    "Menschen"
+   ],
+   "source_lines": [
+    21,
+    22
+   ]
+  },
+  {
+   "conversation": 10,
+   "question_de": "Wohin möchtest du zuerst reisen und wann?",
+   "question_en": "Where do you want to travel first and when?",
+   "answer_de": "Ich würde gerne Japan besuchen. Ich hoffe, in den nächsten Jahren zu reisen, aber die Reise hängt von meinem Job und meinen Finanzen ab.",
+   "answer_en": "I would love to visit Japan. I hope to travel in the next few years, but the trip depends on my job and finances.",
+   "hints": [
+    "Japan",
+    "Jahren",
+    "Job",
+    "Finanzen"
+   ],
+   "source_lines": [
+    25,
+    36
+   ]
+  },
+  {
+   "conversation": 11,
+   "question_de": "Wie verbringt ihr den Sonntagabend als Familie?",
+   "question_en": "How do you spend Sunday evening as a family?",
+   "answer_de": "Wir haben jeden Sonntag ein Familientreffen zum Abendessen. Wir haben normalerweise Nudeln und Salat.",
+   "answer_en": "We have a family dinner every Sunday. We usually have pasta and salad.",
+   "hints": [
+    "Sonntag",
+    "Familientreffen",
+    "Nudeln",
+    "Salat"
+   ],
+   "source_lines": [
+    20,
+    24
+   ]
+  },
+  {
+   "conversation": 11,
+   "question_de": "Was macht ihr, wenn die ganze Familie zusammenkommt?",
+   "question_en": "What do you do when the whole family gets together?",
+   "answer_de": "Wir spielen Brettspiele oder Kartenspiele. Außerdem erzählen wir Geschichten aus unserer Kindheit.",
+   "answer_en": "We play board games or card games. We also share stories from our childhood.",
+   "hints": [
+    "Brettspiele",
+    "Kartenspiele",
+    "Geschichten",
+    "Kindheit"
+   ],
+   "source_lines": [
+    35,
+    40
+   ]
+  },
+  {
+   "conversation": 11,
+   "question_de": "Wie feiert ihr Neujahr und Ostern?",
+   "question_en": "How do you celebrate New Year and Easter?",
+   "answer_de": "Am Neujahrstag haben wir ein großes Frühstück mit all unseren Verwandten. Jedes Ostern haben wir eine Eier-Suche im Garten.",
+   "answer_en": "On New Year's Day we have a big breakfast with all our relatives. Every Easter we have an egg hunt in the garden.",
+   "hints": [
+    "Neujahrstag",
+    "Frühstück",
+    "Ostern",
+    "Eier-Suche"
+   ],
+   "source_lines": [
+    45,
+    57
+   ]
+  },
+  {
+   "conversation": 12,
+   "question_de": "Wo und wann sollen wir die Überraschungsparty feiern?",
+   "question_en": "Where and when should we hold the surprise party?",
+   "answer_de": "Wir feiern bei mir zu Hause, denn mein Haus ist groß genug für eine kleine Gruppe. Wir fangen am Abend um neunzehn Uhr an.",
+   "answer_en": "We'll celebrate at my place, since my house is big enough for a small group. We start in the evening at seven o'clock.",
+   "hints": [
+    "Hause",
+    "groß",
+    "Gruppe",
+    "neunzehn"
+   ],
+   "source_lines": [
+    13,
+    14,
+    17
+   ]
+  },
+  {
+   "conversation": 12,
+   "question_de": "Wie viele Freunde laden wir ein, und wer besorgt das Essen?",
+   "question_en": "How many friends do we invite, and who gets the food?",
+   "answer_de": "Wir laden etwa zehn seiner engsten Freunde ein. Ich werde die Snacks und den Kuchen besorgen.",
+   "answer_en": "We invite about ten of his closest friends. I will get the snacks and the cake.",
+   "hints": [
+    "zehn",
+    "engsten",
+    "Snacks",
+    "Kuchen"
+   ],
+   "source_lines": [
+    20,
+    48
+   ]
+  },
+  {
+   "conversation": 12,
+   "question_de": "Was bringst du zur Party mit, und wie dekorieren wir?",
+   "question_en": "What do you bring to the party, and how do we decorate?",
+   "answer_de": "Ich kann ein paar Getränke mitbringen. Wir sollten ein paar Ballons und ein Banner haben.",
+   "answer_en": "I can bring some drinks. We should have some balloons and a banner.",
+   "hints": [
+    "Getränke",
+    "mitbringen",
+    "Ballons",
+    "Banner"
+   ],
+   "source_lines": [
+    46,
+    50
+   ]
+  },
+  {
+   "conversation": 13,
+   "question_de": "Was ist für dich der erste Schritt bei der Karriereplanung?",
+   "question_en": "What is the first step in career planning for you?",
+   "answer_de": "Ich glaube, der erste Schritt ist es, klare Ziele zu setzen. Ich möchte in meinem Job aufsteigen, vielleicht eine Führungsposition anstreben.",
+   "answer_en": "I believe the first step is to set clear goals. I want to advance in my job, maybe aim for a management position.",
+   "hints": [
+    "Schritt",
+    "klare",
+    "Ziele",
+    "Führungsposition"
+   ],
+   "source_lines": [
+    12,
+    16
+   ]
+  },
+  {
+   "conversation": 13,
+   "question_de": "Welche Fähigkeiten möchtest du lernen und wie?",
+   "question_en": "Which skills do you want to learn and how?",
+   "answer_de": "Ich möchte meine Führungsfähigkeiten und Projektmanagement verbessern. Dafür schaue ich mir mehrere Online-Kursoptionen an.",
+   "answer_en": "I want to improve my leadership skills and project management. For that I'm looking at several online course options.",
+   "hints": [
+    "Führungsfähigkeiten",
+    "Projektmanagement",
+    "verbessern",
+    "Online-Kursoptionen"
+   ],
+   "source_lines": [
+    26,
+    29
+   ]
+  },
+  {
+   "conversation": 13,
+   "question_de": "Wie bleibst du in deinem Bereich auf dem Laufenden?",
+   "question_en": "How do you stay up to date in your field?",
+   "answer_de": "Ich arbeite im Marketing und möchte mehr über digitales Marketing lernen. Ich lese Artikel und höre Podcasts.",
+   "answer_en": "I work in marketing and want to learn more about digital marketing. I read articles and listen to podcasts.",
+   "hints": [
+    "Marketing",
+    "digitales",
+    "Artikel",
+    "Podcasts"
+   ],
+   "source_lines": [
+    41,
+    42,
+    65
+   ]
+  },
+  {
+   "conversation": 14,
+   "question_de": "Warum ist Teamarbeit bei der Arbeit so wichtig?",
+   "question_en": "Why is teamwork so important at work?",
+   "answer_de": "Teamarbeit hilft uns, unsere Ziele gemeinsam zu erreichen. Wenn wir zusammenarbeiten, können wir Probleme schneller lösen.",
+   "answer_en": "Teamwork helps us achieve our goals together. When we cooperate, we can solve problems faster.",
+   "hints": [
+    "Teamarbeit",
+    "Ziele",
+    "Probleme",
+    "schneller"
+   ],
+   "source_lines": [
+    13,
+    19
+   ]
+  },
+  {
+   "conversation": 14,
+   "question_de": "Was passiert, wenn Menschen im Team nicht zusammenarbeiten?",
+   "question_en": "What happens when people on a team don't work together?",
+   "answer_de": "Fehlende Zusammenarbeit kann zu Missverständnissen und Fehlern führen. Gute Kommunikation hilft, Verwirrung zu vermeiden.",
+   "answer_en": "A lack of cooperation can lead to misunderstandings and mistakes. Good communication helps prevent confusion.",
+   "hints": [
+    "Missverständnissen",
+    "Fehlern",
+    "Kommunikation",
+    "Verwirrung"
+   ],
+   "source_lines": [
+    30,
+    40
+   ]
+  },
+  {
+   "conversation": 14,
+   "question_de": "Wie können wir unsere Teamarbeit verbessern?",
+   "question_en": "How can we improve our teamwork?",
+   "answer_de": "Wir können regelmäßige Meetings abhalten, um Updates zu teilen. Wir müssen außerdem unterschiedliche Meinungen respektieren.",
+   "answer_en": "We can hold regular meetings to share updates. We must also respect different opinions.",
+   "hints": [
+    "regelmäßige",
+    "Meetings",
+    "Updates",
+    "Meinungen"
+   ],
+   "source_lines": [
+    45,
+    61
+   ]
+  },
+  {
+   "conversation": 15,
+   "question_de": "Was stört dich an den Fristen im Projekt?",
+   "question_en": "What bothers you about the deadlines in the project?",
+   "answer_de": "Ich habe das Gefühl, dass einige Fristen zu knapp sind, zum Beispiel beim Bericht, den wir bis Freitag fertigstellen müssen.",
+   "answer_en": "I feel that some deadlines are too tight, for example the report we need to finish by Friday.",
+   "hints": [
+    "Fristen",
+    "knapp",
+    "Bericht",
+    "Freitag"
+   ],
+   "source_lines": [
+    10,
+    14
+   ]
+  },
+  {
+   "conversation": 15,
+   "question_de": "Was schlägst du vor, um die Fristen zu ändern?",
+   "question_en": "What do you suggest to change the deadlines?",
+   "answer_de": "Ich denke, wir könnten die Frist auf nächsten Mittwoch verschieben. Ich kann mit dem Manager darüber sprechen.",
+   "answer_en": "I think we could move the deadline to next Wednesday. I can talk to the manager about it.",
+   "hints": [
+    "Frist",
+    "Mittwoch",
+    "verschieben",
+    "Manager"
+   ],
+   "source_lines": [
+    22,
+    24
+   ]
+  },
+  {
+   "conversation": 15,
+   "question_de": "Wie könnte die Kommunikation im Team besser werden?",
+   "question_en": "How could communication in the team get better?",
+   "answer_de": "Ich denke, wir brauchen nicht mehr Meetings, aber regelmäßige Check-ins könnten helfen. Ein kurzes Treffen jede Woche könnte nützlich sein.",
+   "answer_en": "I think we don't need more meetings, but regular check-ins could help. A short meeting every week might be useful.",
+   "hints": [
+    "Meetings",
+    "regelmäßige",
+    "Check-ins",
+    "Treffen"
+   ],
+   "source_lines": [
+    37,
+    39
+   ]
+  },
+  {
+   "conversation": 16,
+   "question_de": "Warum denkst du in letzter Zeit über deinen Job nach?",
+   "question_en": "Why have you been thinking about your job lately?",
+   "answer_de": "Ich habe das Gefühl, dass es Zeit für eine große Veränderung ist. Ich möchte etwas Neues und Aufregendes.",
+   "answer_en": "I feel like it's time for a big change. I want something new and exciting.",
+   "hints": [
+    "Zeit",
+    "Veränderung",
+    "Neues",
+    "Aufregendes"
+   ],
+   "source_lines": [
+    7,
+    10
+   ]
+  },
+  {
+   "conversation": 16,
+   "question_de": "Wie fühlst du dich in deinem aktuellen Job?",
+   "question_en": "How do you feel in your current job?",
+   "answer_de": "Mein Job ist sicher, aber ich fühle mich dort festgefahren. Ich möchte wirklich neue Möglichkeiten erkunden.",
+   "answer_en": "My job is safe, but I feel stuck there. I really want to explore new opportunities.",
+   "hints": [
+    "sicher",
+    "festgefahren",
+    "Möglichkeiten",
+    "erkunden"
+   ],
+   "source_lines": [
+    37,
+    40
+   ]
+  },
+  {
+   "conversation": 16,
+   "question_de": "Warum hast du deiner Familie noch nichts von deiner Veränderung erzählt?",
+   "question_en": "Why haven't you told your family about your change yet?",
+   "answer_de": "Ich bin ein bisschen nervös, weil meine Familie sich um meine Finanzen sorgen könnte. Ich werde es ihr sagen, wenn ich bereit bin.",
+   "answer_en": "I'm a bit nervous because my family might worry about my finances. I'll tell them when I'm ready.",
+   "hints": [
+    "nervös",
+    "Familie",
+    "Finanzen",
+    "bereit"
+   ],
+   "source_lines": [
+    50,
+    52,
+    60
+   ]
+  },
+  {
+   "conversation": 17,
+   "question_de": "Was kommt bei dir in einen Salat?",
+   "question_en": "What goes into your salad?",
+   "answer_de": "Ich mag es, Salat, Tomaten, Gurken und manchmal Karotten hinzuzufügen. Ich möchte aber noch mehr Gemüse essen.",
+   "answer_en": "I like to add lettuce, tomatoes, cucumbers, and sometimes carrots. But I want to eat even more vegetables.",
+   "hints": [
+    "Tomaten",
+    "Gurken",
+    "Karotten",
+    "Gemüse"
+   ],
+   "source_lines": [
+    9,
+    12
+   ]
+  },
+  {
+   "conversation": 17,
+   "question_de": "Was isst und trinkst du täglich für deine Gesundheit?",
+   "question_en": "What do you eat and drink every day for your health?",
+   "answer_de": "Ich esse täglich Obst, vor allem Äpfel und Bananen. Ich versuche, mindestens zwei Liter am Tag zu trinken.",
+   "answer_en": "I eat fruit every day, especially apples and bananas. I try to drink at least two liters a day.",
+   "hints": [
+    "Obst",
+    "Äpfel",
+    "Bananen",
+    "Liter"
+   ],
+   "source_lines": [
+    18,
+    21,
+    35
+   ]
+  },
+  {
+   "conversation": 17,
+   "question_de": "Warum kochst du lieber selbst, statt Fertiggerichte zu essen?",
+   "question_en": "Why do you prefer cooking yourself instead of eating frozen meals?",
+   "answer_de": "Ich denke, selbstgemachtes Essen ist gesünder. Fertiggerichte können einfach sein, aber sie haben oft viel Salz und Fett.",
+   "answer_en": "I think homemade food is healthier. Frozen meals can be easy, but they often have a lot of salt and fat.",
+   "hints": [
+    "selbstgemachtes",
+    "gesünder",
+    "Fertiggerichte",
+    "Salz"
+   ],
+   "source_lines": [
+    44,
+    50
+   ]
+  },
+  {
+   "conversation": 18,
+   "question_de": "Warum fühlst du dich bei der Arbeit überwältigt?",
+   "question_en": "Why do you feel overwhelmed at work?",
+   "answer_de": "Ich habe zu viele Projekte gleichzeitig und kann nicht mithalten. Ich mache normalerweise eine Liste, aber sie wächst jede Woche.",
+   "answer_en": "I have too many projects at the same time and can't keep up. I usually make a list, but it grows every week.",
+   "hints": [
+    "Projekte",
+    "gleichzeitig",
+    "Liste",
+    "wächst"
+   ],
+   "source_lines": [
+    8,
+    11
+   ]
+  },
+  {
+   "conversation": 18,
+   "question_de": "Welches Projekt hat bei dir die höchste Priorität?",
+   "question_en": "Which project is your top priority?",
+   "answer_de": "Das Projekt für unseren Hauptkunden hat die höchste Priorität. Das zweite Projekt ist auch wichtig, hat aber nicht die gleiche Frist.",
+   "answer_en": "The project for our main client has the highest priority. The second project is important too, but it doesn't have the same deadline.",
+   "hints": [
+    "Hauptkunden",
+    "Priorität",
+    "zweite",
+    "Frist"
+   ],
+   "source_lines": [
+    15,
+    18
+   ]
+  },
+  {
+   "conversation": 18,
+   "question_de": "Wie organisierst du deine Aufgaben?",
+   "question_en": "How do you organize your tasks?",
+   "answer_de": "Ich benutze einen Planer und einige Apps für meine Aufgaben. Sie helfen mir zu sehen, was dringend ist und was warten kann.",
+   "answer_en": "I use a planner and some apps for my tasks. They help me see what is urgent and what can wait.",
+   "hints": [
+    "Planer",
+    "Apps",
+    "dringend",
+    "warten"
+   ],
+   "source_lines": [
+    44,
+    57
+   ]
+  },
+  {
+   "conversation": 19,
+   "question_de": "Wie organisierst du deinen Tag zwischen Arbeit und Familie?",
+   "question_en": "How do you organize your day between work and family?",
+   "answer_de": "Ich setze Prioritäten für die Arbeits- und Familienzeit. Morgens plane ich meine Aufgaben und schreibe eine Liste von dem, was ich tun muss.",
+   "answer_en": "I set priorities for work and family time. In the morning I plan my tasks and write a list of what I need to do.",
+   "hints": [
+    "Prioritäten",
+    "Familienzeit",
+    "plane",
+    "Liste"
+   ],
+   "source_lines": [
+    12,
+    15,
+    16
+   ]
+  },
+  {
+   "conversation": 19,
+   "question_de": "Wie schaffst du es, Zeit für deine Familie einzuplanen?",
+   "question_en": "How do you manage to schedule time for your family?",
+   "answer_de": "Ich reserviere mir feste Zeiten während der Woche, um Zeit mit meiner Familie zu verbringen. Am Wochenende versuchen wir, einen Familienausflug zu machen.",
+   "answer_en": "I set aside specific times during the week to spend with my family. On weekends we try to have a family outing.",
+   "hints": [
+    "reserviere",
+    "feste",
+    "Woche",
+    "Familienausflug"
+   ],
+   "source_lines": [
+    23,
+    26
+   ]
+  },
+  {
+   "conversation": 19,
+   "question_de": "Worüber machst du dir bei der Work-Life-Balance Sorgen, und was willst du tun?",
+   "question_en": "What do you worry about regarding work-life balance, and what will you do?",
+   "answer_de": "Ich mache mir Sorgen, dass ich wichtige Momente mit meinen Kindern verpasse. Deshalb werde ich versuchen, Grenzen zu setzen.",
+   "answer_en": "I worry that I will miss important moments with my kids. That's why I'll try to set boundaries.",
+   "hints": [
+    "Sorgen",
+    "Momente",
+    "Kindern",
+    "Grenzen"
+   ],
+   "source_lines": [
+    35,
+    66
+   ]
+  },
+  {
+   "conversation": 20,
+   "question_de": "Was recycelst du im Alltag?",
+   "question_en": "What do you recycle in everyday life?",
+   "answer_de": "Ich versuche, so viel wie möglich zu recyceln. Ich recycele Papier, Plastik und Glas.",
+   "answer_en": "I try to recycle as much as I can. I recycle paper, plastic, and glass.",
+   "hints": [
+    "recyceln",
+    "Papier",
+    "Plastik",
+    "Glas"
+   ],
+   "source_lines": [
+    16,
+    19
+   ]
+  },
+  {
+   "conversation": 20,
+   "question_de": "Wie vermeidest du Müll beim Einkaufen?",
+   "question_en": "How do you avoid waste when shopping?",
+   "answer_de": "Ich bringe meine eigenen Taschen mit, wenn ich einkaufen gehe. Ich versuche auch, Produkte mit weniger Verpackung zu kaufen.",
+   "answer_en": "I bring my own bags when I go shopping. I also try to buy products with less packaging.",
+   "hints": [
+    "Taschen",
+    "einkaufen",
+    "Produkte",
+    "Verpackung"
+   ],
+   "source_lines": [
+    23,
+    27
+   ]
+  },
+  {
+   "conversation": 20,
+   "question_de": "Wie sparst du Wasser und Energie zu Hause?",
+   "question_en": "How do you save water and energy at home?",
+   "answer_de": "Ich spare Wasser, indem ich kürzer dusche. Ich versuche auch, die Lichter auszuschalten, wenn ich einen Raum verlasse.",
+   "answer_en": "I save water by taking shorter showers. I also try to turn off lights when I leave a room.",
+   "hints": [
+    "Wasser",
+    "kürzer",
+    "dusche",
+    "Lichter"
+   ],
+   "source_lines": [
+    63,
+    53
+   ]
+  }
+ ]
+}
