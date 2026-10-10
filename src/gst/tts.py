@@ -75,7 +75,10 @@ class PiperTTS:
 
 
 def _httpx_post(url: str, headers: dict, json: dict) -> bytes:
-    import httpx
+    try:
+        import httpx
+    except ImportError as error:
+        raise TTSError("the ElevenLabs backend needs httpx: uv sync --extra elevenlabs") from error
 
     response = httpx.post(url, headers=headers, json=json, timeout=60)
     response.raise_for_status()
