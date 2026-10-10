@@ -1,7 +1,7 @@
 import pytest
 
 from gst.config import WORK_DIR
-from gst.tts import CachedTTS, ElevenLabsTTS, PiperTTS, TTSError, wav_duration
+from gst.tts import CachedTTS, ElevenLabsTTS, PiperTTS, TTSError, compose_phonemes, wav_duration
 from tests.fakes import FakeTTS, write_silence
 
 
@@ -60,6 +60,32 @@ def test_elevenlabs_needs_an_api_key(monkeypatch):
 
     with pytest.raises(TTSError, match="ELEVENLABS_API_KEY"):
         ElevenLabsTTS()
+
+
+CEDILLA = "\u0327"
+
+
+def test_compose_phonemes_merges_marks_the_voice_does_not_know():
+    id_map = {"ɪ": [1], "c": [2], "ç": [3], " ": [4]}
+
+    assert compose_phonemes(["ɪ", "c", CEDILLA, " "], id_map) == ["ɪ", "ç", " "]
+
+
+def test_compose_phonemes_keeps_marks_the_voice_knows():
+    id_map = {"ɪ": [1], "c": [2], "ç": [3], CEDILLA: [5]}
+
+    assert compose_phonemes(["ɪ", "c", CEDILLA], id_map) == ["ɪ", "c", CEDILLA]
+
+
+@pytest.mark.slow
+def test_low_quality_piper_voice_keeps_the_ich_sound(tmp_path, caplog):
+    voices = WORK_DIR / "voices"
+    if not (voices / "de_DE-kerstin-low.onnx").exists():
+        pytest.skip("Piper voice not downloaded")
+
+    PiperTTS(voices).synthesize("Ich möchte nicht.", "de_DE-kerstin-low", tmp_path / "ich.wav")
+
+    assert "Missing phoneme" not in caplog.text
 
 
 @pytest.mark.slow

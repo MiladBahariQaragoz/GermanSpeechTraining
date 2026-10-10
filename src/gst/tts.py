@@ -2,6 +2,7 @@
 
 import hashlib
 import os
+import unicodedata
 import wave
 from collections.abc import Callable
 from pathlib import Path
@@ -23,6 +24,23 @@ def wav_duration(path: Path) -> float:
         return wav.getnframes() / wav.getframerate()
 
 
+def compose_phonemes(phonemes: list[str], id_map) -> list[str]:
+    """Merge a combining mark into the phoneme before it when only the merged form is known.
+
+    espeak spells the German ich-sound as "c" + combining cedilla; the low-quality German
+    voices only know the precomposed "ç", so without this "ich" loses its ç.
+    """
+    out: list[str] = []
+    for phoneme in phonemes:
+        if out and unicodedata.combining(phoneme) and phoneme not in id_map:
+            merged = unicodedata.normalize("NFC", out[-1] + phoneme)
+            if merged in id_map:
+                out[-1] = merged
+                continue
+        out.append(phoneme)
+    return out
+
+
 class PiperTTS:
     """Local, offline speech. Voices are downloaded into `voices_dir` on first use."""
 
@@ -42,7 +60,10 @@ class PiperTTS:
             if not model.exists():
                 self.voices_dir.mkdir(parents=True, exist_ok=True)
                 download_voice(name, self.voices_dir)
-            self._voices[name] = PiperVoice.load(model)
+            voice = PiperVoice.load(model)
+            phonemize, id_map = voice.phonemize, voice.config.phoneme_id_map
+            voice.phonemize = lambda text: [compose_phonemes(s, id_map) for s in phonemize(text)]
+            self._voices[name] = voice
         return self._voices[name]
 
     def synthesize(self, text: str, voice: str, out: Path) -> None:
