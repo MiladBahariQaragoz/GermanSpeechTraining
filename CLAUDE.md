@@ -14,8 +14,8 @@ plays the correct answer. The full plan and the definition of success live in `d
 - `CLAUDE.md` and `docs/` are committed to this repo (decided 2026-10-10).
 - Drills are **written by Claude in-session**, not by a pipeline LLM. Code does everything mechanical:
   transcript loading, the authoring digest, validation, TTS and video rendering.
-- From level 13 on, **Jev (TypeSafe System One) shortlists** each conversation's question→answer
-  exchanges first (`gst shortlist`), so Claude reads ~250 lines per level instead of ~1700. Jev only
+- From level 13 on, **Jev (TypeSafe System One) shortlists** the 12 lines per conversation most worth
+  practising (`gst shortlist`), so Claude reads ~340 lines per level instead of ~1700. Jev only
   judges; it never writes drill text. Ollama was rejected (4 GB GPU, weak 7B German).
 - Default TTS is edge-tts (Microsoft neural voices, free, retried on HTTP 403). The user rejected
   Piper's German pronunciation; Piper and ElevenLabs remain optional backends.
@@ -35,7 +35,7 @@ plays the correct answer. The full plan and the definition of success live in `d
 uv run pytest                 # tests
 uv run ruff check .           # lint
 uv run gst digest --level 1   # numbered transcript digest for authoring
-uv run --env-file .env gst shortlist --level 13   # Jev-ranked best exchanges (needs TYPESAFE_API_KEY)
+uv run --env-file .env gst shortlist --level 13   # Jev-ranked best lines (needs TYPESAFE_API_KEY)
 uv run gst check --levels 1-10
 uv run gst render --levels 1-10
 ```

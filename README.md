@@ -21,7 +21,7 @@ export GST_OCR_ROOT="/path/to/course/_slide_ocr/output"
 export GST_WORK_DIR="/path/to/course/_speaking_drills"
 
 uv run gst digest --level 1        # numbered transcript used to write drills
-uv run --env-file .env gst shortlist --level 13   # Jev-ranked best exchanges per conversation
+uv run --env-file .env gst shortlist --level 13   # Jev-ranked lines most worth practising
 uv run gst check --levels 1-10     # validate data/drills/level-NN.json
 uv run gst render --levels 1-10    # synthesize speech and render one MP4 per level
 ```
