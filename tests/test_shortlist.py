@@ -158,3 +158,14 @@ def test_shortlist_digest_does_not_repeat_a_picked_question_as_context(tmp_path)
     assert ("[0.67] 04 ? Was wirst du kochen? | What will you cook?\n"
             "[1.00] 05   Ich möchte Pasta machen.") in text
     assert text.count("Was wirst du kochen?") == 1
+    assert text.count("Ich möchte Pasta machen.") == 1
+
+
+def test_shortlist_digest_shows_the_answer_to_a_picked_question(tmp_path):
+    conv = _grocery(tmp_path)
+    judge = FakeJudge({"Was wirst du kochen?": 3.0})
+
+    text = shortlist_digest([conv], shortlist([conv], judge, per_conversation=1))
+
+    assert ("[1.00] 04 ? Was wirst du kochen? | What will you cook?\n"
+            "       05   Ich möchte Pasta machen. | I want to make pasta.") in text
