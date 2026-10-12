@@ -1,0 +1,1018 @@
+{
+ "level": 38,
+ "drills": [
+  {
+   "conversation": 1,
+   "question_de": "Wie oft trainierst du pro Woche?",
+   "question_en": "How often do you work out per week?",
+   "answer_de": "Ich versuche, mindestens viermal pro Woche zu trainieren. Dabei mache ich hauptsächlich eine Mischung aus Cardio und Krafttraining.",
+   "answer_en": "I try to work out at least four times a week. I mostly do a mix of cardio and strength training.",
+   "hints": [
+    "viermal",
+    "trainieren",
+    "Cardio",
+    "Krafttraining"
+   ],
+   "source_lines": [
+    13,
+    8
+   ]
+  },
+  {
+   "conversation": 1,
+   "question_de": "Wie wirkt sich regelmäßige Bewegung auf dich aus?",
+   "question_en": "How does regular exercise affect you?",
+   "answer_de": "Meine Stimmung hat sich definitiv verbessert. Ich fühle mich weniger gestresst und konzentrierter.",
+   "answer_en": "My mood has definitely improved. I feel less stressed and more focused.",
+   "hints": [
+    "Stimmung",
+    "verbessert",
+    "gestresst",
+    "konzentrierter"
+   ],
+   "source_lines": [
+    24,
+    25
+   ]
+  },
+  {
+   "conversation": 1,
+   "question_de": "Warum trainierst du lieber draußen als im Fitnessstudio?",
+   "question_en": "Why do you prefer exercising outdoors to the gym?",
+   "answer_de": "Es ist angenehmer, draußen zu trainieren, als in einem Fitnessstudio festzusitzen. Und in der Natur zu sein, kann auch meine Stimmung verbessern.",
+   "answer_en": "It is more enjoyable to exercise outside than to be stuck in a gym. And being in nature can also improve my mood.",
+   "hints": [
+    "draußen",
+    "Fitnessstudio",
+    "Natur",
+    "Stimmung"
+   ],
+   "source_lines": [
+    62,
+    65
+   ]
+  },
+  {
+   "conversation": 2,
+   "question_de": "Welche Strategie nutzt du, um deine Zeit zu verwalten?",
+   "question_en": "What strategy do you use to manage your time?",
+   "answer_de": "Ich mache jeden Morgen eine To-Do-Liste und fange immer mit den wichtigsten Aufgaben zuerst an.",
+   "answer_en": "I make a to-do list every morning and always start with the most important tasks first.",
+   "hints": [
+    "Morgen",
+    "To-Do-Liste",
+    "wichtigsten",
+    "Aufgaben"
+   ],
+   "source_lines": [
+    13,
+    18
+   ]
+  },
+  {
+   "conversation": 2,
+   "question_de": "Wie gehst du damit um, wenn dein Zeitplan nicht aufgeht?",
+   "question_en": "What do you do when your schedule does not work out?",
+   "answer_de": "Dann bewerte ich meine Planung neu und passe meinen Zeitplan an.",
+   "answer_en": "Then I reassess my planning and adjust my schedule.",
+   "hints": [
+    "bewerte",
+    "Planung",
+    "passe",
+    "Zeitplan"
+   ],
+   "source_lines": [
+    43
+   ]
+  },
+  {
+   "conversation": 2,
+   "question_de": "Warum lehnst du zusätzliche Aufgaben manchmal ab?",
+   "question_en": "Why do you sometimes turn down additional tasks?",
+   "answer_de": "Ich habe gelernt, dass es notwendig ist, meine Zeit zu schützen. Ohne gutes Zeitmanagement fühle ich mich leicht überfordert.",
+   "answer_en": "I have learned that it is necessary to protect my time. Without good time management I easily feel overwhelmed.",
+   "hints": [
+    "notwendig",
+    "Zeit",
+    "schützen",
+    "überfordert"
+   ],
+   "source_lines": [
+    50,
+    6
+   ]
+  },
+  {
+   "conversation": 3,
+   "question_de": "Woran arbeitest du gerade für die Konferenz?",
+   "question_en": "What are you working on for the conference right now?",
+   "answer_de": "Ich habe begonnen, meine Folien für die Präsentation zusammenzustellen. Ich möchte mich auf die Ergebnisse unseres letzten Projekts konzentrieren.",
+   "answer_en": "I have started putting together my slides for the presentation. I want to focus on the results of our last project.",
+   "hints": [
+    "Folien",
+    "Präsentation",
+    "Ergebnisse",
+    "Projekts"
+   ],
+   "source_lines": [
+    7,
+    21
+   ]
+  },
+  {
+   "conversation": 3,
+   "question_de": "Mit wem möchtest du auf der Konferenz ins Gespräch kommen?",
+   "question_en": "Who would you like to talk to at the conference?",
+   "answer_de": "Ich hoffe, mit einigen Branchenführern zu sprechen. Ich will nicht vergessen, die Kontaktdaten der Leute, die ich treffe, auszutauschen.",
+   "answer_en": "I hope to talk to some industry leaders. I do not want to forget to exchange contact information with the people I meet.",
+   "hints": [
+    "Branchenführern",
+    "sprechen",
+    "Kontaktdaten",
+    "auszutauschen"
+   ],
+   "source_lines": [
+    54,
+    63
+   ]
+  },
+  {
+   "conversation": 3,
+   "question_de": "Wie hältst du nach der Konferenz den Kontakt zu neuen Bekannten?",
+   "question_en": "How do you stay in touch with new contacts after the conference?",
+   "answer_de": "Ich sollte danach nachfassen, um die Verbindung lebendig zu halten. Dafür habe ich letzte Woche Visitenkarten bestellt.",
+   "answer_en": "I should follow up afterward to keep the connection alive. For that I ordered business cards last week.",
+   "hints": [
+    "nachfassen",
+    "Verbindung",
+    "lebendig",
+    "Visitenkarten"
+   ],
+   "source_lines": [
+    65,
+    73
+   ]
+  },
+  {
+   "conversation": 4,
+   "question_de": "Was hilft dir, wenn du dich bei der Arbeit überwältigt fühlst?",
+   "question_en": "What helps you when you feel overwhelmed at work?",
+   "answer_de": "Eine Liste zu machen hilft mir, zu sehen, was erledigt werden muss, und reduziert dieses überwältigende Gefühl.",
+   "answer_en": "Making a list helps me see what needs to be done and reduces that overwhelming feeling.",
+   "hints": [
+    "Liste",
+    "erledigt",
+    "überwältigende",
+    "Gefühl"
+   ],
+   "source_lines": [
+    19
+   ]
+  },
+  {
+   "conversation": 4,
+   "question_de": "Was tust du in stressigen Momenten bei der Arbeit?",
+   "question_en": "What do you do in stressful moments at work?",
+   "answer_de": "In diesen Momenten hilft mir tiefes Atmen wirklich. Ich nehme ein paar langsame Atemzüge, um meine Nerven zu beruhigen.",
+   "answer_en": "In those moments deep breathing really helps me. I take a few slow breaths to calm my nerves.",
+   "hints": [
+    "Atmen",
+    "langsame",
+    "Atemzüge",
+    "Nerven"
+   ],
+   "source_lines": [
+    27,
+    28
+   ]
+  },
+  {
+   "conversation": 4,
+   "question_de": "Was hilft dir, nach einer stressigen Phase wieder klar zu denken?",
+   "question_en": "What helps you think clearly again after a stressful period?",
+   "answer_de": "Selbst ein kurzer Spaziergang kann meine Stimmung heben und meinen Kopf frei machen. Ich konzentriere mich auf das, was ich kontrollieren kann.",
+   "answer_en": "Even a short walk can boost my mood and clear my head. I focus on what I can control.",
+   "hints": [
+    "Spaziergang",
+    "Stimmung",
+    "Kopf",
+    "kontrollieren"
+   ],
+   "source_lines": [
+    54,
+    46
+   ]
+  },
+  {
+   "conversation": 5,
+   "question_de": "Was machst du beruflich?",
+   "question_en": "What do you do for a living?",
+   "answer_de": "Ich bin Projektmanagerin in einem Bauunternehmen. Es macht mir Spaß, aber manchmal kann es ziemlich stressig sein.",
+   "answer_en": "I am a project manager at a construction company. I enjoy it, but sometimes it can be quite stressful.",
+   "hints": [
+    "Projektmanagerin",
+    "Bauunternehmen",
+    "Spaß",
+    "stressig"
+   ],
+   "source_lines": [
+    9,
+    13
+   ]
+  },
+  {
+   "conversation": 5,
+   "question_de": "Was empfindest du als größte Herausforderung in deinem Job?",
+   "question_en": "What do you find most challenging in your job?",
+   "answer_de": "Manchmal ist es schwer, Fristen einzuhalten und alle motiviert zu halten.",
+   "answer_en": "Sometimes it is hard to meet deadlines and keep everyone motivated.",
+   "hints": [
+    "schwer",
+    "Fristen",
+    "einzuhalten",
+    "motiviert"
+   ],
+   "source_lines": [
+    28
+   ]
+  },
+  {
+   "conversation": 5,
+   "question_de": "Was gefällt dir an deinem Job am meisten?",
+   "question_en": "What do you enjoy most about your job?",
+   "answer_de": "Ich genieße es, Projekte zu leiten und mit meinem Team zu arbeiten. Ich liebe es, Probleme zu lösen.",
+   "answer_en": "I enjoy leading projects and working with my team. I love solving problems.",
+   "hints": [
+    "Projekte",
+    "Team",
+    "Probleme",
+    "lösen"
+   ],
+   "source_lines": [
+    25,
+    73
+   ]
+  },
+  {
+   "conversation": 6,
+   "question_de": "Welche Eigenschaften sollte ein guter Leader deiner Meinung nach haben?",
+   "question_en": "Which qualities should a good leader have, in your opinion?",
+   "answer_de": "Ein guter Leader sollte inspirierend, kommunikativ, empathisch, anpassungsfähig und integritätsvoll sein.",
+   "answer_en": "A good leader should be inspiring, communicative, empathetic, adaptable and have integrity.",
+   "hints": [
+    "inspirierend",
+    "kommunikativ",
+    "empathisch",
+    "anpassungsfähig"
+   ],
+   "source_lines": [
+    84
+   ]
+  },
+  {
+   "conversation": 6,
+   "question_de": "Wie sollte ein Leader mit seinem Team umgehen?",
+   "question_en": "How should a leader treat their team?",
+   "answer_de": "Ein guter Leader sollte seinen Teammitgliedern zuhören und deren Meinungen wertschätzen. Er sollte das Team in den Entscheidungsprozess einbeziehen.",
+   "answer_en": "A good leader should listen to team members and value their opinions. He should involve the team in the decision-making process.",
+   "hints": [
+    "zuhören",
+    "Meinungen",
+    "wertschätzen",
+    "Entscheidungsprozess"
+   ],
+   "source_lines": [
+    16,
+    36
+   ]
+  },
+  {
+   "conversation": 6,
+   "question_de": "Warum ist eine klare Vision für ein Team wichtig?",
+   "question_en": "Why is a clear vision important for a team?",
+   "answer_de": "Eine klare Vision hilft, das Team zu leiten, und bietet Motivation.",
+   "answer_en": "A clear vision helps guide the team and provides motivation.",
+   "hints": [
+    "klare",
+    "Vision",
+    "leiten",
+    "Motivation"
+   ],
+   "source_lines": [
+    77
+   ]
+  },
+  {
+   "conversation": 7,
+   "question_de": "Welche Tools nutzt ihr für die Zusammenarbeit im Team?",
+   "question_en": "Which tools do you use for teamwork?",
+   "answer_de": "Wir nutzen hauptsächlich Videoanrufe und Messaging-Apps. Für Projekte verwenden wir gemeinsame Dokumente.",
+   "answer_en": "We mainly use video calls and messaging apps. For projects we use shared documents.",
+   "hints": [
+    "Videoanrufe",
+    "Messaging-Apps",
+    "gemeinsame",
+    "Dokumente"
+   ],
+   "source_lines": [
+    10,
+    71
+   ]
+  },
+  {
+   "conversation": 7,
+   "question_de": "Wie förderst du die Teilnahme in Online-Meetings?",
+   "question_en": "How do you encourage participation in online meetings?",
+   "answer_de": "Ich versuche, die Teilnahme zu fördern, indem ich direkte Fragen stelle. Außerdem verwende ich zu Beginn der Meetings Eisbrecherfragen.",
+   "answer_en": "I try to encourage participation by asking direct questions. I also use ice-breaker questions at the start of meetings.",
+   "hints": [
+    "Teilnahme",
+    "direkte",
+    "Fragen",
+    "Eisbrecherfragen"
+   ],
+   "source_lines": [
+    30,
+    34
+   ]
+  },
+  {
+   "conversation": 7,
+   "question_de": "Wie gehst du mit Konflikten im Remote-Team um?",
+   "question_en": "How do you handle conflicts in a remote team?",
+   "answer_de": "Ich spreche die Teammitglieder direkt an, entweder über private Chats oder One-on-One-Anrufe.",
+   "answer_en": "I address the team members directly, either through private chats or one-on-one calls.",
+   "hints": [
+    "direkt",
+    "private",
+    "Chats",
+    "One-on-One-Anrufe"
+   ],
+   "source_lines": [
+    50
+   ]
+  },
+  {
+   "conversation": 8,
+   "question_de": "Warum ist Arbeitsmoral für den Erfolg wichtig?",
+   "question_en": "Why are work ethics important for success?",
+   "answer_de": "Eine starke Arbeitsmoral ist für den Erfolg in jedem Job unerlässlich. Wenn jeder hart arbeitet und engagiert ist, profitiert das gesamte Team.",
+   "answer_en": "Strong work ethics are essential for success in any job. If everyone works hard and is committed, the whole team benefits.",
+   "hints": [
+    "Arbeitsmoral",
+    "unerlässlich",
+    "hart",
+    "profitiert"
+   ],
+   "source_lines": [
+    6,
+    13
+   ]
+  },
+  {
+   "conversation": 8,
+   "question_de": "Warum ist Ehrlichkeit am Arbeitsplatz so wichtig?",
+   "question_en": "Why is honesty so important at work?",
+   "answer_de": "Wahrhaftig gegenüber Kollegen und Vorgesetzten zu sein, verhindert Missverständnisse. Ehrlichkeit schafft außerdem ein positives Arbeitsumfeld.",
+   "answer_en": "Being truthful with colleagues and bosses prevents misunderstandings. Honesty also creates a positive work environment.",
+   "hints": [
+    "Kollegen",
+    "Vorgesetzten",
+    "Missverständnisse",
+    "Arbeitsumfeld"
+   ],
+   "source_lines": [
+    18,
+    20
+   ]
+  },
+  {
+   "conversation": 8,
+   "question_de": "Wie motivierst du dein Team?",
+   "question_en": "How do you motivate your team?",
+   "answer_de": "Ich versuche, mein Team zu motivieren, indem ich organisiert und fokussiert auf unsere Ziele bin. Es ist wichtig, mit gutem Beispiel voranzugehen.",
+   "answer_en": "I try to motivate my team by being organized and focused on our goals. It is important to lead by example.",
+   "hints": [
+    "motivieren",
+    "organisiert",
+    "fokussiert",
+    "Beispiel"
+   ],
+   "source_lines": [
+    44,
+    41
+   ]
+  },
+  {
+   "conversation": 9,
+   "question_de": "Wie läuft ein traditionelles Erntefest bei euch ab?",
+   "question_en": "How does a traditional harvest festival go at your place?",
+   "answer_de": "Wir feiern jedes Jahr, um für die Ernte zu danken. Die Leute versammeln sich auf dem Marktplatz zum Musizieren und Tanzen.",
+   "answer_en": "We celebrate every year to give thanks for the crops. People gather in the town square for music and dancing.",
+   "hints": [
+    "Ernte",
+    "versammeln",
+    "Marktplatz",
+    "Musizieren"
+   ],
+   "source_lines": [
+    9,
+    13
+   ]
+  },
+  {
+   "conversation": 9,
+   "question_de": "Was macht ihr in der Familie an Neujahr?",
+   "question_en": "What do you do in your family on New Year's?",
+   "answer_de": "Wir haben eine große Feier zu Neujahr mit einem großen Abendessen. Dabei erzählen wir oft Geschichten über unsere Vorfahren.",
+   "answer_en": "We have a big New Year's celebration with a big dinner. We often tell stories about our ancestors.",
+   "hints": [
+    "Feier",
+    "Neujahr",
+    "Abendessen",
+    "Geschichten",
+    "Vorfahren"
+   ],
+   "source_lines": [
+    29,
+    32,
+    40
+   ]
+  },
+  {
+   "conversation": 9,
+   "question_de": "Warum sind Traditionen für eine Kultur wichtig?",
+   "question_en": "Why are traditions important for a culture?",
+   "answer_de": "Traditionen sind wichtig, um Kulturen lebendig zu halten. Sie helfen uns, uns daran zu erinnern, woher wir kommen und wer wir sind.",
+   "answer_en": "Traditions are important for keeping cultures alive. They help us remember where we come from and who we are.",
+   "hints": [
+    "Traditionen",
+    "Kulturen",
+    "lebendig",
+    "erinnern"
+   ],
+   "source_lines": [
+    67,
+    69
+   ]
+  },
+  {
+   "conversation": 10,
+   "question_de": "Wie gehst du mit Feedback um, wenn du es erhältst?",
+   "question_en": "How do you handle feedback when you receive it?",
+   "answer_de": "Ich versuche, offen zu bleiben. Ich höre aufmerksam zu und mache Notizen.",
+   "answer_en": "I try to stay open-minded. I listen carefully and take notes.",
+   "hints": [
+    "offen",
+    "aufmerksam",
+    "Notizen"
+   ],
+   "source_lines": [
+    28,
+    29
+   ]
+  },
+  {
+   "conversation": 10,
+   "question_de": "Wie reagierst du manchmal auf Kritik?",
+   "question_en": "How do you sometimes react to criticism?",
+   "answer_de": "Um ehrlich zu sein, werde ich manchmal defensiv. Ich muss mich daran erinnern, dass Kritik kein persönlicher Angriff ist.",
+   "answer_en": "To be honest, I sometimes get defensive. I need to remind myself that criticism is not a personal attack.",
+   "hints": [
+    "defensiv",
+    "erinnern",
+    "persönlicher",
+    "Angriff"
+   ],
+   "source_lines": [
+    20,
+    24
+   ]
+  },
+  {
+   "conversation": 10,
+   "question_de": "Was machst du, nachdem du Feedback gehört hast?",
+   "question_en": "What do you do after you have heard feedback?",
+   "answer_de": "Ich denke über das Feedback nach und entscheide, was ich umsetzen kann. Ich konzentriere mich auf ein oder zwei wichtige Punkte.",
+   "answer_en": "I reflect on the feedback and decide what I can implement. I focus on one or two key points.",
+   "hints": [
+    "Feedback",
+    "entscheide",
+    "umsetzen",
+    "Punkte"
+   ],
+   "source_lines": [
+    32,
+    35
+   ]
+  },
+  {
+   "conversation": 11,
+   "question_de": "Was machst du ehrenamtlich?",
+   "question_en": "What do you do as a volunteer?",
+   "answer_de": "Ich helfe hauptsächlich bei der Organisation von Aktivitäten für Kinder. Ich verbringe normalerweise etwa fünf bis sieben Stunden pro Woche damit.",
+   "answer_en": "I mainly help organize activities for children. I typically spend about five to seven hours a week on it.",
+   "hints": [
+    "Organisation",
+    "Aktivitäten",
+    "Kinder",
+    "Stunden"
+   ],
+   "source_lines": [
+    9,
+    72
+   ]
+  },
+  {
+   "conversation": 11,
+   "question_de": "Welche Vorteile hat ehrenamtliche Arbeit für dich persönlich?",
+   "question_en": "What personal benefits does volunteering have for you?",
+   "answer_de": "Ehrenamtliche Arbeit gibt mir ein Gefühl von Sinn. Anderen zu helfen, kann das eigene Selbstwertgefühl stärken.",
+   "answer_en": "Volunteering gives me a sense of purpose. Helping others can strengthen my self-esteem.",
+   "hints": [
+    "Gefühl",
+    "Sinn",
+    "Selbstwertgefühl",
+    "stärken"
+   ],
+   "source_lines": [
+    19,
+    20
+   ]
+  },
+  {
+   "conversation": 11,
+   "question_de": "Warum schätzen Arbeitgeber ehrenamtliche Erfahrung?",
+   "question_en": "Why do employers value volunteer experience?",
+   "answer_de": "Viele Arbeitgeber schätzen ehrenamtliche Erfahrungen, denn sie zeigen, dass man engagiert und fleißig ist.",
+   "answer_en": "Many employers value volunteer experience because it shows that you are committed and hardworking.",
+   "hints": [
+    "Arbeitgeber",
+    "ehrenamtliche",
+    "engagiert",
+    "fleißig"
+   ],
+   "source_lines": [
+    30,
+    31
+   ]
+  },
+  {
+   "conversation": 12,
+   "question_de": "Worauf sollte sich ein Kurs zur Karriereentwicklung konzentrieren?",
+   "question_en": "What should a career development course focus on?",
+   "answer_de": "Ich würde mich auf Bereiche wie Führungsfähigkeiten und Kommunikation konzentrieren. Eine Sitzung zu Interviewtechniken wäre auch sinnvoll.",
+   "answer_en": "I would focus on areas like leadership skills and communication. A session on interview techniques would also make sense.",
+   "hints": [
+    "Führungsfähigkeiten",
+    "Kommunikation",
+    "Sitzung",
+    "Interviewtechniken"
+   ],
+   "source_lines": [
+    8,
+    47
+   ]
+  },
+  {
+   "conversation": 12,
+   "question_de": "Wie lange sollte der Kurs deiner Meinung nach dauern?",
+   "question_en": "How long should the course last, in your opinion?",
+   "answer_de": "Ich denke, ein paar Wochen wären ideal, vielleicht vier bis sechs Wochen. Man könnte sich einmal pro Woche für ein paar Stunden treffen.",
+   "answer_en": "I think a few weeks would be ideal, maybe four to six weeks. You could meet once a week for a couple of hours.",
+   "hints": [
+    "Wochen",
+    "ideal",
+    "einmal",
+    "Stunden"
+   ],
+   "source_lines": [
+    19,
+    22
+   ]
+  },
+  {
+   "conversation": 12,
+   "question_de": "Soll der Kurs online oder persönlich stattfinden?",
+   "question_en": "Should the course take place online or in person?",
+   "answer_de": "Ich bevorzuge persönliche Interaktionen, weil sie eine bessere Diskussion fördern können. Dazu könnten Gruppendiskussionen und Aktivitäten gehören, die die Interaktion fördern.",
+   "answer_en": "I prefer face-to-face interactions because they can encourage better discussion. Group discussions and activities that promote interaction could be part of it.",
+   "hints": [
+    "persönliche",
+    "Interaktionen",
+    "Diskussion",
+    "Gruppendiskussionen"
+   ],
+   "source_lines": [
+    25,
+    29
+   ]
+  },
+  {
+   "conversation": 13,
+   "question_de": "Was ist die größte Herausforderung in einem schnelllebigen Arbeitsumfeld?",
+   "question_en": "What is the biggest challenge in a fast-paced work environment?",
+   "answer_de": "Ich denke, der ständige Druck ist schwer zu bewältigen. Es gibt immer etwas Dringendes, das Aufmerksamkeit benötigt.",
+   "answer_en": "I think the constant pressure is hard to manage. There is always something urgent that needs attention.",
+   "hints": [
+    "Druck",
+    "bewältigen",
+    "Dringendes",
+    "Aufmerksamkeit"
+   ],
+   "source_lines": [
+    9,
+    10
+   ]
+  },
+  {
+   "conversation": 13,
+   "question_de": "Wie gehst du mit der Menge an Aufgaben um?",
+   "question_en": "How do you deal with the volume of tasks?",
+   "answer_de": "Ich versuche, meine Aufgaben zu priorisieren, aber das ist nicht immer einfach. Am Ende jeder Aufgabe plane ich ein paar Minuten ein, um sie zu überprüfen.",
+   "answer_en": "I try to prioritize my tasks, but it is not always easy. At the end of each task I set aside a few minutes to review it.",
+   "hints": [
+    "priorisieren",
+    "Aufgabe",
+    "Minuten",
+    "überprüfen"
+   ],
+   "source_lines": [
+    14,
+    39
+   ]
+  },
+  {
+   "conversation": 13,
+   "question_de": "Warum ist Teamkommunikation in einem schnellen Umfeld schwierig?",
+   "question_en": "Why is team communication difficult in a fast environment?",
+   "answer_de": "Wenn die Dinge schnell gehen, können Nachrichten leicht verloren gehen. Man sollte regelmäßige Treffen einberufen, um alle auf dem Laufenden zu halten.",
+   "answer_en": "When things move fast, messages can easily get lost. You should call regular meetings to keep everyone up to date.",
+   "hints": [
+    "Nachrichten",
+    "verloren",
+    "Treffen",
+    "Laufenden"
+   ],
+   "source_lines": [
+    48,
+    55
+   ]
+  },
+  {
+   "conversation": 14,
+   "question_de": "Wie gehst du mit Ablenkungen durch dein Handy um?",
+   "question_en": "How do you deal with distractions from your phone?",
+   "answer_de": "Ich schalte die Benachrichtigungen während der Arbeit aus. Manchmal lege ich mein Handy in einen anderen Raum.",
+   "answer_en": "I turn off notifications while I work. Sometimes I put my phone in another room.",
+   "hints": [
+    "Benachrichtigungen",
+    "Arbeit",
+    "Handy",
+    "Raum"
+   ],
+   "source_lines": [
+    11,
+    16
+   ]
+  },
+  {
+   "conversation": 14,
+   "question_de": "Wie organisierst du deine Aufgaben, um fokussiert zu bleiben?",
+   "question_en": "How do you organize your tasks to stay focused?",
+   "answer_de": "Ich mache jeden Morgen eine To-do-Liste und beginne zuerst mit den wichtigsten Aufgaben.",
+   "answer_en": "I make a to-do list every morning and start with the most important tasks first.",
+   "hints": [
+    "Morgen",
+    "To-do-Liste",
+    "wichtigsten",
+    "Aufgaben"
+   ],
+   "source_lines": [
+    20,
+    30
+   ]
+  },
+  {
+   "conversation": 14,
+   "question_de": "Wie teilst du deine Arbeitszeit ein?",
+   "question_en": "How do you structure your working time?",
+   "answer_de": "Ich stelle einen Timer auf fünfundzwanzig Minuten Arbeit und mache dann eine fünfminütige Pause.",
+   "answer_en": "I set a timer for twenty-five minutes of work and then take a five-minute break.",
+   "hints": [
+    "Timer",
+    "fünfundzwanzig",
+    "Minuten",
+    "Pause"
+   ],
+   "source_lines": [
+    43
+   ]
+  },
+  {
+   "conversation": 15,
+   "question_de": "Wie möchtest du deine Fitness verbessern?",
+   "question_en": "How do you want to improve your fitness?",
+   "answer_de": "Ich denke darüber nach, dreimal pro Woche mindestens dreißig Minuten zu trainieren. Dabei ist es wichtig, erreichbare Ziele zu setzen.",
+   "answer_en": "I am thinking about exercising at least thirty minutes three times a week. It is important to set achievable goals.",
+   "hints": [
+    "dreimal",
+    "dreißig",
+    "Minuten",
+    "erreichbare"
+   ],
+   "source_lines": [
+    14,
+    16
+   ]
+  },
+  {
+   "conversation": 15,
+   "question_de": "Wie fängst du am besten an, wenn du dir Ziele setzt?",
+   "question_en": "How do you best start when you set goals?",
+   "answer_de": "Es ist besser, klein anzufangen und die Ziele nach und nach zu erhöhen. Außerdem sollte man Ziele spezifisch und zeitgebunden machen.",
+   "answer_en": "It is better to start small and gradually increase the goals. You should also make goals specific and time-bound.",
+   "hints": [
+    "klein",
+    "anzufangen",
+    "erhöhen",
+    "zeitgebunden"
+   ],
+   "source_lines": [
+    21,
+    75
+   ]
+  },
+  {
+   "conversation": 15,
+   "question_de": "Wie oft solltest du deine Ziele überprüfen?",
+   "question_en": "How often should you review your goals?",
+   "answer_de": "Ich glaube, es ist eine gute Idee, die Ziele monatlich zu überprüfen. Das Aufschreiben der Ziele und Erfolge kann sehr motivierend sein.",
+   "answer_en": "I believe it is a good idea to review the goals monthly. Writing down the goals and achievements can be very motivating.",
+   "hints": [
+    "monatlich",
+    "überprüfen",
+    "Erfolge",
+    "motivierend"
+   ],
+   "source_lines": [
+    57,
+    52
+   ]
+  },
+  {
+   "conversation": 16,
+   "question_de": "Wo könnt ihr bei einem Familienurlaub am meisten sparen?",
+   "question_en": "Where can you save the most on a family vacation?",
+   "answer_de": "Wir können bei Essen und Unterkunft sparen, indem wir unsere eigenen Mahlzeiten zubereiten und nach Orten mit einer Küche suchen.",
+   "answer_en": "We can save on food and accommodation by cooking our own meals and looking for places with a kitchen.",
+   "hints": [
+    "Unterkunft",
+    "Mahlzeiten",
+    "zubereiten",
+    "Küche"
+   ],
+   "source_lines": [
+    12,
+    18,
+    20
+   ]
+  },
+  {
+   "conversation": 16,
+   "question_de": "Fahrt ihr in den Urlaub oder fliegt ihr?",
+   "question_en": "Are you driving or flying on vacation?",
+   "answer_de": "Fahren könnte billiger sein, aber es kommt darauf an, wie weit wir fahren.",
+   "answer_en": "Driving could be cheaper, but it depends on how far we go.",
+   "hints": [
+    "Fahren",
+    "billiger",
+    "weit",
+    "fahren"
+   ],
+   "source_lines": [
+    24
+   ]
+  },
+  {
+   "conversation": 16,
+   "question_de": "Wie plant ihr die Ausgaben am Urlaubsort?",
+   "question_en": "How do you plan the expenses at your destination?",
+   "answer_de": "Wir suchen nach kostenlosen oder kostengünstigen Aktivitäten. Eine kleine Eintrittsgebühr planen wir im Budget ein, dazu einen kleinen Puffer für unerwartete Ausgaben.",
+   "answer_en": "We look for free or low-cost activities. We budget for a small entrance fee, plus a small buffer for unexpected expenses.",
+   "hints": [
+    "kostenlosen",
+    "Aktivitäten",
+    "Eintrittsgebühr",
+    "Puffer"
+   ],
+   "source_lines": [
+    33,
+    36,
+    41,
+    42
+   ]
+  },
+  {
+   "conversation": 17,
+   "question_de": "Wie kann Homeoffice helfen, Beruf und Privatleben zu vereinbaren?",
+   "question_en": "How can working from home help balance work and private life?",
+   "answer_de": "Teilweise von zu Hause aus zu arbeiten, kann wirklich helfen, Arbeit und Leben in Einklang zu bringen.",
+   "answer_en": "Working from home part-time can really help balance work and life.",
+   "hints": [
+    "Hause",
+    "arbeiten",
+    "Arbeit",
+    "Einklang"
+   ],
+   "source_lines": [
+    4
+   ]
+  },
+  {
+   "conversation": 17,
+   "question_de": "Warum sind flexible Arbeitszeiten sinnvoll?",
+   "question_en": "Why are flexible working hours worthwhile?",
+   "answer_de": "Manche Menschen sind Morgenmenschen, während andere abends besser arbeiten. Flexible Stunden würden es ermöglichen, zu wählen, wann man am produktivsten ist.",
+   "answer_en": "Some people are morning people, while others work better in the evening. Flexible hours would let you choose when you are most productive.",
+   "hints": [
+    "Morgenmenschen",
+    "abends",
+    "Flexible",
+    "produktivsten"
+   ],
+   "source_lines": [
+    10,
+    12
+   ]
+  },
+  {
+   "conversation": 17,
+   "question_de": "Was ist bei flexiblen Arbeitszeiten im Team wichtig?",
+   "question_en": "What is important for a team with flexible working hours?",
+   "answer_de": "Es wäre wichtig, klare Erwartungen und Fristen festzulegen. Außerdem hilft ein gemeinsamer Kalender, damit jeder weiß, wann man verfügbar ist.",
+   "answer_en": "It would be important to set clear expectations and deadlines. A shared calendar also helps so everyone knows when people are available.",
+   "hints": [
+    "Erwartungen",
+    "Fristen",
+    "gemeinsamer",
+    "Kalender"
+   ],
+   "source_lines": [
+    42,
+    43
+   ]
+  },
+  {
+   "conversation": 18,
+   "question_de": "Warum sollte man in einer Präsentation zuerst die Ziele erklären?",
+   "question_en": "Why should you explain the goals first in a presentation?",
+   "answer_de": "Wenn man die Ziele klar erklärt, legt das eine gute Grundlage für den Rest der Präsentation.",
+   "answer_en": "If you explain the goals clearly, it lays a good foundation for the rest of the presentation.",
+   "hints": [
+    "Ziele",
+    "erklärt",
+    "Grundlage",
+    "Präsentation"
+   ],
+   "source_lines": [
+    11
+   ]
+  },
+  {
+   "conversation": 18,
+   "question_de": "Wie veranschaulicht ihr die Daten in eurer Präsentation?",
+   "question_en": "How do you illustrate the data in your presentation?",
+   "answer_de": "Wir verwenden ein Kreisdiagramm für die Budgetverteilung. Am Ende fügen wir eine Fragerunde ein.",
+   "answer_en": "We use a pie chart for the budget distribution. At the end we include a Q&A session.",
+   "hints": [
+    "Kreisdiagramm",
+    "Budgetverteilung",
+    "Fragerunde"
+   ],
+   "source_lines": [
+    16,
+    45
+   ]
+  },
+  {
+   "conversation": 18,
+   "question_de": "Wie bereitet ihr euch auf mögliche Fragen des Publikums vor?",
+   "question_en": "How do you prepare for possible questions from the audience?",
+   "answer_de": "Wir brainstormen ein paar mögliche Fragen und schreiben unsere Antworten darauf auf.",
+   "answer_en": "We brainstorm a few possible questions and write down our answers.",
+   "hints": [
+    "brainstormen",
+    "mögliche",
+    "Fragen",
+    "Antworten"
+   ],
+   "source_lines": [
+    50,
+    59
+   ]
+  },
+  {
+   "conversation": 19,
+   "question_de": "Was fällt dir schwer, wenn du Familie und Karriere vereinbaren willst?",
+   "question_en": "What is hard for you when you try to balance family and career?",
+   "answer_de": "Manchmal fühlt es sich an, als gäbe es nicht genug Zeit im Tag für Familie und Arbeit. Ich habe das Gefühl, dass ich immer von einer Sache zur anderen hetze.",
+   "answer_en": "Sometimes it feels like there is not enough time in the day for family and work. I feel like I am always rushing from one thing to another.",
+   "hints": [
+    "Zeit",
+    "Familie",
+    "Arbeit",
+    "hetze"
+   ],
+   "source_lines": [
+    13,
+    11
+   ]
+  },
+  {
+   "conversation": 19,
+   "question_de": "Wann fühlst du dich als Elternteil schuldig?",
+   "question_en": "When do you feel guilty as a parent?",
+   "answer_de": "Ich fühle mich schuldig, wenn ich nicht an den Schulveranstaltungen meines Kindes teilnehmen kann. Bei der Arbeit denke ich oft daran, was ich zu Hause verpasse.",
+   "answer_en": "I feel guilty when I cannot attend my child's school events. At work I often think about what I am missing at home.",
+   "hints": [
+    "schuldig",
+    "Schulveranstaltungen",
+    "Kindes",
+    "verpasse"
+   ],
+   "source_lines": [
+    18,
+    21
+   ]
+  },
+  {
+   "conversation": 19,
+   "question_de": "Wie versuchst du, Arbeit und Familienzeit zu trennen?",
+   "question_en": "How do you try to separate work and family time?",
+   "answer_de": "Ich versuche, meine Zeit zu strukturieren. Wenn ich zu Hause bin, konzentriere ich mich auf die Familie.",
+   "answer_en": "I try to compartmentalize my time. When I am at home, I focus on my family.",
+   "hints": [
+    "strukturieren",
+    "Zeit",
+    "konzentriere",
+    "Familie"
+   ],
+   "source_lines": [
+    29,
+    30
+   ]
+  },
+  {
+   "conversation": 20,
+   "question_de": "Wie gehst du mit Stress im Arbeitsalltag um?",
+   "question_en": "How do you deal with stress in your daily work?",
+   "answer_de": "Ich versuche, tagsüber kurze Pausen einzulegen. Vielleicht sollte ich anfangen, während meiner Mittagspausen mehr zu laufen.",
+   "answer_en": "I try to take short breaks during the day. Maybe I should start walking more during my lunch breaks.",
+   "hints": [
+    "tagsüber",
+    "Pausen",
+    "Mittagspausen",
+    "laufen"
+   ],
+   "source_lines": [
+    12,
+    19
+   ]
+  },
+  {
+   "conversation": 20,
+   "question_de": "Wie sorgst du dafür, dass du genug Wasser trinkst?",
+   "question_en": "How do you make sure you drink enough water?",
+   "answer_de": "Ich halte immer eine Flasche Wasser in der Nähe meines Schreibtisches. Außerdem stelle ich Erinnerungen auf meinem Handy ein, um jede Stunde Wasser zu trinken.",
+   "answer_en": "I always keep a bottle of water near my desk. I also set reminders on my phone to drink water every hour.",
+   "hints": [
+    "Flasche",
+    "Wasser",
+    "Schreibtisches",
+    "Erinnerungen"
+   ],
+   "source_lines": [
+    22,
+    26
+   ]
+  },
+  {
+   "conversation": 20,
+   "question_de": "Wie schaffst du es, trotz vollem Zeitplan Sport zu treiben?",
+   "question_en": "How do you manage to work out despite a full schedule?",
+   "answer_de": "Ich versuche, dreimal pro Woche ins Fitnessstudio zu gehen. Manchmal stehe ich früher auf, um Sport unterzubringen, selbst wenn es nur eine halbe Stunde ist.",
+   "answer_en": "I try to go to the gym three times a week. Sometimes I get up earlier to fit in exercise, even if it is just half an hour.",
+   "hints": [
+    "dreimal",
+    "Fitnessstudio",
+    "früher",
+    "halbe"
+   ],
+   "source_lines": [
+    50,
+    55
+   ]
+  }
+ ]
+}
