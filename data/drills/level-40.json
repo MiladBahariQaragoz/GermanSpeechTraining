@@ -1,0 +1,1021 @@
+{
+ "level": 40,
+ "drills": [
+  {
+   "conversation": 1,
+   "question_de": "Wie kannst du deine Aufgaben übersichtlicher ordnen?",
+   "question_en": "How can you organize your tasks more clearly?",
+   "answer_de": "Ich mache drei kleinere Listen: dringend, wichtig und niedrige Priorität. Außerdem lege ich Fristen für jede Aufgabe fest.",
+   "answer_en": "I make three smaller lists: urgent, important and low priority. I also set deadlines for each task.",
+   "hints": [
+    "Listen",
+    "dringend",
+    "Priorität",
+    "Fristen"
+   ],
+   "source_lines": [
+    14,
+    18
+   ]
+  },
+  {
+   "conversation": 1,
+   "question_de": "Wie hilft dir ein digitaler Kalender, Termine nicht zu verpassen?",
+   "question_en": "How does a digital calendar help you not miss appointments?",
+   "answer_de": "Ich stelle Erinnerungen für jede Aufgabe ein. So erhalte ich Benachrichtigungen für bevorstehende Fristen.",
+   "answer_en": "I set reminders for each task. That way I receive alerts for upcoming deadlines.",
+   "hints": [
+    "Erinnerungen",
+    "Aufgabe",
+    "Benachrichtigungen",
+    "Fristen"
+   ],
+   "source_lines": [
+    23,
+    26
+   ]
+  },
+  {
+   "conversation": 1,
+   "question_de": "Wie arbeitest du konzentriert an einer Aufgabe?",
+   "question_en": "How do you work on a task with focus?",
+   "answer_de": "Ich wähle einen bestimmten Zeitraum, um ohne Unterbrechungen zu arbeiten, zum Beispiel mit der Pomodoro-Methode.",
+   "answer_en": "I choose a specific amount of time to work without interruptions, for example with the Pomodoro method.",
+   "hints": [
+    "Zeitraum",
+    "Unterbrechungen",
+    "Pomodoro-Methode"
+   ],
+   "source_lines": [
+    52,
+    55
+   ]
+  },
+  {
+   "conversation": 2,
+   "question_de": "Was macht ein professioneller Coach nach deinem Verständnis?",
+   "question_en": "What does a professional coach do, as you understand it?",
+   "answer_de": "Soweit ich verstehe, hilft ein professioneller Coach mir, meine Ziele zu identifizieren und einen Plan zu erstellen, um sie zu erreichen.",
+   "answer_en": "As far as I understand, a professional coach helps me identify my goals and create a plan to achieve them.",
+   "hints": [
+    "Coach",
+    "Ziele",
+    "identifizieren",
+    "Plan"
+   ],
+   "source_lines": [
+    11
+   ]
+  },
+  {
+   "conversation": 2,
+   "question_de": "Warum möchtest du mit einem Coach arbeiten?",
+   "question_en": "Why do you want to work with a coach?",
+   "answer_de": "Ich möchte in meinem Job vorankommen und mich beim Führen eines Teams sicherer fühlen.",
+   "answer_en": "I want to advance in my job and feel more confident when leading a team.",
+   "hints": [
+    "Job",
+    "vorankommen",
+    "Führen",
+    "sicherer"
+   ],
+   "source_lines": [
+    25,
+    29
+   ]
+  },
+  {
+   "conversation": 2,
+   "question_de": "Warum findest du einen Coach besser als den Rat von Freunden und Familie?",
+   "question_en": "Why do you find a coach better than advice from friends and family?",
+   "answer_de": "Ich finde, ein professioneller Coach könnte eine objektivere Sichtweise bieten, während Freunde und Familie nur Ratschläge geben können.",
+   "answer_en": "I think a professional coach might offer a more objective view, while friends and family can only give advice.",
+   "hints": [
+    "Coach",
+    "objektivere",
+    "Sichtweise",
+    "Ratschläge"
+   ],
+   "source_lines": [
+    37
+   ]
+  },
+  {
+   "conversation": 3,
+   "question_de": "Warum denkst du, ist es wichtig, das Bewusstsein für psychische Gesundheit zu schärfen?",
+   "question_en": "Why do you think it is important to raise awareness of mental health?",
+   "answer_de": "Ich denke, psychische Gesundheit beeinflusst unsere Leistung und Beziehungen. Wenn wir uns mental nicht wohlfühlen, können wir nicht effektiv arbeiten.",
+   "answer_en": "I think mental health affects our performance and relationships. If we don't feel well mentally, we can't work effectively.",
+   "hints": [
+    "psychische",
+    "Leistung",
+    "Beziehungen",
+    "effektiv"
+   ],
+   "source_lines": [
+    10,
+    11
+   ]
+  },
+  {
+   "conversation": 3,
+   "question_de": "Was kann ein Unternehmen tun, um Mitarbeitern bei Stress zu helfen?",
+   "question_en": "What can a company do to help employees with stress?",
+   "answer_de": "Ein Unternehmen könnte Workshops zum Stressmanagement und zu Bewältigungsstrategien anbieten. Außerdem könnte es Ressourcen wie Beratungsdienste bereitstellen.",
+   "answer_en": "A company could offer workshops on stress management and coping strategies. It could also provide resources such as counseling services.",
+   "hints": [
+    "Workshops",
+    "Stressmanagement",
+    "Bewältigungsstrategien",
+    "Beratungsdienste"
+   ],
+   "source_lines": [
+    27,
+    36
+   ]
+  },
+  {
+   "conversation": 3,
+   "question_de": "Warum sind flexible Arbeitszeiten für Mitarbeiter hilfreich?",
+   "question_en": "Why are flexible working hours helpful for employees?",
+   "answer_de": "Flexible Arbeitszeiten können den Mitarbeitern helfen, ihre persönlichen Verpflichtungen besser zu managen.",
+   "answer_en": "Flexible working hours can help employees manage their personal responsibilities better.",
+   "hints": [
+    "Flexible",
+    "Arbeitszeiten",
+    "Verpflichtungen",
+    "managen"
+   ],
+   "source_lines": [
+    43,
+    46
+   ]
+  },
+  {
+   "conversation": 4,
+   "question_de": "Was glaubst du, wird bei der Einführung des neuen Systems die größte Herausforderung sein?",
+   "question_en": "What do you think will be the biggest challenge when the new system is introduced?",
+   "answer_de": "Ich glaube, die größte Herausforderung wird sein, alle an Bord zu holen, denn einige Teammitglieder sind gegen Veränderungen.",
+   "answer_en": "I believe the biggest challenge will be getting everyone on board, because some team members are resistant to change.",
+   "hints": [
+    "Herausforderung",
+    "Bord",
+    "Teammitglieder",
+    "Veränderungen"
+   ],
+   "source_lines": [
+    17,
+    18
+   ]
+  },
+  {
+   "conversation": 4,
+   "question_de": "Wie können wir Kollegen helfen, sich an ein neues System anzupassen?",
+   "question_en": "How can we help colleagues adjust to a new system?",
+   "answer_de": "Wir können ein paar Sitzungen anbieten, in denen wir Tipps und Tricks zum neuen System teilen. Außerdem können wir eine Chatgruppe für unser Team erstellen.",
+   "answer_en": "We can offer a few sessions where we share tips and tricks on the new system. We can also create a chat group for our team.",
+   "hints": [
+    "Sitzungen",
+    "Tipps",
+    "Chatgruppe",
+    "Team"
+   ],
+   "source_lines": [
+    22,
+    41
+   ]
+  },
+  {
+   "conversation": 4,
+   "question_de": "Wie sollten die Workshops sein, damit ihr die neuen Werkzeuge versteht?",
+   "question_en": "What should the workshops be like so that you understand the new tools?",
+   "answer_de": "Die Workshops müssen praktisch sein, damit wir die neuen Werkzeuge wirklich verstehen können. Wir sollten unseren Bedarf an ausreichender Schulung und Unterstützung äußern.",
+   "answer_en": "The workshops need to be hands-on so we can really understand the new tools. We should express our need for sufficient training and support.",
+   "hints": [
+    "Workshops",
+    "praktisch",
+    "Werkzeuge",
+    "Schulung"
+   ],
+   "source_lines": [
+    32,
+    37
+   ]
+  },
+  {
+   "conversation": 5,
+   "question_de": "Was ist deiner Meinung nach die größte Herausforderung für unser Team?",
+   "question_en": "What do you think is the biggest challenge for our team?",
+   "answer_de": "Ich glaube, es ist der Mangel an klaren Zielen. Wenn die Leute nicht wissen, worauf sie hinarbeiten sollen, fühlen sie sich verloren.",
+   "answer_en": "I believe it's the lack of clear goals. When people don't know what to aim for, they feel lost.",
+   "hints": [
+    "Mangel",
+    "klaren",
+    "Zielen",
+    "verloren"
+   ],
+   "source_lines": [
+    8,
+    9
+   ]
+  },
+  {
+   "conversation": 5,
+   "question_de": "Wie schlägst du vor, dass wir das Meeting zu den Zielen strukturieren?",
+   "question_en": "How do you suggest we structure the meeting about the goals?",
+   "answer_de": "Wir können damit anfangen, die Hauptziele des Projekts zu teilen und das Team um Rückmeldungen zu bitten.",
+   "answer_en": "We can start by sharing the main objectives of the project and asking the team for input.",
+   "hints": [
+    "Hauptziele",
+    "Projekts",
+    "Team",
+    "Rückmeldungen"
+   ],
+   "source_lines": [
+    16
+   ]
+  },
+  {
+   "conversation": 5,
+   "question_de": "Wie können wir die Motivation im Team hochhalten?",
+   "question_en": "How can we keep motivation in the team high?",
+   "answer_de": "Das Feiern kleiner Erfolge kann die Moral heben. Außerdem sollten wir mit gutem Beispiel vorangehen und selbst Enthusiasmus zeigen.",
+   "answer_en": "Celebrating small wins can boost morale. We should also lead by example and show enthusiasm ourselves.",
+   "hints": [
+    "Feiern",
+    "Erfolge",
+    "Moral",
+    "Enthusiasmus"
+   ],
+   "source_lines": [
+    24,
+    59
+   ]
+  },
+  {
+   "conversation": 6,
+   "question_de": "Warum kann Vetternwirtschaft für ein Team gefährlich sein?",
+   "question_en": "Why can favoritism be dangerous for a team?",
+   "answer_de": "Vetternwirtschaft kann die Team-Moral untergraben. Sie schafft eine Kluft, und Menschen fühlen sich gezwungen, ein Spiel zu spielen, um wahrgenommen zu werden.",
+   "answer_en": "Favoritism can undermine team morale. It creates a divide, and people feel they need to play a game to get noticed.",
+   "hints": [
+    "Vetternwirtschaft",
+    "Team-Moral",
+    "Kluft",
+    "Spiel"
+   ],
+   "source_lines": [
+    19,
+    21
+   ]
+  },
+  {
+   "conversation": 6,
+   "question_de": "Wie gehst du mit dem Drama im Büro um?",
+   "question_en": "How do you deal with the drama in the office?",
+   "answer_de": "Ich habe bewusst entschieden, mich vom Drama fernzuhalten. Ich möchte anerkannt werden, aber nicht auf Kosten meiner Integrität.",
+   "answer_en": "I have consciously decided to stay away from the drama. I want to be recognized, but not at the cost of my integrity.",
+   "hints": [
+    "bewusst",
+    "fernzuhalten",
+    "anerkannt",
+    "Integrität"
+   ],
+   "source_lines": [
+    28,
+    35
+   ]
+  },
+  {
+   "conversation": 6,
+   "question_de": "Wie sollten wir das nächste Teammeeting angehen?",
+   "question_en": "How should we approach the next team meeting?",
+   "answer_de": "Wir sollten die Zusammenarbeit und die Anerkennung der Stärken des anderen betonen. Außerdem können offene Foren die Transparenz fördern.",
+   "answer_en": "We should emphasize collaboration and recognizing each other's strengths. Open forums can also promote transparency.",
+   "hints": [
+    "Zusammenarbeit",
+    "Stärken",
+    "Foren",
+    "Transparenz"
+   ],
+   "source_lines": [
+    58,
+    64,
+    65
+   ]
+  },
+  {
+   "conversation": 7,
+   "question_de": "Welche Verantwortung haben Unternehmen deiner Meinung nach neben dem Profit?",
+   "question_en": "In your opinion, what responsibility do companies have besides profit?",
+   "answer_de": "Ich finde, Unternehmen haben eine soziale Verantwortung, und das Wohl der Mitarbeiter sollte wichtig sein.",
+   "answer_en": "I think companies have a social responsibility, and the well-being of employees should matter.",
+   "hints": [
+    "soziale",
+    "Verantwortung",
+    "Wohl",
+    "Mitarbeiter"
+   ],
+   "source_lines": [
+    13,
+    14
+   ]
+  },
+  {
+   "conversation": 7,
+   "question_de": "Was passiert, wenn Unternehmen weiterhin nur Profit wählen?",
+   "question_en": "What happens if companies keep choosing only profit?",
+   "answer_de": "Dann riskieren die Unternehmen, ihren Ruf zu verlieren. Ein beschädigter Ruf kann letztendlich die langfristigen Gewinne beeinflussen.",
+   "answer_en": "Then the companies risk losing their reputation. A tarnished reputation can ultimately affect long-term profits.",
+   "hints": [
+    "riskieren",
+    "Ruf",
+    "beschädigter",
+    "Gewinne"
+   ],
+   "source_lines": [
+    20,
+    22
+   ]
+  },
+  {
+   "conversation": 7,
+   "question_de": "Warum reichen ethische Richtlinien allein nicht aus?",
+   "question_en": "Why aren't ethical guidelines enough on their own?",
+   "answer_de": "Es geht nicht nur darum, ethische Richtlinien zu haben, sondern auch darum, sie durchzusetzen. Kurzfristiges Denken kann zu ethischen Kompromissen führen.",
+   "answer_en": "It's not just about having ethical guidelines, but also about enforcing them. Short-term thinking can lead to ethical compromises.",
+   "hints": [
+    "Richtlinien",
+    "durchzusetzen",
+    "Kurzfristiges",
+    "Kompromissen"
+   ],
+   "source_lines": [
+    72,
+    62
+   ]
+  },
+  {
+   "conversation": 8,
+   "question_de": "Wie könnten wir Meetings mit einem Remote-Team abwechslungsreich gestalten?",
+   "question_en": "How could we make meetings with a remote team more varied?",
+   "answer_de": "Wir könnten eine rotierende Agenda festlegen, bei der jedes Teammitglied seine Herausforderungen oder Erfolge hervorhebt. Außerdem könnten wir Breakout-Sitzungen für kleinere Gruppen nutzen.",
+   "answer_en": "We could set a rotating agenda where each team member highlights their challenges or wins. We could also use breakout sessions for smaller groups.",
+   "hints": [
+    "rotierende",
+    "Agenda",
+    "Breakout-Sitzungen",
+    "Gruppen"
+   ],
+   "source_lines": [
+    15,
+    20
+   ]
+  },
+  {
+   "conversation": 8,
+   "question_de": "Wie oft sollten wir formelle Feedback-Sitzungen ansetzen?",
+   "question_en": "How often should we schedule formal feedback sessions?",
+   "answer_de": "Ich denke, vierteljährliche Überprüfungen, ergänzt durch monatliches informelles Feedback, würden ein gutes Gleichgewicht bieten.",
+   "answer_en": "I think quarterly reviews complemented by monthly informal feedback would provide a good balance.",
+   "hints": [
+    "vierteljährliche",
+    "Überprüfungen",
+    "monatliches",
+    "Gleichgewicht"
+   ],
+   "source_lines": [
+    35
+   ]
+  },
+  {
+   "conversation": 8,
+   "question_de": "Wie gehen wir in einem globalen Team mit Zeitzonen um?",
+   "question_en": "How do we deal with time zones in a global team?",
+   "answer_de": "Wir sollten klare Erwartungen bezüglich Fristen setzen und die Zeitzonen respektieren. Außerdem hilft vielleicht ein gemeinsamer Kalender.",
+   "answer_en": "We should set clear expectations regarding deadlines and respect time zones. A shared calendar might also help.",
+   "hints": [
+    "Erwartungen",
+    "Fristen",
+    "Zeitzonen",
+    "Kalender"
+   ],
+   "source_lines": [
+    52,
+    54
+   ]
+  },
+  {
+   "conversation": 9,
+   "question_de": "Warum ist es für kleine Unternehmen schwer, mit großen Konzernen zu konkurrieren?",
+   "question_en": "Why is it hard for small businesses to compete with large corporations?",
+   "answer_de": "Große Unternehmen haben massive Werbebudgets, während kleine Geschäfte oft auf lokale Werbung beschränkt sind. Außerdem können große Unternehmen viel schneller in Technologie investieren.",
+   "answer_en": "Big companies have massive advertising budgets, while small shops are often limited to local advertising. Big companies can also invest in technology much faster.",
+   "hints": [
+    "Werbebudgets",
+    "lokale",
+    "Werbung",
+    "Technologie"
+   ],
+   "source_lines": [
+    13,
+    31
+   ]
+  },
+  {
+   "conversation": 9,
+   "question_de": "Warum können kleine Unternehmen ihre Ideen im globalen Markt oft nicht umsetzen?",
+   "question_en": "Why are small businesses often unable to realize their ideas in the global market?",
+   "answer_de": "Kleine Unternehmen haben vielleicht großartige Ideen, aber ohne Kapital oder Ressourcen können sie diese Ideen nicht auf die nächste Stufe bringen.",
+   "answer_en": "Small businesses might have great ideas, but without capital or resources they can't take those ideas to the next level.",
+   "hints": [
+    "großartige",
+    "Ideen",
+    "Kapital",
+    "Ressourcen"
+   ],
+   "source_lines": [
+    33
+   ]
+  },
+  {
+   "conversation": 9,
+   "question_de": "Warum sind kleine Unternehmen wertvoll für eine Gemeinde?",
+   "question_en": "Why are small businesses valuable for a community?",
+   "answer_de": "Auf lange Sicht sind es oft die kleinen Unternehmen, die dem Gemeinschaftsleben einen einzigartigen Charakter verleihen. Viele sind außerdem umweltfreundlicher als größere Unternehmen.",
+   "answer_en": "In the long run it is often the small businesses that give community life a unique character. Many are also more environmentally sustainable than larger companies.",
+   "hints": [
+    "Gemeinschaftsleben",
+    "einzigartigen",
+    "Charakter",
+    "umweltfreundlicher"
+   ],
+   "source_lines": [
+    41,
+    46
+   ]
+  },
+  {
+   "conversation": 10,
+   "question_de": "Warum sprechen Menschen im Beruf oft nicht über ihre psychischen Probleme?",
+   "question_en": "Why do people often not talk about their mental health problems at work?",
+   "answer_de": "Menschen fühlen sich oft beschämt, über ihre psychischen Probleme zu sprechen, aus Angst, dass es sich schlecht auf ihr berufliches Image auswirkt.",
+   "answer_en": "People often feel ashamed to talk about their mental health struggles, fearing it will reflect poorly on their professional image.",
+   "hints": [
+    "beschämt",
+    "psychischen",
+    "Angst",
+    "Image"
+   ],
+   "source_lines": [
+    16
+   ]
+  },
+  {
+   "conversation": 10,
+   "question_de": "Was könnten wir dem Management vorschlagen, um psychische Gesundheit zu unterstützen?",
+   "question_en": "What could we propose to management to support mental health?",
+   "answer_de": "Wir könnten mit Workshops und Seminaren beginnen und Experten einladen. Außerdem könnten wir anonyme Feedback-Formulare in Betracht ziehen.",
+   "answer_en": "We could start with workshops and seminars and invite experts. We could also consider anonymous feedback forms.",
+   "hints": [
+    "Workshops",
+    "Seminaren",
+    "Experten",
+    "Feedback-Formulare"
+   ],
+   "source_lines": [
+    22,
+    31
+   ]
+  },
+  {
+   "conversation": 10,
+   "question_de": "Warum würdest du dir regelmäßige Gespräche mit deinem Manager wünschen?",
+   "question_en": "Why would you like regular conversations with your manager?",
+   "answer_de": "Regelmäßige Eins-zu-eins-Gespräche könnten helfen, Probleme frühzeitig zu erkennen. Ich würde mich mehr ermächtigt fühlen, wenn mein Manager regelmäßig fragt, wie es mir geht.",
+   "answer_en": "Regular one-on-ones could help identify problems early on. I'd feel more empowered if my manager asked how I'm doing on a regular basis.",
+   "hints": [
+    "Probleme",
+    "frühzeitig",
+    "ermächtigt",
+    "Manager"
+   ],
+   "source_lines": [
+    45,
+    46
+   ]
+  },
+  {
+   "conversation": 11,
+   "question_de": "Welchen Punkt müssen wir in der Verhandlung unbedingt richtig hinbekommen?",
+   "question_en": "Which point do we absolutely have to get right in the negotiation?",
+   "answer_de": "Der Preis ist einer der entscheidenden Aspekte, die wir richtig hinbekommen müssen. Wir müssen ein Gleichgewicht finden, das den Wert widerspiegelt, den wir anbieten.",
+   "answer_en": "The pricing is one of the crucial aspects we need to get right. We need to find a balance that reflects the value we're offering.",
+   "hints": [
+    "Preis",
+    "entscheidenden",
+    "Gleichgewicht",
+    "Wert"
+   ],
+   "source_lines": [
+    5,
+    10
+   ]
+  },
+  {
+   "conversation": 11,
+   "question_de": "Was sollten wir den potenziellen Kunden über unsere Dienstleistung vermitteln?",
+   "question_en": "What should we convey to potential customers about our service?",
+   "answer_de": "Wir müssen die langfristigen Vorteile unserer Dienstleistung betonen. Es geht nicht nur um die Anfangskosten, sondern um den Gesamtwert.",
+   "answer_en": "We need to emphasize the long-term benefits of our service. It's not just about the initial cost, but the overall value.",
+   "hints": [
+    "langfristigen",
+    "Vorteile",
+    "Anfangskosten",
+    "Gesamtwert"
+   ],
+   "source_lines": [
+    17,
+    18
+   ]
+  },
+  {
+   "conversation": 11,
+   "question_de": "Wie bereiten wir uns auf die Grenzen der Verhandlung vor?",
+   "question_en": "How do we prepare for the limits of the negotiation?",
+   "answer_de": "Wir müssen im Voraus unsere Grenzen festlegen und einen klaren Cutoff haben. Außerdem sollten wir über potenzielle Zugeständnisse nachdenken.",
+   "answer_en": "We need to establish our limits beforehand and have a clear cutoff. We should also think about potential concessions.",
+   "hints": [
+    "Grenzen",
+    "Cutoff",
+    "potenzielle",
+    "Zugeständnisse"
+   ],
+   "source_lines": [
+    52,
+    56,
+    60
+   ]
+  },
+  {
+   "conversation": 12,
+   "question_de": "Warum wollen Mitarbeiter für Unternehmen mit sozialer Verantwortung arbeiten?",
+   "question_en": "Why do employees want to work for companies with social responsibility?",
+   "answer_de": "Mitarbeiter wollen für Organisationen arbeiten, die einen Zweck über das Geldverdienen hinaus haben. Wenn ihre Arbeit einem höheren Zweck dient, sind sie motivierter.",
+   "answer_en": "Employees want to work for organizations that have a purpose beyond making money. When their work serves a greater good, they are more motivated.",
+   "hints": [
+    "Organisationen",
+    "Zweck",
+    "Geldverdienen",
+    "motivierter"
+   ],
+   "source_lines": [
+    16,
+    20
+   ]
+  },
+  {
+   "conversation": 12,
+   "question_de": "Welchen Vorteil bringt soziale Verantwortung einem Unternehmen am Markt?",
+   "question_en": "What advantage does social responsibility bring a company in the market?",
+   "answer_de": "Unternehmerische Sozialverantwortung kann den Ruf eines Unternehmens verbessern. Verbraucher vertrauen oft Unternehmen, die sich aktiv an sozialen Anliegen beteiligen.",
+   "answer_en": "Corporate social responsibility can enhance a company's reputation. Consumers often trust companies that actively engage in social causes.",
+   "hints": [
+    "Sozialverantwortung",
+    "Ruf",
+    "Verbraucher",
+    "Anliegen"
+   ],
+   "source_lines": [
+    22,
+    23,
+    26
+   ]
+  },
+  {
+   "conversation": 12,
+   "question_de": "Wie können Unternehmen sicherstellen, dass ihre soziale Verantwortung wirklich wirksam ist?",
+   "question_en": "How can companies ensure their social responsibility is truly effective?",
+   "answer_de": "Unternehmen müssen ihre Initiativen mit ihren Kernwerten in Einklang bringen und sich auf langfristige Auswirkungen konzentrieren statt auf kurzlebige Kampagnen.",
+   "answer_en": "Companies need to align their initiatives with their core values and focus on long-term impact rather than short-lived campaigns.",
+   "hints": [
+    "Initiativen",
+    "Kernwerten",
+    "langfristige",
+    "Kampagnen"
+   ],
+   "source_lines": [
+    38,
+    54
+   ]
+  },
+  {
+   "conversation": 13,
+   "question_de": "Warum zögern manche Unternehmen bei nachhaltigen Praktiken?",
+   "question_en": "Why do some companies hesitate when it comes to sustainable practices?",
+   "answer_de": "Einige Unternehmen zögern, weil die anfängliche Investition ganz schön hoch sein kann und sie befürchten, dass es sich nicht schnell auszahlen wird.",
+   "answer_en": "Some companies hesitate because the initial investment can be quite hefty and they fear it won't pay off quickly.",
+   "hints": [
+    "anfängliche",
+    "Investition",
+    "befürchten",
+    "auszahlen"
+   ],
+   "source_lines": [
+    9,
+    10
+   ]
+  },
+  {
+   "conversation": 13,
+   "question_de": "Warum ist die Lieferkette ein Problem für nachhaltige Unternehmen?",
+   "question_en": "Why is the supply chain a problem for sustainable companies?",
+   "answer_de": "Viele Unternehmen sind auf Zulieferer angewiesen, die möglicherweise Nachhaltigkeit nicht priorisieren. Sie stecken oft mit Partnern fest, die nicht ihre Werte teilen.",
+   "answer_en": "Many companies rely on suppliers who may not prioritize sustainability. They are often stuck with partners who don't share their values.",
+   "hints": [
+    "Zulieferer",
+    "Nachhaltigkeit",
+    "Partnern",
+    "Werte"
+   ],
+   "source_lines": [
+    15,
+    17
+   ]
+  },
+  {
+   "conversation": 13,
+   "question_de": "Warum kompromittieren Unternehmen manchmal ihre Nachhaltigkeitsziele?",
+   "question_en": "Why do companies sometimes compromise on their sustainability goals?",
+   "answer_de": "Viele Verbraucher wünschen sich Nachhaltigkeit, wollen aber auch niedrige Preise. Das setzt die Unternehmen unter Druck, wettbewerbsfähig zu bleiben.",
+   "answer_en": "Many consumers want sustainability but also want low prices. That puts the companies under pressure to stay competitive.",
+   "hints": [
+    "Verbraucher",
+    "niedrige",
+    "Preise",
+    "Druck"
+   ],
+   "source_lines": [
+    26,
+    30
+   ]
+  },
+  {
+   "conversation": 14,
+   "question_de": "Welche Bedenken hast du bei dem Wandel im Unternehmen?",
+   "question_en": "What concerns do you have about the change in the company?",
+   "answer_de": "Ich denke, das größte Problem ist der Mangel an Kommunikation von der Führungsebene. Wenn wir alle frühzeitig einbeziehen, könnte das zu einer besseren Akzeptanz führen.",
+   "answer_en": "I think the biggest issue is the lack of communication from the leadership. Engaging everyone early on could lead to better acceptance.",
+   "hints": [
+    "Problem",
+    "Mangel",
+    "Kommunikation",
+    "Führungsebene"
+   ],
+   "source_lines": [
+    8,
+    21
+   ]
+  },
+  {
+   "conversation": 14,
+   "question_de": "Wie kann die Führungsebene besser mit den Mitarbeitern kommunizieren?",
+   "question_en": "How can the leadership communicate better with the employees?",
+   "answer_de": "Die Führungsebene sollte regelmäßige Treffen abhalten, bei denen jeder seine Fragen und Bedenken äußern kann. Außerdem sollte sie Workshops organisieren, um die Gründe für die Veränderungen zu erklären.",
+   "answer_en": "The leadership should hold regular meetings where everyone can voice their questions and concerns. It should also organize workshops to explain the rationale behind the changes.",
+   "hints": [
+    "Treffen",
+    "Fragen",
+    "Workshops",
+    "Gründe"
+   ],
+   "source_lines": [
+    14,
+    26
+   ]
+  },
+  {
+   "conversation": 14,
+   "question_de": "Wie können wir Mitarbeiter auf die neuen Methoden vorbereiten?",
+   "question_en": "How can we prepare employees for the new methods?",
+   "answer_de": "Wir müssen unser Team mit den richtigen Fähigkeiten ausstatten. Wenn die Schulung interaktiv ist, hilft das den Mitarbeitern, sich sicherer auf die neuen Methoden einzustellen.",
+   "answer_en": "We need to equip our team with the right skills. If the training is interactive, it helps employees feel more confident in adapting to the new methods.",
+   "hints": [
+    "Fähigkeiten",
+    "ausstatten",
+    "Schulung",
+    "interaktiv"
+   ],
+   "source_lines": [
+    46,
+    47
+   ]
+  },
+  {
+   "conversation": 15,
+   "question_de": "Wie gehst du mit dem Risiko in deinen Investitionen um?",
+   "question_en": "How do you handle the risk in your investments?",
+   "answer_de": "Ich denke daran, meine Investitionen zu diversifizieren. Diversifizierung kann helfen, plötzliche Rückgänge abzufedern.",
+   "answer_en": "I'm thinking of diversifying my investments. Diversification can help cushion against sudden downturns.",
+   "hints": [
+    "diversifizieren",
+    "Diversifizierung",
+    "Rückgänge",
+    "abzufedern"
+   ],
+   "source_lines": [
+    10,
+    13
+   ]
+  },
+  {
+   "conversation": 15,
+   "question_de": "Welche Sektoren und Anlageformen ziehst du in Betracht?",
+   "question_en": "Which sectors and types of investment are you considering?",
+   "answer_de": "Ich schaue mir erneuerbare Energien, Technologie und das Gesundheitswesen an. Außerdem überlege ich, einen Teil meines Portfolios in Anleihen zu investieren.",
+   "answer_en": "I'm looking at renewable energy, technology and healthcare. I'm also considering putting part of my portfolio into bonds.",
+   "hints": [
+    "erneuerbare",
+    "Energien",
+    "Gesundheitswesen",
+    "Anleihen"
+   ],
+   "source_lines": [
+    15,
+    40
+   ]
+  },
+  {
+   "conversation": 15,
+   "question_de": "Wie überprüfst du dein Portfolio?",
+   "question_en": "How do you review your portfolio?",
+   "answer_de": "Ich plane monatliche Überprüfungen, achte aber während des Monats auf bedeutende Nachrichtenereignisse. Ich denke, regelmäßige Portfolioüberprüfungen sind wichtig.",
+   "answer_en": "I schedule monthly reviews, but I keep an eye on significant news events during the month. I think regular portfolio reviews are vital.",
+   "hints": [
+    "monatliche",
+    "Überprüfungen",
+    "Nachrichtenereignisse",
+    "Portfolioüberprüfungen"
+   ],
+   "source_lines": [
+    49,
+    44
+   ]
+  },
+  {
+   "conversation": 16,
+   "question_de": "Warum hinterfragst du die Ethik hinter der Unternehmensüberwachung?",
+   "question_en": "Why do you question the ethics behind corporate surveillance?",
+   "answer_de": "Ich denke, wenn Menschen wissen, dass sie überwacht werden, verhalten sie sich anders. Überwachung schafft eine Kultur der Angst und Konformität.",
+   "answer_en": "I think when people know they are being monitored, they behave differently. Surveillance creates a culture of fear and conformity.",
+   "hints": [
+    "überwacht",
+    "anders",
+    "Kultur",
+    "Konformität"
+   ],
+   "source_lines": [
+    17,
+    19
+   ]
+  },
+  {
+   "conversation": 16,
+   "question_de": "Warum verstehen viele Nutzer nicht, was sie mit den Datenschutzbestimmungen akzeptieren?",
+   "question_en": "Why do many users not understand what they accept with privacy policies?",
+   "answer_de": "Die meisten Menschen überfliegen die Allgemeinen Geschäftsbedingungen, ohne wirklich zu verstehen, was sie akzeptieren.",
+   "answer_en": "Most people skim through the terms and conditions without really understanding what they are agreeing to.",
+   "hints": [
+    "überfliegen",
+    "Geschäftsbedingungen",
+    "verstehen",
+    "akzeptieren"
+   ],
+   "source_lines": [
+    22,
+    23
+   ]
+  },
+  {
+   "conversation": 16,
+   "question_de": "Was sollte sich ändern, damit persönliche Informationen besser geschützt sind?",
+   "question_en": "What should change so that personal information is better protected?",
+   "answer_de": "Unternehmen sollten klar darüber sein, welche Daten sie sammeln. Außerdem brauchen wir stärkere Vorschriften, um persönliche Informationen zu schützen.",
+   "answer_en": "Companies should be clear about what data they collect. We also need stronger regulations to protect personal information.",
+   "hints": [
+    "Daten",
+    "sammeln",
+    "stärkere",
+    "Vorschriften"
+   ],
+   "source_lines": [
+    50,
+    55
+   ]
+  },
+  {
+   "conversation": 17,
+   "question_de": "Was müssen wir zuerst für die Krisenkommunikation festlegen?",
+   "question_en": "What do we have to establish first for crisis communication?",
+   "answer_de": "Zuerst müssen wir einen klaren Kommunikationsplan festlegen. Außerdem müssen wir Sprecher identifizieren, die diese Botschaften konsistent übermitteln können.",
+   "answer_en": "First, we need to establish a clear communication plan. We also need to identify spokespersons who can deliver those messages consistently.",
+   "hints": [
+    "Kommunikationsplan",
+    "festlegen",
+    "Sprecher",
+    "Botschaften"
+   ],
+   "source_lines": [
+    8,
+    11
+   ]
+  },
+  {
+   "conversation": 17,
+   "question_de": "Wie sollten wir die Sprecher auf Medienfragen vorbereiten?",
+   "question_en": "How should we prepare the spokespersons for media questions?",
+   "answer_de": "Wir sollten die Sprecher im Voraus schulen, um mit schwierigen Fragen umzugehen. Medientrainings können sie mit den Fähigkeiten ausstatten, auch unter Druck ruhig zu bleiben.",
+   "answer_en": "We should train the spokespersons in advance to handle tough questions. Media training can equip them with the skills to stay calm, even under pressure.",
+   "hints": [
+    "Sprecher",
+    "schulen",
+    "Medientrainings",
+    "Druck"
+   ],
+   "source_lines": [
+    17,
+    19
+   ]
+  },
+  {
+   "conversation": 17,
+   "question_de": "Wie sollten wir die Öffentlichkeit während der Krise informieren?",
+   "question_en": "How should we inform the public during the crisis?",
+   "answer_de": "Wir sollten E-Mail, soziale Medien und vielleicht eine spezielle Website nutzen. Außerdem können wir einen Raum für Fragen schaffen, um Ängste direkt anzusprechen.",
+   "answer_en": "We should use email, social media and perhaps a dedicated website. We can also create a space for questions to address fears directly.",
+   "hints": [
+    "Medien",
+    "Website",
+    "Raum",
+    "Ängste"
+   ],
+   "source_lines": [
+    47,
+    52
+   ]
+  },
+  {
+   "conversation": 18,
+   "question_de": "Warum belasten Compliance-Kosten kleinere Unternehmen besonders?",
+   "question_en": "Why do compliance costs burden smaller companies in particular?",
+   "answer_de": "Größere Unternehmen können diese Kosten leichter absorbieren, aber für kleinere Unternehmen können sie lähmend sein. Außerdem nimmt der Papierkram Ressourcen für die Geschäftsentwicklung in Anspruch.",
+   "answer_en": "Larger companies can absorb these costs more easily, but for smaller companies they can be crippling. The paperwork also takes away resources from business development.",
+   "hints": [
+    "absorbieren",
+    "lähmend",
+    "Papierkram",
+    "Geschäftsentwicklung"
+   ],
+   "source_lines": [
+    8,
+    10
+   ]
+  },
+  {
+   "conversation": 18,
+   "question_de": "Welche Gefahr siehst du in zu viel Regulierung?",
+   "question_en": "What danger do you see in too much regulation?",
+   "answer_de": "Ich glaube, es gibt eine feine Linie zwischen notwendiger Aufsicht und Überregulierung, die das Wachstum erstickt. Zu viel Regulierung kann Innovation ins Untergrund treiben.",
+   "answer_en": "I believe there is a fine line between necessary oversight and overregulation that stifles growth. Too much regulation can drive innovation underground.",
+   "hints": [
+    "Linie",
+    "Aufsicht",
+    "Überregulierung",
+    "Innovation"
+   ],
+   "source_lines": [
+    17,
+    20
+   ]
+  },
+  {
+   "conversation": 18,
+   "question_de": "Was würdest du dir wünschen, damit Regulierungen praktischer werden?",
+   "question_en": "What would you wish for so that regulations become more practical?",
+   "answer_de": "Ich würde mir Foren wünschen, in denen Unternehmen offen Herausforderungen mit den Regulierungsbehörden teilen können. Bessere Kommunikation würde das Vertrauen zwischen Regierung und Unternehmen stärken.",
+   "answer_en": "I would love to see forums where businesses can openly share challenges with regulators. Better communication would build trust between the government and businesses.",
+   "hints": [
+    "Foren",
+    "Herausforderungen",
+    "Regulierungsbehörden",
+    "Vertrauen"
+   ],
+   "source_lines": [
+    40,
+    42
+   ]
+  },
+  {
+   "conversation": 19,
+   "question_de": "Warum ist euer traditionelles Handwerk für das Unternehmen so wichtig?",
+   "question_en": "Why is your traditional craftsmanship so important for the company?",
+   "answer_de": "Unser traditionelles Handwerk zeichnet uns aus, und unsere Kunden schätzen die Qualität, die aus unserem Erbe stammt.",
+   "answer_en": "Our traditional craftsmanship sets us apart, and our customers appreciate the quality that comes from our heritage.",
+   "hints": [
+    "Handwerk",
+    "Kunden",
+    "Qualität",
+    "Erbe"
+   ],
+   "source_lines": [
+    5,
+    7
+   ]
+  },
+  {
+   "conversation": 19,
+   "question_de": "Wie schlägst du vor, dass wir Innovation und Tradition in Einklang bringen?",
+   "question_en": "How do you suggest we balance innovation and tradition?",
+   "answer_de": "Ich denke, wir sollten klein anfangen. Wir können ein neues Werkzeug einführen, das unseren Arbeitsablauf verbessert, ohne alles umzukrempeln.",
+   "answer_en": "I think we should start small. We can introduce a new tool that improves our workflow without overhauling everything.",
+   "hints": [
+    "klein",
+    "Werkzeug",
+    "Arbeitsablauf",
+    "umzukrempeln"
+   ],
+   "source_lines": [
+    10,
+    11
+   ]
+  },
+  {
+   "conversation": 19,
+   "question_de": "Was müssen wir bei einem automatisierten Bestandsmanagement beachten?",
+   "question_en": "What do we have to keep in mind with automated inventory management?",
+   "answer_de": "Wir sollten sicherstellen, dass das Bestandsmanagement weiterhin manuelle Kontrollen ermöglicht. Es geht darum, unsere aktuellen Prozesse zu ergänzen, nicht sie vollständig zu ersetzen.",
+   "answer_en": "We should ensure that inventory management still allows for manual checks. It's about augmenting our current processes, not replacing them entirely.",
+   "hints": [
+    "Bestandsmanagement",
+    "manuelle",
+    "Kontrollen",
+    "Prozesse"
+   ],
+   "source_lines": [
+    14,
+    17
+   ]
+  },
+  {
+   "conversation": 20,
+   "question_de": "Wie kommunizierst du in deiner Kultur?",
+   "question_en": "How do you communicate in your culture?",
+   "answer_de": "In meiner Kultur tendieren wir dazu, sehr direkt zu sein, weil Offenheit Zeit spart und Missverständnisse vermeidet.",
+   "answer_en": "In my culture we tend to be very direct, because being straightforward saves time and avoids misunderstandings.",
+   "hints": [
+    "direkt",
+    "Offenheit",
+    "Zeit",
+    "Missverständnisse"
+   ],
+   "source_lines": [
+    8,
+    13
+   ]
+  },
+  {
+   "conversation": 20,
+   "question_de": "Welche Grundregeln sollten wir für unsere Kommunikation festlegen?",
+   "question_en": "What ground rules should we establish for our communication?",
+   "answer_de": "Wir sollten einige Grundregeln festlegen. Vielleicht können wir uns darauf einigen, unsere Absichten zu klären, wenn wir uns missverstanden fühlen.",
+   "answer_en": "We should establish some ground rules. Perhaps we can agree to clarify our intentions when we feel misunderstood.",
+   "hints": [
+    "Grundregeln",
+    "einigen",
+    "Absichten",
+    "missverstanden"
+   ],
+   "source_lines": [
+    19,
+    22
+   ]
+  },
+  {
+   "conversation": 20,
+   "question_de": "Wie können wir den Austausch über kulturelle Unterschiede im Team fördern?",
+   "question_en": "How can we encourage an exchange about cultural differences in the team?",
+   "answer_de": "Wir könnten ein offenes Forum schaffen, in dem Teammitglieder ihre Erfahrungen teilen können. Außerdem könnte jedes Teammitglied seinen Hintergrund hervorheben.",
+   "answer_en": "We could create an open forum where team members can share their experiences. Each team member could also highlight their background.",
+   "hints": [
+    "Forum",
+    "Teammitglieder",
+    "Erfahrungen",
+    "Hintergrund"
+   ],
+   "source_lines": [
+    33,
+    34
+   ]
+  }
+ ]
+}
